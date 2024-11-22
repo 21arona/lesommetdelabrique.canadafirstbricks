@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Le Sommet De La Brique</title>
+    <link rel="stylesheet" href="css/accueil.css" />
+    <style>
+      body {
+        overflow: hidden;
+        /* Supprime la barre de défilement */
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="images/sommetlogo.png" alt="Logo" />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="accueil.html">Accueil</a></li>
+          <li>
+            <a
+              href="https://www.eventbrite.ca/e/bricks-in-the-six-2024-lego-fan-exhibition-tickets-759779279277?aff=oddtdtcreator"
+              >Billets</a
+            >
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Exhibitor Info</a>
+            <ul class="dropdown-menu">
+              <li><a href="login.html">Login</a></li>
+              <li><a href="Createaccount.html">Create Account</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="accueil">
+        <div class="overlay"></div>
+        <!-- Ajout de l'overlay sombre -->
+      </section>
+
+      <!-- Formulaire de Connexion -->
+      <section id="login-form">
+        <div class="form-container">
+          <form action="#" method="post">
+            <h2>Connexion</h2>
+
+            <!-- Champ pour l'email -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <!-- Champ pour le mot de passe -->
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" required />
+
+            <button type="submit" class="btn">Se connecter</button>
+
+            <p>
+              Vous n'avez pas de compte ?
+              <a href="Createaccount.html">Créez un compte</a>
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

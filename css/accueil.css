@@ -1,0 +1,441 @@
+/* Reset styles */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: #222;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styles */
+.logo img {
+    height: 30px;
+    width: auto;
+}
+
+/* Navigation styles */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #f4a261;
+    font-weight: 700;
+}
+
+
+/* Style de base pour la navigation */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    /* Position relative pour le conteneur du dropdown */
+}
+
+/* Style pour le dropdown */
+.dropdown {
+    position: relative;
+    /* Conteneur du menu déroulant */
+}
+
+/* Empêcher le clic sur Exhibitor Info */
+.dropdown-toggle {
+    cursor: default;
+    /* Change le curseur pour indiquer qu'il n'est pas cliquable */
+    color: #fff;
+    /* Couleur de texte */
+    font-size: 1rem;
+    /* Taille du texte */
+    transition: color 0.3s;
+}
+
+/* Menu déroulant caché par défaut */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Juste en dessous du lien "Exhibitor Info" */
+    left: 0;
+    background-color: #333;
+    /* Couleur de fond */
+    padding: 10px 0;
+    border-radius: 5px;
+    /* Coins arrondis */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    /* Ombre légère */
+    z-index: 1000;
+    min-width: 150px;
+    /* Largeur minimale */
+}
+
+/* Style pour les liens dans le menu */
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu li a {
+    color: #fff;
+    /* Couleur du texte */
+    display: block;
+    /* Rend les liens cliquables sur toute leur largeur */
+    padding: 10px 20px;
+    /* Espacement interne */
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f4a261;
+    /* Couleur de survol */
+    color: #000;
+    /* Texte noir sur survol */
+}
+
+/* Afficher le menu au survol */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    /* Rendre visible le menu */
+}
+
+
+/* Section styles */
+#accueil {
+    height: 90vh;
+    background-image: url('../images/image3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#accueil .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Ombre sur le background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#accueil .content {
+    color: white;
+    text-align: left;
+    max-width: 80%;
+    /* La largeur max reste inchangée */
+    margin-left: -25%;
+    /* Ajustez cette valeur pour aller plus à gauche */
+    position: relative;
+    /* Garantit que l'alignement est propre */
+}
+
+
+#accueil h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#accueil h1 {
+    font-size: 4.5rem;
+    line-height: 1;
+    margin-bottom: 20px;
+
+}
+
+.highlight {
+    color: yellow;
+    font-weight: bolder;
+}
+
+
+.actions {
+    display: flex;
+    gap: 20px;
+}
+
+.actions .btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 20px 20px;
+    background-color: yellow;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.actions .btn:hover {
+    background-color: #e76f51;
+}
+
+/* Section de description */
+#description {
+
+    /* Couleur de fond pour le texte */
+    padding: 50px 10%;
+    /* Espacement haut-bas et sur les côtés */
+    text-align: left;
+    margin-top: 50px;
+}
+
+#description p {
+
+    font-size: 1.2rem;
+    /* Taille du texte */
+    line-height: 1.8;
+    /* Hauteur de ligne pour améliorer la lisibilité */
+    font-family: 'Georgia', serif;
+    /* Police stylisée */
+    color: #333;
+    /* Couleur du texte */
+    max-width: 800px;
+    /* Limite la largeur pour un meilleur centrage */
+    margin: 0 auto;
+    /* Centre le paragraphe horizontalement */
+}
+
+/*collaboration */
+
+
+/* Styles pour la section de collaboration */
+.collaboration {
+    display: flex;
+    flex-direction: column;
+    /* Dispose les éléments en colonne */
+    padding: 20px;
+    /* Espace autour de la section */
+    /* Centre la section avec un espacement au-dessus et en dessous */
+    max-width: 1350px;
+    /* Définir une largeur maximale pour maintenir l'espacement */
+    box-sizing: border-box;
+    /* background-color: yellow; */
+}
+
+.collaboration .left {
+    text-align: left;
+    /* Espace entre les colonnes */
+    margin: auto;
+}
+
+.collaboration .right {
+    display: flex;
+    align-items: center;
+    /* Aligne les éléments verticalement au centre */
+    justify-content: center;
+    /* Centre les éléments horizontalement */
+    gap: 10px;
+    /* Espace entre le texte et l'image */
+    margin-top: 25px;
+}
+
+.collaboration img {
+    max-width: 100%;
+    display: block;
+}
+
+.collaboration h2 {
+    font-family: roboto;
+    color: black;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    /* Ajoute un espace entre le titre et l'image */
+}
+
+
+/* Section de la carte */
+#map {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#map h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+    color: white;
+    font-size: 0.9rem;
+}
+
+
+
+/*LOGIN PAGE */
+/* Empêcher le défilement global de la page */
+html, body {
+    height: 100%;
+    /* S'assure que le corps prend toute la hauteur de la fenêtre */
+    margin: 0;
+    /* Retirer les marges par défaut */
+}
+
+/* Section de l'arrière-plan */
+#accueil {
+    height: 100vh;
+    /* Utilise toute la hauteur de la fenêtre */
+    background-image: url('../images/image3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Overlay sombre */
+#accueil .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Ombre semi-transparente */
+    z-index: 1;
+    /* L'overlay doit être au-dessus de l'image de fond */
+}
+
+/* Formulaire de Connexion */
+#login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10%;
+    position: absolute;
+    /* Pour positionner le formulaire sur le fond */
+    top: 55%;
+    /* Décaler un peu plus bas */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    /* Le formulaire doit être au-dessus de l'overlay */
+}
+
+.form-container {
+    background-color: #fff;
+    /* Formulaire opaque */
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    max-width: 500px;
+    width: 110%;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 2rem;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1rem;
+}
+
+.form-container input {
+    width: 90%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-container input[type="email"],
+.form-container input[type="password"] {
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 15px;
+    background-color: #f4a261;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #e76f51;
+}
+
+.form-container p {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.form-container a {
+    color: #f4a261;
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
