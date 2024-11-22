@@ -231,8 +231,46 @@ body {
     /* Centre le paragraphe horizontalement */
 }
 
-/*collaboration */
+/* Section pour la galerie d'images */
+#image-gallery {
+    display: grid;
+    /* Utilisation de Grid Layout */
+    grid-template-columns: 1fr 1fr;
+    /* Deux colonnes de largeur égale */
+    gap: 20px;
+    /* Espacement entre les images */
+    padding: 50px 10%;
+    /* Marges */
+    align-items: center;
+    /* Aligner les images verticalement */
+    justify-content: center;
+    /* Centrer le contenu horizontalement */
+}
 
+/* Conteneur des images */
+.image-item {
+    position: relative;
+    overflow: hidden;
+    /* Masquer tout débordement de l'image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Ombre douce */
+}
+
+/* Images verticales (image5.jpg et image6.jpg) */
+.image-item.vertical img {
+    width: 100%;
+    /* Largeur de la colonne */
+    height: auto;
+    /* Conserver les proportions */
+}
+
+/* Images horizontales (image7.jpg et image87.jpg) */
+.image-item.horizontal img {
+    width: 100%;
+    /* Largeur de la colonne */
+    height: auto;
+    /* Conserver les proportions */
+}
 
 /* Styles pour la section de collaboration */
 .collaboration {
