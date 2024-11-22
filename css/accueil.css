@@ -319,6 +319,70 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Section collaboration-info */
+#collaboration-info {
+    display: flex;
+    /* Utilisation du flexbox pour aligner les éléments */
+    justify-content: space-between;
+    /* Espacement entre le texte et l'image */
+    align-items: center;
+    /* Centrer les éléments verticalement */
+    padding: 60px 10%;
+    background-color: #f4f4f4;
+    /* Couleur de fond douce */
+    margin-top: 60px;
+}
+
+/* Conteneur du texte à gauche */
+.text-container {
+    width: 50%;
+    /* Le texte prend 50% de l'espace */
+    padding-right: 30px;
+    /* Espace entre le texte et l'image */
+}
+
+#collaboration-info h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left;
+    /* Aligner le titre à gauche */
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Liste d'énumération */
+#collaboration-info ul {
+    list-style-type: none;
+    /* Supprimer les puces */
+    padding: 0;
+    margin: 0;
+}
+
+#collaboration-info ul li {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Conteneur de l'image à droite */
+.image-container {
+    width: 40%;
+    /* L'image prend 40% de l'espace */
+    text-align: center;
+    /* Centrer l'image */
+}
+
+.image-container img {
+    width: 100%;
+    /* L'image prend toute la largeur du conteneur */
+    height: auto;
+    object-fit: contain;
+    /* Conserver les proportions de l'image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Ombre légère pour l'image */
+}
+
 
 
 /*LOGIN PAGE */
