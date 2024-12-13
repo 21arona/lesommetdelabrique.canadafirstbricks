@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Sommet De La Brique</title>
+    <link rel="stylesheet" href="css/accueil.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/sommetlogo.png"
+      sizes="180x180"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Defilement vers contact  -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const burgerMenu = document.getElementById("burger-menu");
+        if (burgerMenu) {
+          burgerMenu.addEventListener("click", function () {
+            document.querySelector(".nav-links").classList.toggle("active");
+          });
+        }
+      });
+    </script>
+
+    <script>
+      (function () {
+        emailjs.init("VXrxCjioO6p93R7_9");
+      })();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const backToTopButton = document.getElementById("back-to-top");
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 300) {
+            backToTopButton.style.display = "block";
+          } else {
+            backToTopButton.style.display = "none";
+          }
+        });
+
+        backToTopButton.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Sélectionne tous les liens avec des ancres
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault(); // Empêche le comportement par défaut
+
+            // Récupère la cible de l'ancre
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth", // Animation fluide
+                block: "start", // Scroll vers le début de la section
+              });
+            }
+          });
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector(".contact-form");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault(); // Empêche le rechargement de la page
+
+          const params = {
+            from_name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value,
+          };
+
+          emailjs
+            .send("service_6ql6qy9", "template_ubgbv4a", params)
+            .then(function (res) {
+              alert("Message envoyé avec succès !");
+              form.reset(); // Réinitialiser le formulaire
+            })
+            .catch(function (error) {
+              console.error("Échec de l'envoi du message : ", error);
+              alert("Une erreur est survenue, veuillez réessayer.");
+            });
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <button id="back-to-top" title="Back to Top">&#8679;</button>
+    <header class="navbar">
+      <div class="logo">
+        <img src="images/sommetlogo.png" alt="Logo" />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#accueil">Home</a></li>
+          <li>
+            <a
+              href="https://www.eventbrite.ca/e/bricks-in-the-six-2024-lego-fan-exhibition-tickets-759779279277?aff=oddtdtcreator"
+              >Tickets</a
+            >
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Exhibitor</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="login.html"> <i class="fa fa-user"></i> Connexion </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="burger-menu" id="burger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </header>
+
+    <main>
+      <section id="accueil">
+        <div class="overlay">
+          <div class="content">
+            <h3>Le Sommet De La Brique</h3>
+            <h1>Le Sommet de la Brique</h1>
+            <p>
+              est une exposition de passionnés de briques
+              <span class="highlight">Lego®</span> ayant créé leurs propres
+              modèles
+              <br />
+              <span class="highlight">MOC (My Own Creation)</span> ou ayant une
+              collection de modèles officiels à exposer.
+            </p>
+            <div class="actions">
+              <a
+                href="https://www.eventbrite.ca/e/bricks-in-the-six-2024-lego-fan-exhibition-tickets-759779279277?aff=oddtdtcreator"
+                class="btn"
+                >Buy Tickets</a
+              >
+              <a href="Login.html" class="btn">Become an Exhibitor</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Nouvelle section -->
+      <section id="description">
+        <h1
+          style="
+            color: #f4a261;
+            text-align: center;
+            font-size: x-large;
+            height: 30%;
+            margin-bottom: 20px;
+          "
+        >
+          THE BRICK SUMMIT
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet 2025! <br />
+          <br />
+          Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident sunt in culpa. <br />
+          <br />
+          Qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Sapiente praesentium maxime
+          voluptatibus quisquam dolores unde ad repellat reprehenderit labore
+          molestias perferendis officia atque beatae deserunt necessitatibus a
+          ea autem vitae id consequuntur. <br />
+          <br />
+          Maiores voluptas culpa fugit sapiente voluptates laudantium amet
+          voluptatum. Corporis reprehenderit ugiat iste velit cupiditate itaque,
+          tempore voluptates reiciendis orem ipsum dolor sit, amet consectetur
+          adipisicing elit sint molestiae cumque, eveniet dignissimos veritatis
+          asperiores. <br />
+          <br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit agnam laborum
+          officiis id perferendis. <br />
+          <br />
+          Bricktacularly Yours
+        </p>
+      </section>
+
+      <section class="collaboration" style="background-color: white">
+        <div class="left">
+          <h2>Présenté par</h2>
+          <img
+            style="height: 300px"
+            src="images/presentedByCFB.png"
+            alt="presentedByCFB Logo"
+          />
+        </div>
+        <div class="right">
+          <h2>En collaboration avec</h2>
+          <img
+            style="height: auto"
+            src="images/collabAvecBB.png"
+            alt="BB Logo"
+          />
+        </div>
+      </section>
+
+      <!-- Nouvelle section avec 4 images -->
+      <section id="image-gallery" style="background-color: white">
+        <div class="image-item vertical">
+          <img src="images/image5.jpg" alt="Image 5" />
+        </div>
+        <div class="image-item vertical">
+          <img src="images/image6.jpg" alt="Image 6" />
+        </div>
+        <div class="image-item horizontal">
+          <img src="images/image7.jpg" alt="Image 7" />
+        </div>
+        <div class="image-item horizontal">
+          <img src="images/image8.jpg" alt="Image 87" />
+        </div>
+      </section>
+
+      <!-- Nouvelle section pour la carte -->
+      <section id="map">
+        <h2>
+          Hilton Meadowvale/Mississauga Hotel conveniently located along Highway
+          401!
+        </h2>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d92455.58974329421!2d-79.742216!3d43.601603!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b6a818296a65b%3A0x9ac8eafecb49e97b!2sHilton%20Mississauga%2FMeadowvale!5e0!3m2!1sen!2sus!4v1732298731895!5m2!1sen!2sus"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </section>
+
+      <!-- Nouvelle section avec texte à gauche et image à droite -->
+      <section style="background-color: white" id="collaboration-info">
+        <div class="text-container">
+          <!-- Titre au centre -->
+          <h1 style="color: #f4a261">LOREM IPSUM LIGULA PHARETRA EU TORLEO</h1>
+
+          <!-- Contenu de l'énumération -->
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>
+              Nullam tincidunt neque vitae libero euismod, non placerat elit
+              tempor.
+            </li>
+            <li>
+              Quisque ullamcorper orci in leo faucibus, et aliquam libero
+              fermentum.
+            </li>
+            <li>
+              Suspendisse in bibendum magna. Curabitur viverra purus nec
+              facilisis.
+            </li>
+            <li>Morbi non ligula ac ante cursus pharetra eu ac tortor.</li>
+          </ul>
+        </div>
+
+        <!-- Image à droite -->
+        <div class="image-container">
+          <img src="images/image4.jpg" alt="Presented By CFB" />
+          <h3 style="color: #f4a261">Kim’s Convenience model by Calum Tsang</h3>
+        </div>
+      </section>
+
+      <!-- New Contact Section -->
+      <section
+        id="contact"
+        class="contact-section"
+        style="background-color: rgb(31, 30, 30); margin-bottom: 30px"
+      >
+        <div class="contact-content">
+          <br />
+          <h3 style="text-align: center; color: yellow">Canada First Bricks</h3>
+          <br />
+          <h2 style="color: white; text-align: center">Contact Us</h2>
+          <div class="underline"></div>
+          <form id="contact-form" class="contact-form">
+            <label for="name">Name*</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="subject">Subject*</label>
+            <input type="text" id="subject" name="subject" required />
+
+            <label for="message">Message*</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" onclick="SendMail()">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Le Sommet De La Brique</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/sommetlogo.png"
+      sizes="180x180"
+    />
+    <style>
+      /* General body styling */
+      body {
+        background-color: #f0f0f0;
+        margin: 0;
+        height: 100vh;
+        overflow: hidden; /* Prevent scrolling */
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box; /* Ensure padding/borders don't cause overflow */
+      }
+
+      .fa-user {
+        margin-right: 8px; /* Espacement entre l'icône et le texte */
+        font-size: 1rem; /* Taille de l'icône */
+      }
+
+      /* Navbar styling */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #222;
+        padding: 10px 20px;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        height: 30px;
+      }
+
+      .logo img {
+        height: 30px;
+        width: auto;
+      }
+
+      /* Styling the navigation links */
+      .nav-links {
+        display: flex;
+        gap: 20px;
+        list-style-type: none; /* Remove list points */
+        margin-right: 30px;
+      }
+
+      .nav-links li {
+        display: inline-block;
+      }
+
+      .nav-links li a {
+        color: #fff;
+        font-size: 0.9rem; /* Reduce the size */
+        transition: all 0.3s ease;
+        padding: 8px 16px; /* Add padding for a better clickable area */
+        border-radius: 4px;
+        text-decoration: none; /* Remove underline */
+      }
+
+      .nav-links li a:hover {
+        color: black;
+        background-color: yellow; /* Change background on hover */
+        font-weight: 700;
+      }
+
+      /* Dropdown menu */
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #222;
+        border-radius: 4px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+        padding: 10px 0;
+        z-index: 1;
+        margin-top: 5px;
+        width: 150px;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block; /* Show the dropdown menu when hovering */
+      }
+
+      .dropdown-menu li a {
+        color: #fff;
+        padding: 10px 20px;
+        display: block;
+        text-decoration: none;
+      }
+
+      .dropdown-menu li a:hover {
+        background-color: #f4a261;
+        font-weight: 700;
+      }
+
+      /* Login container styling */
+      .login-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        margin-top: auto;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+
+      label {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      #errorMessage {
+        text-align: center;
+        font-size: 14px;
+      }
+
+      /* iframe styling */
+      iframe {
+        width: 100%;
+        height: 600px;
+        border: none;
+      }
+
+      /* Adjust contact section to stay within screen */
+      #contact {
+        margin-left: 20px;
+        margin-right: 20px;
+        overflow: hidden; /* Prevent horizontal overflow */
+        width: 100%;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="images/sommetlogo.png" alt="Logo" />
+      </div>
+      <nav style="margin-right: 30px">
+        <ul class="nav-links">
+          <li><a href="accueil.html">Home</a></li>
+          <li>
+            <a
+              href="https://www.eventbrite.ca/e/bricks-in-the-six-2024-lego-fan-exhibition-tickets-759779279277?aff=oddtdtcreator"
+              >Tickets</a
+            >
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Exhibitor</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="login.html"> <i class="fa fa-user"></i> Connexion </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Iframe content -->
+    <div>
+      <iframe
+        src="https://script.google.com/macros/s/AKfycbyzZOLOwcQqqngP4iyNk4HMnHj86987oyDEKuG1_hjyTTehfdVi9t-6dgKYdcT071M/exec"
+        width="100%"
+        height="598px"
+        frameborder="0"
+      ></iframe>
+    </div>
+  </body>
+</html>
