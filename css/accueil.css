@@ -6,11 +6,11 @@ body, h1, h2, p, ul, li, a {
     text-decoration: none;
     color: inherit;
     box-sizing: border-box;
-
 }
 
 body {
     background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
 }
 
 .fa-user {
@@ -29,6 +29,7 @@ body {
     padding: 10px 20px;
     z-index: 1000;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    animation: slideInNav 0.5s ease-in-out;
 }
 
 /* Logo styles */
@@ -143,8 +144,6 @@ body {
     font-weight: 700;
 }
 
-
-
 /* Section styles */
 #accueil {
     background-image: url('../images/image3.jpg');
@@ -157,9 +156,10 @@ body {
     align-items: center;
     width: 100%;
     overflow-x: hidden;
-    /* EmpÃªche le dÃ©filement horizontal */
+    animation: fadeInBackground 1s ease-in-out;
 }
 
+/* Overlay for darkening the background */
 #accueil .overlay {
     position: absolute;
     top: 0;
@@ -170,8 +170,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 1;
+    /* Overlay will be fully visible from the start */
 }
 
+/* Content styling */
 #accueil .content {
     color: white;
     text-align: left;
@@ -180,7 +183,7 @@ body {
     margin-top: -5%;
     position: relative;
     font-family: Arial, sans-serif;
-
+    animation: slideInContent 1s ease-in-out;
 }
 
 #accueil h3 {
@@ -194,6 +197,8 @@ body {
     font-size: 4.5rem;
     line-height: 1;
     margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInTitle 2s ease-in-out forwards;
 }
 
 .highlight {
@@ -204,6 +209,8 @@ body {
 .actions {
     display: flex;
     gap: 20px;
+    opacity: 0;
+    animation: fadeInActions 2s ease-in-out 1.5s forwards;
 }
 
 .actions .btn {
@@ -222,6 +229,60 @@ body {
 .actions .btn:hover {
     background-color: #e76f51;
 }
+
+/* Animation Keyframes */
+@keyframes slideInNav {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInContent {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInActions {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 
 
 @media screen and (max-width: 600px) {
