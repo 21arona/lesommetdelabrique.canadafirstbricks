@@ -38,7 +38,6 @@
         }
       });
     </script>
-
     <script>
       (function () {
         emailjs.init("VXrxCjioO6p93R7_9");
@@ -83,7 +82,6 @@
         });
       });
     </script>
-
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.querySelector(".contact-form");
@@ -108,6 +106,36 @@
               console.error("Échec de l'envoi du message : ", error);
               alert("Une erreur est survenue, veuillez réessayer.");
             });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const scrollElements = document.querySelectorAll(".scroll-animate");
+
+        const elementInView = (el, dividend = 1) => {
+          const elementTop = el.getBoundingClientRect().top;
+          return (
+            elementTop <=
+            (window.innerHeight || document.documentElement.clientHeight) /
+              dividend
+          );
+        };
+
+        const displayScrollElement = (element) => {
+          element.classList.add("visible");
+        };
+
+        const handleScrollAnimation = () => {
+          scrollElements.forEach((el) => {
+            if (elementInView(el, 1.25)) {
+              displayScrollElement(el);
+            }
+          });
+        };
+
+        window.addEventListener("scroll", () => {
+          handleScrollAnimation();
         });
       });
     </script>
@@ -171,14 +199,14 @@
                 class="btn"
                 >Buy Tickets</a
               >
-              <a href="Login.html" class="btn">Become an Exhibitor</a>
+              <a href="exhebitor.html" class="btn">Become an Exhibitor</a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Nouvelle section -->
-      <section id="description">
+      <section class="scroll-animate" id="description">
         <h1
           style="
             color: #f4a261;
@@ -239,7 +267,11 @@
       </section>
 
       <!-- Nouvelle section avec 4 images -->
-      <section id="image-gallery" style="background-color: white">
+      <section
+        class="scroll-animate"
+        id="image-gallery"
+        style="background-color: white"
+      >
         <div class="image-item vertical">
           <img src="images/image5.jpg" alt="Image 5" />
         </div>
@@ -255,7 +287,7 @@
       </section>
 
       <!-- Nouvelle section pour la carte -->
-      <section id="map">
+      <section class="scroll-animate" id="map">
         <h2>
           Hilton Meadowvale/Mississauga Hotel conveniently located along Highway
           401!
@@ -275,7 +307,11 @@
       </section>
 
       <!-- Nouvelle section avec texte à gauche et image à droite -->
-      <section style="background-color: white" id="collaboration-info">
+      <section
+        class="scroll-animate"
+        style="background-color: white"
+        id="collaboration-info"
+      >
         <div class="text-container">
           <!-- Titre au centre -->
           <h1 style="color: #f4a261">LOREM IPSUM LIGULA PHARETRA EU TORLEO</h1>
@@ -308,6 +344,7 @@
 
       <!-- New Contact Section -->
       <section
+        class="scroll-animate"
         id="contact"
         class="contact-section"
         style="background-color: rgb(31, 30, 30); margin-bottom: 30px"

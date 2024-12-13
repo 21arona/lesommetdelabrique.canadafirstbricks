@@ -179,6 +179,8 @@ body {
     margin-left: -5%;
     margin-top: -5%;
     position: relative;
+    font-family: Arial, sans-serif;
+
 }
 
 #accueil h3 {
@@ -227,6 +229,10 @@ body {
         height: 70%;
         /* Adjust the height of the overlay for mobile */
 
+    }
+
+    #back-to-top {
+        display: none !important;
     }
 
     .actions .btn {
@@ -742,4 +748,36 @@ html, body {
 
 #back-to-top:hover {
     background-color: #1c1c1c;
+}
+
+/****************************/
+/* Ajoutez ce bloc CSS dans votre fichier existant */
+
+/* Animation d'apparition */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style pour les éléments masqués par défaut */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Lorsque l'élément est visible */
+.scroll-animate.visible {
+    animation: fadeInUp 0.7s ease forwards;
+}
+
+html {
+    scroll-behavior: smooth;
 }
