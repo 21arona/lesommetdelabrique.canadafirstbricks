@@ -79,7 +79,7 @@ body {
     border-radius: 2px;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 435px) {
     .nav-links {
         display: none;
         /* Hide the navigation links by default on smaller screens */

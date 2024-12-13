@@ -9,6 +9,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
 
     <link
       rel="icon"
@@ -16,6 +20,16 @@
       href="images/sommetlogo.png"
       sizes="180x180"
     />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const burgerMenu = document.getElementById("burger-menu");
+        if (burgerMenu) {
+          burgerMenu.addEventListener("click", function () {
+            document.querySelector(".nav-links").classList.toggle("active");
+          });
+        }
+      });
+    </script>
     <style>
       /* General body styling */
       body {
@@ -33,22 +47,20 @@
         font-size: 1rem; /* Taille de l'icône */
       }
 
-      /* Navbar styling */
+      /* Navbar styles */
       .navbar {
-        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
         top: 0;
-        left: 0;
-        width: 100%;
         background-color: #222;
         padding: 10px 20px;
         z-index: 1000;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        height: 30px;
       }
 
+      /* Logo styles */
       .logo img {
         height: 30px;
         width: auto;
@@ -58,7 +70,7 @@
       .nav-links {
         display: flex;
         gap: 20px;
-        list-style-type: none; /* Remove list points */
+        list-style-type: none;
         margin-right: 30px;
       }
 
@@ -68,17 +80,61 @@
 
       .nav-links li a {
         color: #fff;
-        font-size: 0.9rem; /* Reduce the size */
+        font-size: 0.9rem;
         transition: all 0.3s ease;
-        padding: 8px 16px; /* Add padding for a better clickable area */
+        padding: 8px 16px;
         border-radius: 4px;
-        text-decoration: none; /* Remove underline */
+        text-decoration: none;
       }
 
       .nav-links li a:hover {
         color: black;
-        background-color: yellow; /* Change background on hover */
+        background-color: yellow;
         font-weight: 700;
+      }
+
+      /* Burger Menu Styles */
+      .burger-menu {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+      }
+
+      .burger-menu .bar {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 2px;
+      }
+
+      @media screen and (max-width: 435px) {
+        .nav-links {
+          display: none;
+          /* Hide the navigation links by default on smaller screens */
+          position: absolute;
+          top: 60px;
+          right: -12px;
+          background-color: #222;
+          width: 378px;
+          padding: 8px;
+          border-radius: 4px;
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-links li {
+          display: block;
+          margin-bottom: 10px;
+        }
+
+        .burger-menu {
+          display: flex;
+        }
+
+        .nav-links.active {
+          display: flex;
+          /* Show the menu when the burger is clicked */
+        }
       }
 
       /* Dropdown menu */
@@ -101,7 +157,7 @@
       }
 
       .dropdown:hover .dropdown-menu {
-        display: block; /* Show the dropdown menu when hovering */
+        display: block;
       }
 
       .dropdown-menu li a {
@@ -212,6 +268,11 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <div class="burger-menu" id="burger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
     </header>
 
     <!-- Iframe content -->
