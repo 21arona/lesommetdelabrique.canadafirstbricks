@@ -83,7 +83,6 @@ body {
 @media screen and (max-width: 435px) {
     .nav-links {
         display: none;
-        /* Hide the navigation links by default on smaller screens */
         position: absolute;
         top: 60px;
         right: -12px;
@@ -105,7 +104,6 @@ body {
 
     .nav-links.active {
         display: flex;
-        /* Show the menu when the burger is clicked */
     }
 }
 
@@ -171,7 +169,6 @@ body {
     justify-content: center;
     align-items: center;
     opacity: 1;
-    /* Overlay will be fully visible from the start */
 }
 
 /* Content styling */
@@ -288,7 +285,6 @@ body {
 @media screen and (max-width: 600px) {
     #accueil .overlay {
         height: 70%;
-        /* Adjust the height of the overlay for mobile */
 
     }
 
@@ -321,9 +317,7 @@ body {
 /* Section de description */
 #description {
 
-    /* Couleur de fond pour le texte */
     padding: 50px 10%;
-    /* Espacement haut-bas et sur les cÃ´tÃ©s */
     text-align: left;
     margin-top: 50px;
 }
@@ -333,86 +327,60 @@ body {
     font-size: 1.2rem;
     /* Taille du texte */
     line-height: 1.8;
-    /* Hauteur de ligne pour amÃ©liorer la lisibilitÃ© */
     font-family: 'Georgia', serif;
-    /* Police stylisÃ©e */
     color: #333;
-    /* Couleur du texte */
     max-width: 800px;
-    /* Limite la largeur pour un meilleur centrage */
     margin: 0 auto;
-    /* Centre le paragraphe horizontalement */
 }
 
 /* Section pour la galerie d'images */
 #image-gallery {
     display: grid;
-    /* Utilisation de Grid Layout */
     grid-template-columns: 1fr 1fr;
-    /* Deux colonnes de largeur Ã©gale */
     gap: 20px;
-    /* Espacement entre les images */
     padding: 50px 10%;
-    /* Marges */
     align-items: center;
-    /* Aligner les images verticalement */
     justify-content: center;
-    /* Centrer le contenu horizontalement */
 }
 
 /* Conteneur des images */
 .image-item {
     position: relative;
     overflow: hidden;
-    /* Masquer tout dÃ©bordement de l'image */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Ombre douce */
 }
 
 /* Images verticales (image5.jpg et image6.jpg) */
 .image-item.vertical img {
     width: 100%;
-    /* Largeur de la colonne */
     height: auto;
-    /* Conserver les proportions */
 }
 
 /* Images horizontales (image7.jpg et image87.jpg) */
 .image-item.horizontal img {
     width: 100%;
-    /* Largeur de la colonne */
     height: auto;
-    /* Conserver les proportions */
 }
 
 /* Styles pour la section de collaboration */
 .collaboration {
     display: flex;
     flex-direction: column;
-    /* Dispose les Ã©lÃ©ments en colonne */
     padding: 20px;
-    /* Espace autour de la section */
-    /* Centre la section avec un espacement au-dessus et en dessous */
     max-width: 1350px;
-    /* DÃ©finir une largeur maximale pour maintenir l'espacement */
     box-sizing: border-box;
-    /* background-color: yellow; */
 }
 
 .collaboration .left {
     text-align: left;
-    /* Espace entre les colonnes */
     margin: auto;
 }
 
 .collaboration .right {
     display: flex;
     align-items: center;
-    /* Aligne les Ã©lÃ©ments verticalement au centre */
     justify-content: center;
-    /* Centre les Ã©lÃ©ments horizontalement */
     gap: 10px;
-    /* Espace entre le texte et l'image */
     margin-top: 25px;
 }
 
@@ -426,7 +394,6 @@ body {
     color: black;
     margin-bottom: 10px;
     margin-right: 10px;
-    /* Ajoute un espace entre le titre et l'image */
 }
 
 
@@ -479,7 +446,6 @@ footer {
     background-color: #f4f4f4;
     margin-top: 60px;
     flex-wrap: wrap;
-    /* Permet Ã  la mise en page de s'adapter */
 }
 
 /* Conteneur du texte Ã  gauche */
@@ -527,44 +493,35 @@ footer {
 @media (max-width: 768px) {
     #collaboration-info {
         flex-direction: column;
-        /* Basculer en colonne */
         text-align: center;
-        /* Centrer le contenu */
     }
 
     .text-container,
     .image-container {
         width: 100%;
-        /* Chaque Ã©lÃ©ment occupe toute la largeur */
         padding: 0;
-        /* Supprimer les marges/paddings horizontaux */
     }
 
     .text-container {
         margin-bottom: 20px;
-        /* Ajouter un espace entre le texte et l'image */
     }
 
     #collaboration-info h1 {
         font-size: 2rem;
-        /* RÃ©duire la taille des titres */
     }
 
     #collaboration-info ul li {
         font-size: 1rem;
-        /* RÃ©duire la taille du texte */
     }
 }
 
 @media (max-width: 480px) {
     #collaboration-info {
         padding: 40px 5%;
-        /* RÃ©duire les marges sur les petits Ã©crans */
     }
 
     #collaboration-info h1 {
         font-size: 1.8rem;
-        /* Encore plus petit sur trÃ¨s petits Ã©crans */
     }
 
     #collaboration-info ul li {
@@ -576,18 +533,14 @@ footer {
 
 
 /*LOGIN PAGE */
-/* EmpÃªcher le dÃ©filement global de la page */
 html, body {
     height: 100%;
-    /* S'assure que le corps prend toute la hauteur de la fenÃªtre */
     margin: 0;
-    /* Retirer les marges par dÃ©faut */
 }
 
 /* Section de l'arriÃ¨re-plan */
 #accueil {
     height: 91vh;
-    /* Utilise toute la hauteur de la fenÃªtre */
     background-image: url('../images/image3.jpg');
     background-size: cover;
     background-position: center;
@@ -603,9 +556,7 @@ html, body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Ombre semi-transparente */
     z-index: 1;
-    /* L'overlay doit Ãªtre au-dessus de l'image de fond */
 }
 
 /* Formulaire de Connexion */
@@ -615,18 +566,14 @@ html, body {
     align-items: center;
     padding: 50px 10%;
     position: absolute;
-    /* Pour positionner le formulaire sur le fond */
     top: 55%;
-    /* DÃ©caler un peu plus bas */
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    /* Le formulaire doit Ãªtre au-dessus de l'overlay */
 }
 
 .form-container {
     background-color: #fff;
-    /* Formulaire opaque */
     padding: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -698,10 +645,8 @@ html, body {
 /* Styles pour le formulaire de contact */
 #contact form {
     max-width: 500px;
-    /* Ajustez la largeur maximale du formulaire */
     width: 100%;
     margin: auto;
-    /* Centre le formulaire horizontalement */
 }
 
 #contact label {
@@ -717,12 +662,9 @@ html, body {
 #contact select {
     padding: 8px 10px;
     color: #000;
-    /* Couleur du texte en noir pour un meilleur contraste */
     background: #fff;
-    /* Fond blanc pour les champs */
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    /* Ajouter une bordure pour dÃ©limiter le champ */
     outline: none;
     font-size: 15px;
     line-height: 24px;
@@ -735,9 +677,7 @@ html, body {
 #contact select:focus,
 #contact input[type="file"]:focus {
     color: #000;
-    /* Couleur du texte en noir lors du focus */
     background-color: #d5e9ea;
-    /* Gardez la couleur de fond en focus si souhaitÃ© */
 }
 
 #contact button.submit {
@@ -801,7 +741,6 @@ html, body {
     font-size: 24px;
     cursor: pointer;
     z-index: 9999;
-    /* Assurez-vous qu'il est au-dessus de tout autre contenu */
     text-align: center;
     line-height: 50px;
 }
@@ -812,8 +751,6 @@ html, body {
 }
 
 /****************************/
-/* Ajoutez ce bloc CSS dans votre fichier existant */
-
 /* Animation d'apparition */
 @keyframes fadeInUp {
     from {
