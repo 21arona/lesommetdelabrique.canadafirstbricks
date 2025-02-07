@@ -257,16 +257,45 @@ margin: auto;
 
 /* Paragraphe de 3 lignes */
 .three-line-paragraph {
-  font-size: 1.3em;
-  width: 80%;
-margin: auto;
-  padding: 20px;
+    background: linear-gradient(to right, #ffecd2, #7d6f6b); /* Dégradé doux */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    max-width: 80%;
+    margin: auto;
+    line-height: 1.6;
+}
+
+.tit{
+  text-align: center;
+ text-decoration: underline;
 }
 
 .three-line-paragraph p {
-  font-size: 1em;
-  color: #555;
+    font-size: 22px;
+    margin-top: 20px;
 }
+
+.three-line-paragraph p b {
+    font-weight: bold;
+    color: #333;
+    text-decoration: underline;
+}
+
+.three-line-paragraph p::first-line {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .three-line-paragraph {
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
 
 /* Deux lignes */
 .two-lines {
@@ -429,17 +458,106 @@ margin: auto;
         <p>
           L'événement de cette année aura lieu à l'hôtel Hilton Meadowvale/Mississauga, idéalement situé le long de l'autoroute 401. Il y aura un stationnement gratuit pour les invités qui passent la nuit à l'hôtel et un tarif de chambre de 159 $/nuit pour l'événement (plus taxes et frais).      </section>
   
-      <!-- Image -->
-      <section class="image-section scroll-animate">
-        <img src="images/image8.jpg" alt="Image8" />
-      </section>
+          <section class="recognition-container scroll-animate">
+            <div class="recognition-text">
+                <h2>RECONNAISSANCE DU TRAVAIL DES EXPOSANTS</h2>
+                <p>
+                    Nous comprenons qu'une exposition réussie passe par des exposants de MOCs. Nous désirons donc dès cette année reconnaître la contribution de certains d'entre vous en distinguant les exposants par les modèles exposés. Nous reconnaissons donc les types d'exposants suivants :
+                </p>
+        
+                <p><b>Exposants standards :</b> Quelqu'un qui expose une collection unique de modèles Lego.</p>
+                <p><b>Exposants premium :</b> Quelqu'un qui expose un/des MOC(s).</p>
+                <p><b>Exposants platine :</b> Quelqu'un qui expose un/des MOC(s) de grande envergure/complexité.</p>
+                <p><b>Exposants prestige :</b> Exposant ayant gagné un des prix de l'édition précédente.</p>
+        
+                <p>
+                    Ces distinctions seront faites lors de l'exposition par un jury et vous donneront droit, dans le cas d'un exposant premium, platine ou prestige, à des gratuités lors de l'événement de l'année suivante.
+                </p>
+            </div>
+        
+            <div class="recognition-image">
+                <img src="images/image8.jpg" alt="Image8">
+            </div>
+        </section>
+        
   
       <!-- Paragraphe de 3 lignes -->
       <section class="three-line-paragraph scroll-animate">
-        <p>
-          Si vous avez des questions, contactez notre équipe à <span class="highlight">info@brickassembly.ca</span> (Nous mettons toujours à jour certaines informations sur notre site Web, alors soyez indulgents avec nous pendant que nous le faisons !)
-        </p>
-      </section>
+        <p class="tit">PRIX POUR LES EXPOSANTS</p>
+        <p>Voici une liste des prix qui seront remis lors de l’édition 2025 de Le Sommet de la Brique. À noter que seulement un prix peut-être gagné par participant.</p>
+        
+        <p><b>Recru(e) de l’année</b><br>
+        Prix remis par le jury à l’exposant qui est à sa première exposition et s’étant le plus démarqué par son MOC. Cette reconnaissance est remise avec un coupon d’une valeur de 100$ dans la boutique Canada First Bricks.</p>
+    
+        <p><b>Jeune exposant de l’année</b><br>
+        Prix remis par le jury à l’exposant de moins de 18 ans s’étant le plus démarqué par son MOC. Cette reconnaissance est remise avec un ensemble LEGO offert par Canada First Bricks.</p>
+    
+        <p><b>Meilleur exploitation de la thématique</b><br>
+        Prix remis par le jury à l’exposant ayant le mieux exploité la thématique de son MOC. Cette reconnaissance est remise avec un coupon d’une valeur de 100$ dans la boutique Canada First Bricks.</p>
+    
+        <p><b>Meilleur exploitation des LEDs</b><br>
+        Prix remis par le jury à l’exposant ayant le mieux exploité les LEDs dans son MOC. Cette reconnaissance est remise avec un coupon d’une valeur de 100$ dans la boutique Canada First Bricks.</p>
+    
+        <p><b>1ère place vote des visiteurs</b><br>
+        Prix remis à l’exposant ayant reçu le plus grand nombre de votes de la part des visiteurs. Cette reconnaissance est remise avec un coupon d’une valeur de 200$ dans la boutique Canada First Bricks.</p>
+    
+        <p><b>1ère place vote du jury</b><br>
+        Prix remis à l’exposant ayant reçu le plus grand nombre de votes de la part du jury. Cette reconnaissance est remise avec un coupon d’une valeur de 300$ dans la boutique Canada First Bricks.</p>
+    
+        <p><b>1ère place vote des exposants</b><br>
+        Prix remis à l’exposant ayant reçu le plus grand nombre de votes de la part des exposants/congressistes. Cette reconnaissance est remise avec un coupon d’une valeur de 500$ dans la boutique Canada First Bricks.</p>
+    </section>
+    
+    <section class="schedule-container scroll-animate">
+      <h2>Horaire (préliminaire, sujet à changement)</h2>
+  
+      <div class="day">
+          <h3>Jeudi 2 octobre</h3>
+          <p class="time-slot"><b>10h-22h30</b> : Ouverture des portes aux exposants pour l’installation de leur modèles</p>
+          <p class="time-slot"><b>10h-15h</b> : Accueil et orientation des exposants/congressistes</p>
+          <p class="time-slot"><b>15h-17h</b> : Draft de pièces <span class="price">($)</span></p>
+          <p class="time-slot"><b>19h</b> : Mixer <span class="price">($)</span></p>
+          <p class="time-slot"><b>20h</b> : Quiz</p>
+          <p class="time-slot"><b>20h30-21h30</b> : DJ Night années 1970 à 2000</p>
+          <p class="time-slot"><b>21h30-22h30</b> : DJ Night trend actuel</p>
+      </div>
+  
+      <div class="day">
+          <h3>Vendredi 3 octobre</h3>
+          <p class="time-slot"><b>8h-22h30</b> : Ouverture des portes aux exposants pour l’installation de leur modèles</p>
+          <p class="time-slot"><b>8h-10h</b> : Accueil et orientation des exposants/congressistes</p>
+          <p class="time-slot"><b>10h</b> : L’apprentissage par le jeu… même à l’âge adulte, conférence de Dominic Tremblay</p>
+          <p class="time-slot"><b>11h</b> : Construire l’impossible, L’art des mégas-constructions, conférence de Steve St-Pierre</p>
+          <p class="time-slot"><b>14h</b> : Partagez votre création avec le monde, une leçon rapide sur la conception d’instructions stud.io, atelier de James Nunnally</p>
+          <p class="time-slot"><b>15h</b> : Atelier d’introduction sur l’animation stop motion, atelier de Patrick Dion-Penman</p>
+          <p class="time-slot"><b>16h</b> : Impact de LEGO MASTERS sur la communauté LEGO, conférence de Corey Samuels</p>
+          <p class="time-slot"><b>17h</b> : Beyond the Brick, une épopée à travers la création d’une communauté de plus de 10 millions d’abonnés, conférence de Joshua et John Hanlon</p>
+          <p class="time-slot"><b>18h</b> : Food Truck offert par Le Sommet de la Brique</p>
+          <p class="time-slot"><b>19h-21h</b> : Événement VIP</p>
+          <p class="time-slot"><b>21h</b> : Segment dans le noir</p>
+          <p class="time-slot"><b>21h30-22h30</b> : Draft de pièces <span class="price">($)</span></p>
+      </div>
+  
+      <div class="day">
+          <h3>Samedi 4 octobre</h3>
+          <p class="time-slot"><b>8h-22h</b> : Ouverture du site pour les exposants</p>
+          <p class="time-slot"><b>9h-10h</b> : Rencontre LGBTQIA+</p>
+          <p class="time-slot"><b>10h-13h</b> : Ouverture du site pour les visiteurs</p>
+          <p class="time-slot"><b>14h-17h</b> : Ouverture du site pour les visiteurs</p>
+          <p class="time-slot"><b>19h-22h</b> : Dirty Brickster <span class="price">($)</span></p>
+      </div>
+  
+      <div class="day">
+          <h3>Dimanche 5 octobre</h3>
+          <p class="time-slot"><b>8h-19h</b> : Ouverture du site pour les exposants</p>
+          <p class="time-slot"><b>9h-12h</b> : Ouverture du site pour les visiteurs</p>
+          <p class="time-slot"><b>13h-16h</b> : Ouverture du site pour les visiteurs</p>
+          <p class="time-slot"><b>16h-19h</b> : Sortie des exposants</p>
+      </div>
+  
+      <p class="note">Note: Horaire sujet à changement.</p>
+  </section>
+  
   
       <!-- Deux lignes -->
       <section class="two-lines">
@@ -447,4 +565,112 @@ margin: auto;
         <p>Canada FirstBricks</p>
       </section>
 
+      <style>.recognition-container {
+        display: flex;
+        align-items: center; /* Alignement vertical */
+        justify-content: space-between; /* Sépare le texte et l'image */
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+        gap: 20px; /* Espacement entre le texte et l'image */
+    }
+    
+    .recognition-text {
+        flex: 1; /* Prend l'espace disponible */
+        font-family: 'Arial', sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #333;
+        background: #f9f9f9; /* Fond doux */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .recognition-text h2 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #d35400; /* Titre en orange foncé */
+        margin-bottom: 15px;
+    }
+    
+    .recognition-text p {
+        margin-bottom: 10px;
+    }
+    
+    .recognition-text b {
+        font-weight: bold;
+        color: #2c3e50; /* Bleu foncé pour les distinctions */
+    }
+    
+    .recognition-image img {
+        width: 500px; /* Assure une taille fixe sans déformation */
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    @media (max-width: 768px) {
+        .recognition-container {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .recognition-image img {
+            width: 100%; /* Pour s’adapter aux petits écrans */
+        }
+    }
+
+    .schedule-container {
+    background: #f0f0f0;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.schedule-container h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #d35400;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.schedule-container .day {
+    margin-bottom: 30px;
+}
+
+.schedule-container .day h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.schedule-container .time-slot {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.schedule-container .time-slot b {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.schedule-container .price {
+    color: #e74c3c; /* Rouge pour les éléments payants */
+    font-weight: bold;
+}
+
+.schedule-container .note {
+    font-size: 14px;
+    color: #95a5a6;
+    text-align: center;
+    margin-top: 30px;
+}
+
+    </style>
   </body>
