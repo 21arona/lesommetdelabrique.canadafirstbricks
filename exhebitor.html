@@ -256,8 +256,9 @@ margin: auto;
 }
 
 /* Paragraphe de 3 lignes */
+/* Styles pour la section */
 .three-line-paragraph {
-    background: linear-gradient(to right, #ffecd2, #7d6f6b); /* Dégradé doux */
+    background: linear-gradient(to right, #ffecd2, #6c5d59); /* Dégradé doux */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -268,14 +269,45 @@ margin: auto;
     line-height: 1.6;
 }
 
-.tit{
-  text-align: center;
- text-decoration: underline;
+/* Titre et icône de toggle */
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
 }
 
+.tit {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.toggle-icon {
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s ease;
+    font-weight: bolder;
+}
+
+/* Contenu masqué par défaut */
+.content-wrapper {
+    display: none;
+    margin-top: 15px;
+}
+
+
+.tit {
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* Texte */
 .three-line-paragraph p {
-    font-size: 22px;
-    margin-top: 20px;
+    font-size: 18px;
+    margin-top: 10px;
 }
 
 .three-line-paragraph p b {
@@ -283,6 +315,7 @@ margin: auto;
     color: #333;
     text-decoration: underline;
 }
+
 
 .three-line-paragraph p::first-line {
     font-weight: bold;
@@ -483,30 +516,53 @@ margin: auto;
   
       <!-- Paragraphe de 3 lignes -->
       <section class="three-line-paragraph scroll-animate">
-        <p class="tit">PRIX POUR LES EXPOSANTS</p>
-        <p>Voici une liste des prix qui seront remis lors de l’édition 2025 de Le Sommet de la Brique. À noter que seulement un prix peut-être gagné par participant.</p>
+        <div class="toggle-container" onclick="toggleSection()">
+            <p class="tit">PRIX POUR LES EXPOSANTS</p>
+            <span class="toggle-icon">↓</span>
+        </div>
         
-        <p><b>Recru(e) de l’année</b><br>
-        Prix remis par le jury à l’exposant qui est à sa première exposition et s’étant le plus démarqué par son MOC. Cette reconnaissance est remise avec un coupon d’une valeur de 100$ dans la boutique Canada First Bricks.</p>
-    
-        <p><b>Jeune exposant de l’année</b><br>
-        Prix remis par le jury à l’exposant de moins de 18 ans s’étant le plus démarqué par son MOC. Cette reconnaissance est remise avec un ensemble LEGO offert par Canada First Bricks.</p>
-    
-        <p><b>Meilleur exploitation de la thématique</b><br>
-        Prix remis par le jury à l’exposant ayant le mieux exploité la thématique de son MOC. Cette reconnaissance est remise avec un coupon d’une valeur de 100$ dans la boutique Canada First Bricks.</p>
-    
-        <p><b>Meilleur exploitation des LEDs</b><br>
-        Prix remis par le jury à l’exposant ayant le mieux exploité les LEDs dans son MOC. Cette reconnaissance est remise avec un coupon d’une valeur de 100$ dans la boutique Canada First Bricks.</p>
-    
-        <p><b>1ère place vote des visiteurs</b><br>
-        Prix remis à l’exposant ayant reçu le plus grand nombre de votes de la part des visiteurs. Cette reconnaissance est remise avec un coupon d’une valeur de 200$ dans la boutique Canada First Bricks.</p>
-    
-        <p><b>1ère place vote du jury</b><br>
-        Prix remis à l’exposant ayant reçu le plus grand nombre de votes de la part du jury. Cette reconnaissance est remise avec un coupon d’une valeur de 300$ dans la boutique Canada First Bricks.</p>
-    
-        <p><b>1ère place vote des exposants</b><br>
-        Prix remis à l’exposant ayant reçu le plus grand nombre de votes de la part des exposants/congressistes. Cette reconnaissance est remise avec un coupon d’une valeur de 500$ dans la boutique Canada First Bricks.</p>
+        <div class="content-wrapper">
+            <p>Voici une liste des prix qui seront remis lors de l’édition 2025 de Le Sommet de la Brique. À noter que seulement un prix peut-être gagné par participant.</p>
+            
+            <p><b>Recru(e) de l’année</b><br>
+            Prix remis par le jury à l’exposant qui est à sa première exposition et s’étant le plus démarqué par son MOC. Cette reconnaissance est remise avec un coupon d’une valeur de 100$ dans la boutique Canada First Bricks.</p>
+        
+            <p><b>Jeune exposant de l’année</b><br>
+            Prix remis par le jury à l’exposant de moins de 18 ans s’étant le plus démarqué par son MOC. Cette reconnaissance est remise avec un ensemble LEGO offert par Canada First Bricks.</p>
+        
+            <p><b>Meilleur exploitation de la thématique</b><br>
+            Prix remis par le jury à l’exposant ayant le mieux exploité la thématique de son MOC. Cette reconnaissance est remise avec un coupon d’une valeur de 100$ dans la boutique Canada First Bricks.</p>
+        
+            <p><b>Meilleur exploitation des LEDs</b><br>
+            Prix remis par le jury à l’exposant ayant le mieux exploité les LEDs dans son MOC. Cette reconnaissance est remise avec un coupon d’une valeur de 100$ dans la boutique Canada First Bricks.</p>
+        
+            <p><b>1ère place vote des visiteurs</b><br>
+            Prix remis à l’exposant ayant reçu le plus grand nombre de votes de la part des visiteurs. Cette reconnaissance est remise avec un coupon d’une valeur de 200$ dans la boutique Canada First Bricks.</p>
+        
+            <p><b>1ère place vote du jury</b><br>
+            Prix remis à l’exposant ayant reçu le plus grand nombre de votes de la part du jury. Cette reconnaissance est remise avec un coupon d’une valeur de 300$ dans la boutique Canada First Bricks.</p>
+        
+            <p><b>1ère place vote des exposants</b><br>
+            Prix remis à l’exposant ayant reçu le plus grand nombre de votes de la part des exposants/congressistes. Cette reconnaissance est remise avec un coupon d’une valeur de 500$ dans la boutique Canada First Bricks.</p>
+        </div>
+        <script>
+          function toggleSection() {
+              var content = document.querySelector(".content-wrapper");
+              var icon = document.querySelector(".toggle-icon");
+          
+              if (content.style.display === "none" || content.style.display === "") {
+                  content.style.display = "block";
+                  icon.innerHTML = "↑"; // Flèche vers le haut
+              } else {
+                  content.style.display = "none";
+                  icon.innerHTML = "↓"; // Flèche vers le bas
+              }
+          }
+          </script>
+          
     </section>
+    
+
     
     <section class="schedule-container scroll-animate">
       <h2>Horaire (préliminaire, sujet à changement)</h2>
