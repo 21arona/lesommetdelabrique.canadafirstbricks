@@ -24,12 +24,16 @@
           });
         });
 
-        const burgerMenu = document.getElementById("burger-menu");
-        if (burgerMenu) {
-          burgerMenu.addEventListener("click", function () {
-            document.querySelector(".nav-links").classList.toggle("active");
-          });
-        }
+        // document.addEventListener("DOMContentLoaded", function () {
+        //   const burgerMenu = document.getElementById("burger-menu");
+        //   const navLinks = document.querySelector(".nav-links");
+
+        //   if (burgerMenu) {
+        //     burgerMenu.addEventListener("click", function () {
+        //       navLinks.classList.toggle("active");
+        //     });
+        //   }
+        // });
 
         const backToTopButton = document.getElementById("back-to-top");
         window.addEventListener("scroll", () => {
@@ -76,35 +80,42 @@
         <img src="images/sommetlogo.png" alt="Logo" />
       </div>
       <nav>
-        <ul class="nav-links">
-          <li><a href="accueil.html">Accueil</a></li>
-          <li>
+        <li
+          style="
+            color: #fff;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: black;
+            background-color: yellow;
+            font-weight: 700;
+          "
+        >
+          <a href="accueil.html">Accueil</a>
+        </li>
+        <!-- <li>
             <a
               href="https://www.eventbrite.ca/e/bricks-in-the-six-2024-lego-fan-exhibition-tickets-759779279277?aff=oddtdtcreator"
               >Billets</a
             >
-          </li>
-          <li class="dropdown">
+          </li> -->
+        <!-- <li class="dropdown">
             <a href="#" class="dropdown-toggle">Exposant</a>
             <ul class="dropdown-menu">
               <li>
                 <a href="Login.html"> <i class="fa fa-user"></i> Connexion </a>
               </li>
               <li>
-                <a href="Login.html">
-                  <i class="fa fa-user"></i> Nouveau compte
-                </a>
+                <a href="Login.html"
+                  ><i class="fa fa-user"></i> Nouveau compte</a
+                >
               </li>
             </ul>
-          </li>
-          <li><a href="accueil.html#contact">Contact</a></li>
-        </ul>
+          </li> -->
+        <!-- <li><a href="accueil.html#contact">Contact</a></li> -->
       </nav>
-      <div class="burger-menu" id="burger-menu">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
     </header>
 
     <section class="landing-text">
@@ -583,6 +594,11 @@
       margin-top: 20px;
     }
 
+    /* Ensure nav-links are hidden by default on small screens */
+    .nav-links {
+      display: none;
+    }
+
     .nav-links li {
       display: inline-block;
     }
@@ -620,33 +636,6 @@
     .highlight {
       color: #333;
       font-weight: bolder;
-    }
-
-    @media screen and (max-width: 435px) {
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: -12px;
-        background-color: #222;
-        width: 395px;
-        padding: 8px;
-        border-radius: 4px;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-      }
-
-      .nav-links li {
-        display: block;
-        margin-bottom: 10px;
-      }
-
-      .burger-menu {
-        display: flex;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
     }
 
     /* Dropdown menu */
