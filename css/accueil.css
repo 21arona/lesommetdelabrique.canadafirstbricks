@@ -287,35 +287,46 @@ body {
 
 
 
-/* @media screen and (max-width: 600px) {
+/* Mode téléphone : Suppression des animations */
+@media (max-width: 768px) {
+    #accueil {
+        animation: none !important;
+    }
+
+    #accueil .content {
+        animation: none !important;
+    }
+
+    #accueil h1,
+    .actions {
+        animation: none !important;
+        opacity: 1;
+        /* Assurer qu'ils restent visibles */
+    }
+
+    /* Assurer que l'overlay recouvre toute la section et les boutons */
     #accueil .overlay {
-        height: 70%;
-
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        /* Assombrissement plus fort */
+        z-index: 2;
     }
 
-    #back-to-top {
-        display: none !important;
+    #accueil .content {
+        position: relative;
+        z-index: 3;
+        /* Assurer qu'il passe au-dessus de l'overlay */
     }
 
-    .actions .btn {
-        display: inline-block;
-        margin-top: 35px;
-        padding: 10px 20px;
-        background-color: yellow;
-        color: black;
-        font-size: 1rem;
-        font-weight: bold;
-        text-align: center;
-        border-radius: 2px;
-        transition: background-color 0.3s ease;
+    /* Désactiver les liens/boutons en dessous de l'overlay */
+    .actions {
+        pointer-events: none;
     }
-
-    #accueil h1 {
-        font-size: 4rem;
-        line-height: 1;
-        margin-bottom: 20px;
-    }
-} */
+}
 
 @media (max-width: 768px) {
     #accueil {
