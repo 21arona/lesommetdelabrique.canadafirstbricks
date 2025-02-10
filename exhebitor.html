@@ -1,40 +1,44 @@
-<head></head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Le Sommet De La Brique</title>
-    <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X2S70WVQRV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le Sommet De La Brique</title>
+  <!-- Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-X2S70WVQRV"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  // ID de mesure Google Analytics
-  gtag('config', 'G-X2S70WVQRV');
-</script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    rel="stylesheet"
-  />
+    // ID de mesure Google Analytics
+    gtag("config", "G-X2S70WVQRV");
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <link
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     rel="stylesheet"
   />
   <link
-  rel="icon"
-  type="image/png"
-  href="images/sommetlogo.png"
-  sizes="180x180"
-/>
+    rel="icon"
+    type="image/png"
+    href="images/sommetlogo.png"
+    sizes="180x180"
+  />
+</head>
 
-  </head>
-
-  <style>
-    /* Reset styles */
-body, h1, h2, p, ul, li, a {
+<style>
+  /* Reset styles */
+  body,
+  h1,
+  h2,
+  p,
+  ul,
+  li,
+  a {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -42,691 +46,801 @@ body, h1, h2, p, ul, li, a {
     color: inherit;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-}
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
+  body {
     background-color: #f4f4f4;
-}
+  }
 
-.fa-user {
+  .fa-user {
     margin-right: 8px;
     font-size: 1rem;
-}
+  }
 
-    /* Navbar styles */
-    .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: sticky;
-        top: 0;
-        background-color: #222;
-        z-index: 1000;
-        padding: 10px 12px;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* Logo styles */
-    .logo img {
-        height: 30px;
-        width: auto;
-    }
-    
-    /* Styling the navigation links */
+  /* Navbar styles */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: #222;
+    z-index: 1000;
+    padding: 10px 12px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Logo styles */
+  .logo img {
+    height: 30px;
+    width: auto;
+  }
+
+  /* Styling the navigation links */
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    margin-right: 30px;
+  }
+
+  .nav-links li {
+    display: inline-block;
+  }
+
+  .nav-links li a {
+    color: #fff;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+  .nav-links li a:hover {
+    color: black;
+    background-color: yellow;
+    font-weight: 700;
+  }
+
+  /* Burger Menu Styles */
+  .burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .burger-menu .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+  }
+
+  .highlight {
+    color: #333;
+    font-weight: bolder;
+  }
+
+  @media screen and (max-width: 435px) {
     .nav-links {
-        display: flex;
-        gap: 20px;
-        list-style-type: none;
-        margin-right: 30px;
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: -12px;
+      background-color: #222;
+      width: 395px;
+      padding: 8px;
+      border-radius: 4px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
     }
-    
+
     .nav-links li {
-        display: inline-block;
+      display: block;
+      margin-bottom: 10px;
     }
-    
-    .nav-links li a {
-        color: #fff;
-        font-size: 0.9rem;
-        transition: all 0.3s ease;
-        padding: 8px 16px;
-        border-radius: 4px;
-        text-decoration: none;
-    }
-    
-    .nav-links li a:hover {
-        color: black;
-        background-color: yellow;
-        font-weight: 700;
-    }
-    
-    /* Burger Menu Styles */
+
     .burger-menu {
-        display: none;
-        flex-direction: column;
-        cursor: pointer;
-        gap: 5px;
-    }
-    
-    .burger-menu .bar {
-        width: 30px;
-        height: 3px;
-        background-color: #fff;
-        border-radius: 2px;
-    }
-    
-    .highlight {
-      color: #333;
-      font-weight: bolder;
-}
-    
-    @media screen and (max-width: 435px) {
-        .nav-links {
-            display: none;
-            position: absolute;
-            top: 60px;
-            right: -12px;
-            background-color: #222;
-            width: 395px;
-            padding: 8px;
-            border-radius: 4px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-        }
-    
-        .nav-links li {
-            display: block;
-            margin-bottom: 10px;
-        }
-    
-        .burger-menu {
-            display: flex;
-        }
-    
-        .nav-links.active {
-            display: flex;
-        }
-    }
-    
-    /* Dropdown menu */
-    .dropdown {
-        position: relative;
-    }
-    
-    .dropdown-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #222;
-        border-radius: 4px;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-        padding: 10px 0;
-        z-index: 1;
-        margin-top: 5px;
-        width: 180px;
-    }
-    
-    .dropdown:hover .dropdown-menu {
-        display: block;
-    }
-    
-    .dropdown-menu li a {
-        color: #fff;
-        padding: 10px 20px;
-        display: block;
-        text-decoration: none;
-    }
-    
-    .dropdown-menu li a:hover {
-        background-color: #f4a261;
-        font-weight: 700;
+      display: flex;
     }
 
-    /****************************************/
-    /* Section Titre */
-.title-section {
-  text-align: left;
-  padding-top: 2%;
-}
+    .nav-links.active {
+      display: flex;
+    }
+  }
 
-.title {
-  font-size: 1.5em;
-  color: #333;
-width: 80%;
-padding-top: 3%;
-margin-left: 10%;
+  /* Dropdown menu */
+  .dropdown {
+    position: relative;
+  }
 
-}
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+    z-index: 1;
+    margin-top: 5px;
+    width: 180px;
+  }
 
-/* Long texte */
-.long-text {
-  padding: 5px;
-  background-color: #f4f4f4;
-  width: 80%;
-  margin: auto;
-}
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
 
-.long-text p {
-  font-size: 1.4em;
-  color: #555;
-  
-}
+  .dropdown-menu li a {
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+  }
 
-/* Section Carte */
-.map-section {
-  margin: 20px 0;
-  text-align: center;
-}
+  .dropdown-menu li a:hover {
+    background-color: #f4a261;
+    font-weight: 700;
+  }
 
-.map-section h2 {
-  font-size: 1.5em;
-  color: #333;
-}
+  /****************************************/
+  /* Section Titre */
+  .title-section {
+    text-align: left;
+    padding-top: 2%;
+  }
 
-.map-container {
-  margin: 0 auto;
-  max-width: 100%;
-}
+  .title {
+    font-size: 1.5em;
+    color: #333;
+    width: 80%;
+    padding-top: 3%;
+    margin-left: 10%;
+  }
 
-/* Petit paragraphe */
-.small-paragraph {
-  font-size: 1.3em;
-  width: 80%;
-margin: auto;
-  padding: 20px;
-}
+  /* Long texte */
+  .long-text {
+    padding: 5px;
+    background-color: #f4f4f4;
+    width: 80%;
+    margin: auto;
+  }
 
-.small-paragraph p {
-  font-size: 1em;
-  color: #555;
-}
+  .long-text p {
+    font-size: 1.4em;
+    color: #555;
+  }
 
-/* Image */
-.image-section {
-  text-align: center;
-  margin: 20px 0;
-}
+  /* Section Carte */
+  .map-section {
+    margin: 20px 0;
+    text-align: center;
+  }
 
-.image-section img {
-  max-width: 100%;
-  height: auto;
-}
+  .map-section h2 {
+    font-size: 1.5em;
+    color: #333;
+  }
 
-/* Paragraphe de 3 lignes */
-/* Styles pour la section */
-.three-line-paragraph {
+  .map-container {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  /* Petit paragraphe */
+  .small-paragraph {
+    font-size: 1.3em;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .small-paragraph p {
+    font-size: 1em;
+    color: #555;
+  }
+
+  /* Image */
+  .image-section {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .image-section img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Paragraphe de 3 lignes */
+  /* Styles pour la section */
+  .three-line-paragraph {
     background: linear-gradient(to right, #ffecd2, #6c5d59); /* Dégradé doux */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
+    font-family: "Arial", sans-serif;
     color: #333;
     max-width: 80%;
     margin: auto;
     line-height: 1.6;
-}
+  }
 
-/* Titre et icône de toggle */
-.toggle-container {
+  /* Titre et icône de toggle */
+  .toggle-container {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     gap: 10px;
-}
-
-.tit {
-    text-align: center;
     font-size: 24px;
+  }
+
+  .tit {
+    text-align: center;
     font-weight: bold;
     margin: 0;
-}
-
-.toggle-icon {
+    text-decoration: underline;
+    font-size: 34px !important;
+  }
+  .toggle-icon {
     font-size: 24px;
     color: white;
     transition: transform 0.3s ease;
     font-weight: bolder;
-}
+  }
 
-/* Contenu masqué par défaut */
-.content-wrapper {
+  /* Contenu masqué par défaut */
+  .content-wrapper {
     display: none;
     margin-top: 15px;
-}
+  }
 
-
-.tit {
-    text-align: center;
-    text-decoration: underline;
-}
-
-/* Texte */
-.three-line-paragraph p {
+  /* Texte */
+  .three-line-paragraph p {
     font-size: 18px;
     margin-top: 10px;
-}
+  }
 
-.three-line-paragraph p b {
+  .three-line-paragraph p b {
     font-weight: bold;
     color: #333;
     text-decoration: underline;
-}
+  }
 
-
-.three-line-paragraph p::first-line {
+  .three-line-paragraph p::first-line {
     font-weight: bold;
     font-size: 20px;
-}
+  }
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .three-line-paragraph {
-        padding: 15px;
-        font-size: 16px;
+      padding: 15px;
+      font-size: 16px;
     }
-}
+  }
 
+  /* Deux lignes */
+  .two-lines {
+    font-size: 1.3em;
+    width: 80%;
+    margin: auto;
+    padding: 10px 20px;
+  }
 
-/* Deux lignes */
-.two-lines {
-  font-size: 1.3em;
-  width: 80%;
-margin: auto;
-  padding: 10px 20px;
-}
+  .two-lines p {
+    font-size: 1em;
+    color: #333;
+  }
 
-.two-lines p {
-  font-size: 1em;
-  color: #333;
+  /**************************/
+  /* Animation d'apparition */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-}
-
-/**************************/
-/* Animation d'apparition */
-@keyframes fadeInUp {
-  from {
+  /* Style pour les éléments masqués par défaut */
+  .scroll-animate {
     opacity: 0;
     transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  /* Lorsque l'élément est visible */
+  .scroll-animate.visible {
+    animation: fadeInUp 0.7s ease forwards;
   }
-}
 
-/* Style pour les éléments masqués par défaut */
-.scroll-animate {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-/* Lorsque l'élément est visible */
-.scroll-animate.visible {
-  animation: fadeInUp 0.7s ease forwards;
-}
-
-    </style>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const scrollElements = document.querySelectorAll(".scroll-animate");
-    
-        const elementInView = (el, dividend = 1) => {
-          const elementTop = el.getBoundingClientRect().top;
-          return (
-            elementTop <=
-            (window.innerHeight || document.documentElement.clientHeight) / dividend
-          );
-        };
-    
-        const displayScrollElement = (element) => {
-          element.classList.add("visible");
-        };
-    
-        const handleScrollAnimation = () => {
-          scrollElements.forEach((el) => {
-            if (elementInView(el, 1.25)) {
-              displayScrollElement(el);
-            }
-          });
-        };
-    
-        window.addEventListener("scroll", () => {
-          handleScrollAnimation();
-        });
-      });
-    </script>
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const burgerMenu = document.getElementById("burger-menu");
-            if (burgerMenu) {
-              burgerMenu.addEventListener("click", function () {
-                document.querySelector(".nav-links").classList.toggle("active");
-              });
-            }
-          });
-        </script>
-    
-
-  <body>
-    <header class="navbar">
-        <div class="logo">
-          <img src="images/sommetlogo.png" alt="Logo" />
-        </div>
-        <nav style="margin-right: 30px">
-          <ul class="nav-links">
-            <li><a href="accueil.html">Accueil</a></li>
-            <li>
-              <a
-                href="https://www.eventbrite.ca/e/bricks-in-the-six-2024-lego-fan-exhibition-tickets-759779279277?aff=oddtdtcreator"
-                >Billets</a
-              >
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle">Exposant</a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="Login.html"> <i class="fa fa-user"></i> Connexion </a>
-                </li>
-                <li>
-                  <a href="Login.html">
-                    <i class="fa fa-user"></i> Nouveau Compte
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li><a href="accueil.html#contact">Contact</a></li>          </ul>
-        </nav>
-        <div class="burger-menu" id="burger-menu">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-      </header>
-
-      <section class="title-section">
-      <h2 style="text-align: center; margin: 10px; text-decoration: underline;">Rabais d’une durée d’un an, jusqu’à 40% dans la boutique de Canada First Bricks (une des plus grosses boutiques de pièces LEGO au monde)</h2>
-      <h3 class="title">En tant que congressiste / exposant, </h3></section>
-  
-      <!-- Long texte -->
-      <section class="long-text">
-        <p>
-          vous avez droit à un escompte allant jusqu’à <span class="highlight">40%</span> dans la boutique de Canada First Bricks Inc. <br>
-          Sur <span class="highlight">Bricklink</span>, une plateforme appartenant à The Lego Group et regroupant plus <span class="highlight">19000 boutiques</span>, Canada First Bricks est, depuis quelques années, dans le top 20 pour la variété et la quantité de pièces LEGO ainsi que pour le nombre total de commentaires positifs. L’escompte offert s’applique sur tout le contenu de la boutique à l’exception des ensembles, est valide pour une durée d’un an et est applicable sur plusieurs commandes.          <br>
-          <br>
-          Prendre note que seulement le niveau d’escompte le plus élevé qui s’applique sera émis.          <br>
-          <br>
-          Les escomptes vont comme suit:
-          <br>
-          <br>
-          <span class="highlight">En tant que congressiste,</span> vous recevrez 20% d’escompte sur vos prochains 500$ d’achat pour un escompte total de 100$ .          <br>
-          <br>
-          <span class="highlight">En tant qu’exposant d’une collection unique de modèles LEGO,</span> vous recevrez 25% d'escompte sur vos prochains 800$ d’achat pour un escompte total de 200$.          <br>
-          <br>
-          <span class="highlight">En tant qu’exposant de MOCs,</span> vous recevrez 40% d’escompte sur vos prochains 1250$ d’achat pour un escompte total de 500$.          <br>
-          <br>
-          <br>
-      </section>
-  
-      <!-- Carte -->
-      <section class="map-section scroll-animate">
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d92455.58974329421!2d-79.742216!3d43.601603!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b6a818296a65b%3A0x9ac8eafecb49e97b!2sHilton%20Mississauga%2FMeadowvale!5e0!3m2!1sen!2sus!4v1732298731895!5m2!1sen!2sus"
-            width="800"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </section>
-  
-      <!-- Petit paragraphe de 4 lignes -->
-      <section class="small-paragraph scroll-animate">
-        <p>
-          L'événement de cette année aura lieu à l'hôtel Hilton Meadowvale/Mississauga, idéalement situé le long de l'autoroute 401. Il y aura un stationnement gratuit pour les invités qui passent la nuit à l'hôtel et un tarif de chambre de 159 $/nuit pour l'événement (plus taxes et frais).      </section>
-  
-          <section class="recognition-container scroll-animate">
-            <div class="recognition-text">
-                <h2>RECONNAISSANCE DU TRAVAIL DES EXPOSANTS</h2>
-                <p>
-                    Nous comprenons qu'une exposition réussie passe par des exposants de MOCs. Nous désirons donc dès cette année reconnaître la contribution de certains d'entre vous en distinguant les exposants par les modèles exposés. Nous reconnaissons donc les types d'exposants suivants :
-                </p>
-        
-                <p><b>Exposants standards :</b> Quelqu'un qui expose une collection unique de modèles Lego.</p>
-                <p><b>Exposants premium :</b> Quelqu'un qui expose un/des MOC(s).</p>
-                <p><b>Exposants platine :</b> Quelqu'un qui expose un/des MOC(s) de grande envergure/complexité.</p>
-                <p><b>Exposants prestige :</b> Exposant ayant gagné un des prix de l'édition précédente.</p>
-        
-                <p>
-                    Ces distinctions seront faites lors de l'exposition par un jury et vous donneront droit, dans le cas d'un exposant premium, platine ou prestige, à des gratuités lors de l'événement de l'année suivante.
-                </p>
-            </div>
-        
-            <div class="recognition-image">
-                <img src="images/image8.jpg" alt="Image8">
-            </div>
-        </section>
-        
-  
-      <!-- Paragraphe de 3 lignes -->
-      <section class="three-line-paragraph scroll-animate">
-        <div class="toggle-container" onclick="toggleSection()">
-            <p class="tit">PRIX POUR LES EXPOSANTS</p>
-            <span class="toggle-icon">↓</span>
-        </div>
-        
-        <div class="content-wrapper">
-            <p>Voici une liste des prix qui seront remis lors de l’édition 2025 de Le Sommet de la Brique. À noter que seulement un prix peut-être gagné par participant.</p>
-            
-            <p><b>Recru(e) de l’année</b><br>
-            Prix remis par le jury à l’exposant qui est à sa première exposition et s’étant le plus démarqué par son MOC. Cette reconnaissance est remise avec un coupon d’une valeur de 100$ dans la boutique Canada First Bricks.</p>
-        
-            <p><b>Jeune exposant de l’année</b><br>
-            Prix remis par le jury à l’exposant de moins de 18 ans s’étant le plus démarqué par son MOC. Cette reconnaissance est remise avec un ensemble LEGO offert par Canada First Bricks.</p>
-        
-            <p><b>Meilleur exploitation de la thématique</b><br>
-            Prix remis par le jury à l’exposant ayant le mieux exploité la thématique de son MOC. Cette reconnaissance est remise avec un coupon d’une valeur de 100$ dans la boutique Canada First Bricks.</p>
-        
-            <p><b>Meilleur exploitation des LEDs</b><br>
-            Prix remis par le jury à l’exposant ayant le mieux exploité les LEDs dans son MOC. Cette reconnaissance est remise avec un coupon d’une valeur de 100$ dans la boutique Canada First Bricks.</p>
-        
-            <p><b>1ère place vote des visiteurs</b><br>
-            Prix remis à l’exposant ayant reçu le plus grand nombre de votes de la part des visiteurs. Cette reconnaissance est remise avec un coupon d’une valeur de 200$ dans la boutique Canada First Bricks.</p>
-        
-            <p><b>1ère place vote du jury</b><br>
-            Prix remis à l’exposant ayant reçu le plus grand nombre de votes de la part du jury. Cette reconnaissance est remise avec un coupon d’une valeur de 300$ dans la boutique Canada First Bricks.</p>
-        
-            <p><b>1ère place vote des exposants</b><br>
-            Prix remis à l’exposant ayant reçu le plus grand nombre de votes de la part des exposants/congressistes. Cette reconnaissance est remise avec un coupon d’une valeur de 500$ dans la boutique Canada First Bricks.</p>
-        </div>
-        <script>
-          function toggleSection() {
-              var content = document.querySelector(".content-wrapper");
-              var icon = document.querySelector(".toggle-icon");
-          
-              if (content.style.display === "none" || content.style.display === "") {
-                  content.style.display = "block";
-                  icon.innerHTML = "↑"; // Flèche vers le haut
-              } else {
-                  content.style.display = "none";
-                  icon.innerHTML = "↓"; // Flèche vers le bas
-              }
-          }
-          </script>
-          
-    </section>
-    
-
-    
-    <section class="schedule-container scroll-animate">
-      <h2>Horaire (préliminaire, sujet à changement)</h2>
-  
-      <div class="day">
-          <h3>Jeudi 2 octobre</h3>
-          <p class="time-slot"><b>10h-22h30</b> : Ouverture des portes aux exposants pour l’installation de leur modèles</p>
-          <p class="time-slot"><b>10h-15h</b> : Accueil et orientation des exposants/congressistes</p>
-          <p class="time-slot"><b>15h-17h</b> : Draft de pièces <span class="price">($)</span></p>
-          <p class="time-slot"><b>19h</b> : Mixer <span class="price">($)</span></p>
-          <p class="time-slot"><b>20h</b> : Quiz</p>
-          <p class="time-slot"><b>20h30-21h30</b> : DJ Night années 1970 à 2000</p>
-          <p class="time-slot"><b>21h30-22h30</b> : DJ Night trend actuel</p>
-      </div>
-  
-      <div class="day">
-          <h3>Vendredi 3 octobre</h3>
-          <p class="time-slot"><b>8h-22h30</b> : Ouverture des portes aux exposants pour l’installation de leur modèles</p>
-          <p class="time-slot"><b>8h-10h</b> : Accueil et orientation des exposants/congressistes</p>
-          <p class="time-slot"><b>10h</b> : L’apprentissage par le jeu… même à l’âge adulte, conférence de Dominic Tremblay</p>
-          <p class="time-slot"><b>11h</b> : Construire l’impossible, L’art des mégas-constructions, conférence de Steve St-Pierre</p>
-          <p class="time-slot"><b>14h</b> : Partagez votre création avec le monde, une leçon rapide sur la conception d’instructions stud.io, atelier de James Nunnally</p>
-          <p class="time-slot"><b>15h</b> : Atelier d’introduction sur l’animation stop motion, atelier de Patrick Dion-Penman</p>
-          <p class="time-slot"><b>16h</b> : Impact de LEGO MASTERS sur la communauté LEGO, conférence de Corey Samuels</p>
-          <p class="time-slot"><b>17h</b> : Beyond the Brick, une épopée à travers la création d’une communauté de plus de 10 millions d’abonnés, conférence de Joshua et John Hanlon</p>
-          <p class="time-slot"><b>18h</b> : Food Truck offert par Le Sommet de la Brique</p>
-          <p class="time-slot"><b>19h-21h</b> : Événement VIP</p>
-          <p class="time-slot"><b>21h</b> : Segment dans le noir</p>
-          <p class="time-slot"><b>21h30-22h30</b> : Draft de pièces <span class="price">($)</span></p>
-      </div>
-  
-      <div class="day">
-          <h3>Samedi 4 octobre</h3>
-          <p class="time-slot"><b>8h-22h</b> : Ouverture du site pour les exposants</p>
-          <p class="time-slot"><b>9h-10h</b> : Rencontre LGBTQIA+</p>
-          <p class="time-slot"><b>10h-13h</b> : Ouverture du site pour les visiteurs</p>
-          <p class="time-slot"><b>14h-17h</b> : Ouverture du site pour les visiteurs</p>
-          <p class="time-slot"><b>19h-22h</b> : Dirty Brickster <span class="price">($)</span></p>
-      </div>
-  
-      <div class="day">
-          <h3>Dimanche 5 octobre</h3>
-          <p class="time-slot"><b>8h-19h</b> : Ouverture du site pour les exposants</p>
-          <p class="time-slot"><b>9h-12h</b> : Ouverture du site pour les visiteurs</p>
-          <p class="time-slot"><b>13h-16h</b> : Ouverture du site pour les visiteurs</p>
-          <p class="time-slot"><b>16h-19h</b> : Sortie des exposants</p>
-      </div>
-  
-      <p class="note">Note: Horaire sujet à changement.</p>
-  </section>
-  
-  
-      <!-- Deux lignes -->
-      <section class="two-lines">
-        <p>Salutations,</p>
-        <p>Canada FirstBricks</p>
-      </section>
-
-      <style>.recognition-container {
-        display: flex;
-        align-items: center; /* Alignement vertical */
-        justify-content: space-between; /* Sépare le texte et l'image */
-        max-width: 1200px;
-        margin: auto;
-        padding: 20px;
-        gap: 20px; /* Espacement entre le texte et l'image */
-    }
-    
-    .recognition-text {
-        flex: 1; /* Prend l'espace disponible */
-        font-family: 'Arial', sans-serif;
-        font-size: 18px;
-        line-height: 1.6;
-        color: #333;
-        background: #f9f9f9; /* Fond doux */
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    .recognition-text h2 {
-        font-size: 24px;
-        font-weight: bold;
-        color: #d35400; /* Titre en orange foncé */
-        margin-bottom: 15px;
-    }
-    
-    .recognition-text p {
-        margin-bottom: 10px;
-    }
-    
-    .recognition-text b {
-        font-weight: bold;
-        color: #2c3e50; /* Bleu foncé pour les distinctions */
-    }
-    
-    .recognition-image img {
-        width: 500px; /* Assure une taille fixe sans déformation */
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    
-    @media (max-width: 768px) {
-        .recognition-container {
-            flex-direction: column;
-            text-align: center;
-        }
-    
-        .recognition-image img {
-            width: 100%; /* Pour s’adapter aux petits écrans */
-        }
-    }
-
-    .schedule-container {
-    background: #f0f0f0;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
+  /* Recognition Container */
+  .recognition-container {
+    display: flex;
+    align-items: center; /* Alignement vertical */
+    justify-content: space-between; /* Sépare le texte et l'image */
     max-width: 1200px;
-}
+    margin: auto;
+    padding: 20px;
+    gap: 20px; /* Espacement entre le texte et l'image */
+  }
 
-.schedule-container h2 {
-    text-align: center;
-    font-size: 28px;
-    color: #d35400;
+  .recognition-text {
+    flex: 1; /* Prend l'espace disponible */
+    font-family: "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    background: #f9f9f9; /* Fond doux */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .recognition-text h2 {
+    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px;
-}
+    color: #d35400; /* Titre en orange foncé */
+    margin-bottom: 15px;
+  }
 
-.schedule-container .day {
+  .recognition-text p {
+    margin-bottom: 10px;
+  }
+
+  .recognition-text b {
+    font-weight: bold;
+    color: #2c3e50; /* Bleu foncé pour les distinctions */
+  }
+
+  .recognition-image img {
+    width: 500px; /* Assure une taille fixe sans déformation */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    .recognition-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .recognition-image img {
+      width: 100%; /* Pour s’adapter aux petits écrans */
+    }
+  }
+
+  /* Schedule Container */
+  .schedule-container {
+    background: linear-gradient(to right, #ffecd2, #6c5d59); /* Dégradé doux */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Arial", sans-serif;
+    color: #333;
+    max-width: 82%;
+    margin: 20px auto;
+    line-height: 1.6;
+  }
+
+  .schedule-container h2 {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: underline;
+  }
+
+  .schedule-container .day {
     margin-bottom: 30px;
-}
+  }
 
-.schedule-container .day h3 {
+  .schedule-container .day h3 {
     font-size: 22px;
     font-weight: bold;
     color: #2980b9;
     margin-bottom: 10px;
-}
+  }
 
-.schedule-container .time-slot {
+  .schedule-container .time-slot {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 10px;
-}
+  }
 
-.schedule-container .time-slot b {
+  .schedule-container .time-slot b {
     font-weight: bold;
     color: #2c3e50;
-}
+  }
 
-.schedule-container .price {
+  .schedule-container .price {
     color: #e74c3c; /* Rouge pour les éléments payants */
     font-weight: bold;
-}
+  }
 
-.schedule-container .note {
+  .schedule-container .note {
     font-size: 14px;
     color: #95a5a6;
     text-align: center;
     margin-top: 30px;
-}
+  }
+</style>
 
-    </style>
-  </body>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollElements = document.querySelectorAll(".scroll-animate");
+
+    const elementInView = (el, dividend = 1) => {
+      const elementTop = el.getBoundingClientRect().top;
+      return (
+        elementTop <=
+        (window.innerHeight || document.documentElement.clientHeight) / dividend
+      );
+    };
+
+    const displayScrollElement = (element) => {
+      element.classList.add("visible");
+    };
+
+    const handleScrollAnimation = () => {
+      scrollElements.forEach((el) => {
+        if (elementInView(el, 1.25)) {
+          displayScrollElement(el);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", () => {
+      handleScrollAnimation();
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burgerMenu = document.getElementById("burger-menu");
+    if (burgerMenu) {
+      burgerMenu.addEventListener("click", function () {
+        document.querySelector(".nav-links").classList.toggle("active");
+      });
+    }
+  });
+</script>
+
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/sommetlogo.png" alt="Logo" />
+    </div>
+    <nav style="margin-right: 30px">
+      <ul class="nav-links">
+        <li><a href="accueil.html">Accueil</a></li>
+        <li>
+          <a
+            href="https://www.eventbrite.ca/e/bricks-in-the-six-2024-lego-fan-exhibition-tickets-759779279277?aff=oddtdtcreator"
+            >Billets</a
+          >
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Exposant</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="Login.html"> <i class="fa fa-user"></i> Connexion </a>
+            </li>
+            <li>
+              <a href="Login.html">
+                <i class="fa fa-user"></i> Nouveau Compte
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="accueil.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="burger-menu" id="burger-menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </header>
+
+  <section class="title-section">
+    <h2 style="text-align: center; margin: 10px; text-decoration: underline">
+      Rabais d’une durée d’un an, jusqu’à 40% dans la boutique de Canada First
+      Bricks (une des plus grosses boutiques de pièces LEGO au monde)
+    </h2>
+    <h3 class="title">En tant que congressiste / exposant,</h3>
+  </section>
+
+  <!-- Long texte -->
+  <section class="long-text">
+    <p>
+      vous avez droit à un escompte allant jusqu’à
+      <span class="highlight">40%</span> dans la boutique de Canada First Bricks
+      Inc. <br />
+      Sur <span class="highlight">Bricklink</span>, une plateforme appartenant à
+      The Lego Group et regroupant plus
+      <span class="highlight">19000 boutiques</span>, Canada First Bricks est,
+      depuis quelques années, dans le top 20 pour la variété et la quantité de
+      pièces LEGO ainsi que pour le nombre total de commentaires positifs.
+      L’escompte offert s’applique sur tout le contenu de la boutique à
+      l’exception des ensembles, est valide pour une durée d’un an et est
+      applicable sur plusieurs commandes. <br />
+      <br />
+      Prendre note que seulement le niveau d’escompte le plus élevé qui
+      s’applique sera émis. <br />
+      <br />
+      Les escomptes vont comme suit:
+      <br />
+      <br />
+      <span class="highlight">En tant que congressiste,</span> vous recevrez 20%
+      d’escompte sur vos prochains 500$ d’achat pour un escompte total de 100$ .
+      <br />
+      <br />
+      <span class="highlight"
+        >En tant qu’exposant d’une collection unique de modèles LEGO,</span
+      >
+      vous recevrez 25% d'escompte sur vos prochains 800$ d’achat pour un
+      escompte total de 200$. <br />
+      <br />
+      <span class="highlight">En tant qu’exposant de MOCs,</span> vous recevrez
+      40% d’escompte sur vos prochains 1250$ d’achat pour un escompte total de
+      500$. <br />
+      <br />
+      <br />
+    </p>
+  </section>
+
+  <!-- Carte -->
+  <section class="map-section scroll-animate">
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d92455.58974329421!2d-79.742216!3d43.601603!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b6a818296a65b%3A0x9ac8eafecb49e97b!2sHilton%20Mississauga%2FMeadowvale!5e0!3m2!1sen!2sus!4v1732298731895!5m2!1sen!2sus"
+        width="800"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- Petit paragraphe de 4 lignes -->
+  <section class="small-paragraph scroll-animate">
+    <p>
+      L'événement de cette année aura lieu à l'hôtel Hilton
+      Meadowvale/Mississauga, idéalement situé le long de l'autoroute 401. Il y
+      aura un stationnement gratuit pour les invités qui passent la nuit à
+      l'hôtel et un tarif de chambre de 159 $/nuit pour l'événement (plus taxes
+      et frais).
+    </p>
+  </section>
+
+  <section class="recognition-container scroll-animate">
+    <div class="recognition-text">
+      <h2>RECONNAISSANCE DU TRAVAIL DES EXPOSANTS</h2>
+      <p>
+        Nous comprenons qu'une exposition réussie passe par des exposants de
+        MOCs. Nous désirons donc dès cette année reconnaître la contribution de
+        certains d'entre vous en distinguant les exposants par les modèles
+        exposés. Nous reconnaissons donc les types d'exposants suivants :
+      </p>
+
+      <p>
+        <b>Exposants standards :</b> Quelqu'un qui expose une collection unique
+        de modèles Lego.
+      </p>
+      <p><b>Exposants premium :</b> Quelqu'un qui expose un/des MOC(s).</p>
+      <p>
+        <b>Exposants platine :</b> Quelqu'un qui expose un/des MOC(s) de grande
+        envergure/complexité.
+      </p>
+      <p>
+        <b>Exposants prestige :</b> Exposant ayant gagné un des prix de
+        l'édition précédente.
+      </p>
+
+      <p>
+        Ces distinctions seront faites lors de l'exposition par un jury et vous
+        donneront droit, dans le cas d'un exposant premium, platine ou prestige,
+        à des gratuités lors de l'événement de l'année suivante.
+      </p>
+    </div>
+
+    <div class="recognition-image">
+      <img src="images/image8.jpg" alt="Image8" />
+    </div>
+  </section>
+
+  <!-- Paragraphe de 3 lignes -->
+  <section class="three-line-paragraph scroll-animate">
+    <div class="toggle-container" onclick="toggleSection()">
+      <h2 class="tit">Prix pour les exposants</h2>
+      <span class="toggle-icon"> voir plus ↓</span>
+    </div>
+
+    <div class="content-wrapper">
+      <p>
+        Voici une liste des prix qui seront remis lors de l’édition 2025 de Le
+        Sommet de la Brique. À noter que seulement un prix peut-être gagné par
+        participant.
+      </p>
+
+      <p>
+        <b>Recru(e) de l’année</b><br />
+        Prix remis par le jury à l’exposant qui est à sa première exposition et
+        s’étant le plus démarqué par son MOC. Cette reconnaissance est remise
+        avec un coupon d’une valeur de 100$ dans la boutique Canada First
+        Bricks.
+      </p>
+
+      <p>
+        <b>Jeune exposant de l’année</b><br />
+        Prix remis par le jury à l’exposant de moins de 18 ans s’étant le plus
+        démarqué par son MOC. Cette reconnaissance est remise avec un ensemble
+        LEGO offert par Canada First Bricks.
+      </p>
+
+      <p>
+        <b>Meilleur exploitation de la thématique</b><br />
+        Prix remis par le jury à l’exposant ayant le mieux exploité la
+        thématique de son MOC. Cette reconnaissance est remise avec un coupon
+        d’une valeur de 100$ dans la boutique Canada First Bricks.
+      </p>
+
+      <p>
+        <b>Meilleur exploitation des LEDs</b><br />
+        Prix remis par le jury à l’exposant ayant le mieux exploité les LEDs
+        dans son MOC. Cette reconnaissance est remise avec un coupon d’une
+        valeur de 100$ dans la boutique Canada First Bricks.
+      </p>
+
+      <p>
+        <b>1ère place vote des visiteurs</b><br />
+        Prix remis à l’exposant ayant reçu le plus grand nombre de votes de la
+        part des visiteurs. Cette reconnaissance est remise avec un coupon d’une
+        valeur de 200$ dans la boutique Canada First Bricks.
+      </p>
+
+      <p>
+        <b>1ère place vote du jury</b><br />
+        Prix remis à l’exposant ayant reçu le plus grand nombre de votes de la
+        part du jury. Cette reconnaissance est remise avec un coupon d’une
+        valeur de 300$ dans la boutique Canada First Bricks.
+      </p>
+
+      <p>
+        <b>1ère place vote des exposants</b><br />
+        Prix remis à l’exposant ayant reçu le plus grand nombre de votes de la
+        part des exposants/congressistes. Cette reconnaissance est remise avec
+        un coupon d’une valeur de 500$ dans la boutique Canada First Bricks.
+      </p>
+    </div>
+    <script>
+      function toggleSection() {
+        var content = document.querySelector(".content-wrapper");
+        var icon = document.querySelector(".toggle-icon");
+
+        if (content.style.display === "none" || content.style.display === "") {
+          content.style.display = "block";
+          icon.innerHTML = "↑"; // Flèche vers le haut
+        } else {
+          content.style.display = "none";
+          icon.innerHTML = "↓"; // Flèche vers le bas
+        }
+      }
+    </script>
+  </section>
+
+  <section class="schedule-container scroll-animate">
+    <div class="toggle-container" onclick="toggleSchedule()">
+      <h2>Horaire (préliminaire, sujet à changement)</h2>
+      <span class="toggle-icon">voir plus ↓</span>
+    </div>
+
+    <div class="schedule-wrapper" style="display: none">
+      <div class="day">
+        <h3>Jeudi 2 octobre</h3>
+        <p class="time-slot">
+          <b>10h-22h30</b> : Ouverture des portes aux exposants pour
+          l’installation de leur modèles
+        </p>
+        <p class="time-slot">
+          <b>10h-15h</b> : Accueil et orientation des exposants/congressistes
+        </p>
+        <p class="time-slot">
+          <b>15h-17h</b> : Draft de pièces <span class="price">($)</span>
+        </p>
+        <p class="time-slot">
+          <b>19h</b> : Mixer <span class="price">($)</span>
+        </p>
+        <p class="time-slot"><b>20h</b> : Quiz</p>
+        <p class="time-slot">
+          <b>20h30-21h30</b> : DJ Night années 1970 à 2000
+        </p>
+        <p class="time-slot"><b>21h30-22h30</b> : DJ Night trend actuel</p>
+      </div>
+
+      <div class="day">
+        <h3>Vendredi 3 octobre</h3>
+        <p class="time-slot">
+          <b>8h-22h30</b> : Ouverture des portes aux exposants pour
+          l’installation de leur modèles
+        </p>
+        <p class="time-slot">
+          <b>8h-10h</b> : Accueil et orientation des exposants/congressistes
+        </p>
+        <p class="time-slot">
+          <b>10h</b> : L’apprentissage par le jeu… même à l’âge adulte,
+          conférence de Dominic Tremblay
+        </p>
+        <p class="time-slot">
+          <b>11h</b> : Construire l’impossible, L’art des mégas-constructions,
+          conférence de Steve St-Pierre
+        </p>
+        <p class="time-slot">
+          <b>14h</b> : Partagez votre création avec le monde, une leçon rapide
+          sur la conception d’instructions stud.io, atelier de James Nunnally
+        </p>
+        <p class="time-slot">
+          <b>15h</b> : Atelier d’introduction sur l’animation stop motion,
+          atelier de Patrick Dion-Penman
+        </p>
+      </div>
+
+      <div class="day">
+        <h3>Samedi 4 octobre</h3>
+        <p class="time-slot">
+          <b>8h-22h</b> : Ouverture du site pour les exposants
+        </p>
+        <p class="time-slot"><b>9h-10h</b> : Rencontre LGBTQIA+</p>
+        <p class="time-slot">
+          <b>10h-13h</b> : Ouverture du site pour les visiteurs
+        </p>
+      </div>
+
+      <div class="day">
+        <h3>Dimanche 5 octobre</h3>
+        <p class="time-slot">
+          <b>8h-19h</b> : Ouverture du site pour les exposants
+        </p>
+        <p class="time-slot">
+          <b>9h-12h</b> : Ouverture du site pour les visiteurs
+        </p>
+      </div>
+
+      <p class="note">Note: Horaire sujet à changement.</p>
+    </div>
+  </section>
+
+  <script>
+    function toggleSchedule() {
+      var content = document.querySelector(".schedule-wrapper");
+      var icon = document.querySelector(".toggle-icon");
+
+      if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+        icon.innerHTML = "↑"; // Flèche vers le haut
+      } else {
+        content.style.display = "none";
+        icon.innerHTML = "↓"; // Flèche vers le bas
+      }
+    }
+  </script>
+
+  <!-- Deux lignes -->
+  <section class="two-lines">
+    <p>Salutations,</p>
+    <p>Canada FirstBricks</p>
+  </section>
+</body>
