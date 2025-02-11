@@ -327,10 +327,11 @@ body {
         text-align: center;
         max-width: 95%;
         margin: auto;
+        margin-top: 10%;
     }
 
     #accueil h1 {
-        font-size: 2rem;
+        font-size: 3rem;
         margin-bottom: 10px;
     }
 

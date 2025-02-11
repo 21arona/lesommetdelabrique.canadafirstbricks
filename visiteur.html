@@ -204,19 +204,6 @@
     margin-left: 10%;
   }
 
-  /* Long texte */
-  .long-text {
-    padding: 5px;
-    background-color: #f4f4f4;
-    width: 80%;
-    margin: auto;
-  }
-
-  .long-text p {
-    font-size: 1.4em;
-    color: #555;
-  }
-
   /* Section Carte */
   .map-section {
     margin: 20px 0;
@@ -587,6 +574,67 @@
       <br />
       <br />
     </p>
+    <style>
+      /* Long texte */
+      /* Style pour la section du texte long */
+      .long-text {
+        padding: 20px;
+        background-color: #f9f9f9;
+        width: 80%;
+        margin: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .long-text:hover {
+        transform: scale(1.02);
+      }
+
+      /* Style pour le texte */
+      .long-text p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        color: #444;
+        text-align: justify;
+      }
+
+      /* Mise en valeur des éléments importants */
+      .highlight {
+        font-weight: bold;
+        color: #8a312e;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .highlight:hover {
+        color: #c9302c;
+      }
+
+      /* Effet subtil sur les sauts de ligne */
+      .long-text p br {
+        display: block;
+        content: "";
+        margin-bottom: 10px;
+      }
+
+      /* Animation d'apparition fluide */
+      .long-text {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.8s ease-in-out forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
   </section>
 
   <!-- Carte
@@ -626,16 +674,16 @@
       </p>
 
       <p>
-        <b>Exposants standards :</b> Quelqu'un qui expose une collection unique
-        de modèles Lego.
+        <b> 🔹 Exposants standards :</b> Quelqu'un qui expose une collection
+        unique de modèles Lego.
       </p>
-      <p><b>Exposants premium :</b> Quelqu'un qui expose un/des MOC(s).</p>
+      <p><b> 🔹 Exposants premium :</b> Quelqu'un qui expose un/des MOC(s).</p>
       <p>
-        <b>Exposants platine :</b> Quelqu'un qui expose un/des MOC(s) de grande
-        envergure/complexité.
+        <b> 🔹 Exposants platine :</b> Quelqu'un qui expose un/des MOC(s) de
+        grande envergure/complexité.
       </p>
       <p>
-        <b>Exposants prestige :</b> Exposant ayant gagné un des prix de
+        <b> 🔹 Exposants prestige :</b> Exposant ayant gagné un des prix de
         l'édition précédente.
       </p>
 
