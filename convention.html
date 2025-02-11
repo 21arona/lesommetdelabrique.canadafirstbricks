@@ -1,0 +1,1001 @@
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Sommet De La Brique</title>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-X2S70WVQRV"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      // ID de mesure Google Analytics
+      gtag("config", "G-X2S70WVQRV");
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-X2S70WVQRV");
+
+      emailjs.init("VXrxCjioO6p93R7_9");
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
+            });
+          });
+        });
+
+        // document.addEventListener("DOMContentLoaded", function () {
+        //   const burgerMenu = document.getElementById("burger-menu");
+        //   const navLinks = document.querySelector(".nav-links");
+
+        //   if (burgerMenu) {
+        //     burgerMenu.addEventListener("click", function () {
+        //       navLinks.classList.toggle("active");
+        //     });
+        //   }
+        // });
+
+        const backToTopButton = document.getElementById("back-to-top");
+        window.addEventListener("scroll", () => {
+          backToTopButton.style.display =
+            window.scrollY > 300 ? "block" : "none";
+        });
+
+        backToTopButton.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        const scrollElements = document.querySelectorAll(".scroll-animate");
+        const elementInView = (el, dividend = 1) =>
+          el.getBoundingClientRect().top <=
+          (window.innerHeight || document.documentElement.clientHeight) /
+            dividend;
+        const displayScrollElement = (element) =>
+          element.classList.add("visible");
+
+        window.addEventListener("scroll", () => {
+          scrollElements.forEach((el) => {
+            if (elementInView(el, 1.25)) displayScrollElement(el);
+          });
+        });
+      });
+    </script>
+    <link rel="stylesheet" href="css/accueil.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/sommetlogo.png"
+      sizes="180x180"
+    />
+  </head>
+
+  <body>
+    <button id="back-to-top" title="Back to Top">&#8679;</button>
+    <header class="navbar">
+      <div class="logo">
+        <img src="images/sommetlogo.png" alt="Logo" />
+      </div>
+      <nav>
+        <li
+          style="
+            color: #fff;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: black;
+            background-color: yellow;
+            font-weight: 700;
+          "
+        >
+          <a href="accueil.html">Accueil</a>
+        </li>
+        <!-- <li>
+            <a
+              href="https://www.eventbrite.ca/e/bricks-in-the-six-2024-lego-fan-exhibition-tickets-759779279277?aff=oddtdtcreator"
+              >Billets</a
+            >
+          </li> -->
+        <!-- <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Exposant</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="Login.html"> <i class="fa fa-user"></i> Connexion </a>
+              </li>
+              <li>
+                <a href="Login.html"
+                  ><i class="fa fa-user"></i> Nouveau compte</a
+                >
+              </li>
+            </ul>
+          </li> -->
+        <!-- <li><a href="accueil.html#contact">Contact</a></li> -->
+      </nav>
+    </header>
+
+    <section class="landing-text">
+      <div class="content">
+        <div class="header-container">
+          <a href="#">
+            <button class="button">
+              S'inscrire
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </a>
+          <a href="#">
+            <button class="button">
+              Devenir exposant
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </a>
+        </div>
+        <!-- Nouvelle section -->
+        <section id="description">
+          <style>
+            /* Section de description */
+            #description {
+              padding: 0px 10%;
+              text-align: left;
+            }
+
+            #description p {
+              font-size: 1.2rem;
+              /* Taille du texte */
+              line-height: 1.8;
+              font-family: "Georgia", serif;
+              color: #333;
+              max-width: 800px;
+              margin: 0 auto;
+            }
+          </style>
+          <h1 style="color: #f4a261; text-align: center; font-size: x-large">
+            LE SOMMET DE LA BRIQUE
+          </h1>
+          <p>
+            <br />
+            Le Sommet de la Brique est l’événement à ne pas manquer pour tout
+            AFOL (Adult Fan of Lego). Il s’agit de l’événement vous offrant le
+            plus de conférenciers et d'ateliers au Canada. Pour l’édition 2025,
+            ne manquez pas la chance de voir vos créations mises en vedette sur
+            les réseaux sociaux de Beyond the Brick qui seront présent pour les
+            4 journées de l’événement. En tant que congressiste, vous avez accès
+            à tous les ateliers, conférences et activités (à noter que certaines
+            activités sont payantes). Vous avez également accès au site
+            d’exposition en tout temps lors des périodes d’ouverture pour le
+            public ou des périodes d’ouverture pour les exposants. <br />
+            <br />
+          </p>
+        </section>
+      </div>
+    </section>
+
+    <section class="conferences">
+      <div class="content">
+        <h2>Conférences et Ateliers</h2>
+
+        <div class="conference">
+          <h3>Impact de LEGO MASTERS sur la communauté LEGO</h3>
+          <p>
+            <strong>Conférence de Corey Samuels</strong>, participant à la
+            saison 1 de LEGO Masters (principalement en anglais)
+          </p>
+          <ul>
+            <li>
+              <strong>Pour :</strong> Plus d'exposition à LEGO, Plus d’impact
+              sociétal, Plus de notoriété de la marque
+            </li>
+            <li>
+              <strong>Contre :</strong> Moins d'opportunités au sein de la
+              communauté, Comportement plus envieux, Exposition déséquilibrée
+            </li>
+          </ul>
+          <p>
+            LEGO Masters a créé un nouveau type de prise de conscience pour la
+            communauté LEGO. Avec la sortie du film LEGO et d'autres
+            opportunités IP, LEGO Masters est devenu une partie importante de la
+            communauté. Cette conférence expliquera comment l'impact de LEGO
+            Masters a ouvert des portes et des opportunités pour la communauté.
+          </p>
+        </div>
+
+        <div class="conference">
+          <h3>L’apprentissage par le jeu… même à l’âge adulte</h3>
+          <p>
+            <strong>Conférence de Dominic Tremblay</strong>, Consultant en
+            éducation
+          </p>
+          <p>
+            Dans cette conférence inspirante, nous explorerons comment les
+            principes de l’apprentissage par le jeu, souvent associés à
+            l’enfance, peuvent être appliqués tout au long de la vie, en
+            particulier à travers l’utilisation des LEGO. Nous commencerons par
+            examiner comment les jeunes enfants développent des compétences
+            essentielles telles que la créativité, la résolution de problèmes et
+            la collaboration en jouant.
+          </p>
+          <p>
+            Ensuite, nous établirons des parallèles avec les adultes qui
+            partagent une passion pour les LEGO, démontrant comment ce
+            passe-temps peut être une source continue d’apprentissage et de
+            développement. Les participantes et participants découvriront
+            comment les LEGO peuvent être utilisés pour stimuler l’innovation,
+            renforcer les compétences en communication et favoriser une
+            mentalité de croissance.
+          </p>
+          <p>
+            Que vous soyez une amatrice ou amateur de LEGO ou simplement curieux
+            de savoir comment le jeu peut enrichir votre vie, cette conférence
+            vous offrira des perspectives nouvelles et des outils pratiques pour
+            devenir un apprenant à vie.
+          </p>
+        </div>
+
+        <div class="conference">
+          <h3>Construire l’impossible, L’art des mégas-constructions</h3>
+          <p><strong>Conférence de Steve St-Pierre</strong>, AFOL</p>
+          <p>
+            Apprenez les secrets des mégas-constructions LEGO, avec des astuces
+            techniques pour créer des structures de plusieurs mètres. À travers
+            mon parcours, je partagerai des conseils pratiques pour vous aider à
+            bâtir vos propres projets monumentaux.
+          </p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="conference">
+          <h3>
+            Partager votre création avec le monde, une leçon rapide sur la
+            conception d'instructions stud.io
+          </h3>
+          <p>
+            <strong>Atelier de James Nunnally</strong>, Bricker Builds LLC
+            (principalement en anglais)
+          </p>
+          <p>
+            Vous êtes-vous déjà demandé comment faire passer votre création au
+            niveau supérieur ? Vous avez du mal à comprendre l'interface de
+            stud.io pour définir les étapes et créer des instructions permettant
+            aux autres de profiter de votre création? Au cours de cette session,
+            nous passerons d'un modèle d'une conception numérique aux
+            instructions finales en l'espace d'une heure. Venez avec des
+            questions et une volonté d'apprendre!
+          </p>
+        </div>
+
+        <div class="conference">
+          <h3>Atelier d’introduction sur l’animation stop motion</h3>
+          <p>
+            <strong>Atelier de Patrick Dion Penman</strong>, spécialiste de la
+            vidéo
+          </p>
+          <p>
+            Avec plus de 25 années d’expériences dans l’univers de la vidéo en
+            télévision et spectacles, Patrick s’adonne dans ses temps libres à
+            faire de l’animation stop motion avec des briques LEGO. Venez le
+            rencontrer pour en apprendre davantage sur les bases de l’animation
+            stop motion. Patrick sera également exposant avec les constructions
+            et créations qui composent son installation de tournage.
+          </p>
+        </div>
+
+        <div class="conference">
+          <h3>
+            Beyond the Brick, une épopée à travers la création d’une communauté
+            de plus de 10 millions d’abonnés.
+          </h3>
+          <p>
+            <strong>Conférence de Joshua et John Hanlon</strong>, propriétaire
+            de Beyond the Brick (en anglais)
+          </p>
+          <p>
+            Joshua et John Hanlon parleront de leur travail auprès de la
+            communauté LEGO mondiale et expliqueront comment ils ont construit
+            Beyond the Brick au cours de la dernière décennie. Il y aura
+            beaucoup de temps pour les questions du public.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule-container">
+      <div class="toggle-container" onclick="toggleSchedule()">
+        <h2>Horaires</h2>
+        <span class="toggle-icon">voir plus ↓</span>
+      </div>
+
+      <div class="schedule-wrapper" style="display: none">
+        <div class="day">
+          <h3>Jeudi 2 octobre</h3>
+          <p class="time-slot">
+            <b>10h-22h30</b> : Ouverture des portes aux exposants pour
+            l’installation de leur modèles
+          </p>
+          <p class="time-slot">
+            <b>10h-15h</b> : Accueil et orientation des exposants/congressistes
+          </p>
+          <p class="time-slot">
+            <b>15h-17h</b> : Draft de pièces <span class="price">($)</span>
+          </p>
+          <p class="time-slot">
+            <b>19h</b> : Mixer <span class="price">($)</span>
+          </p>
+          <p class="time-slot"><b>20h</b> : Quiz</p>
+          <p class="time-slot">
+            <b>20h30-21h30</b> : DJ Night années 1970 à 2000
+          </p>
+          <p class="time-slot"><b>21h30-22h30</b> : DJ Night trend actuel</p>
+        </div>
+
+        <div class="day">
+          <h3>Vendredi 3 octobre</h3>
+          <p class="time-slot">
+            <b>8h-22h30</b> : Ouverture des portes aux exposants pour
+            l’installation de leur modèles
+          </p>
+          <p class="time-slot">
+            <b>8h-10h</b> : Accueil et orientation des exposants/congressistes
+          </p>
+          <p class="time-slot">
+            <b>10h</b> : L’apprentissage par le jeu… même à l’âge adulte,
+            conférence de Dominic Tremblay
+          </p>
+          <p class="time-slot">
+            <b>11h</b> : Construire l’impossible, L’art des mégas-constructions,
+            conférence de Steve St-Pierre
+          </p>
+          <p class="time-slot">
+            <b>14h</b> : Partagez votre création avec le monde, une leçon rapide
+            sur la conception d’instructions stud.io, atelier de James Nunnally
+          </p>
+          <p class="time-slot">
+            <b>15h</b> : Atelier d’introduction sur l’animation stop motion,
+            atelier de Patrick Dion-Penman
+          </p>
+          <p class="time-slot">
+            <b>16h</b> : Impact de LEGO MASTERS sur la communauté LEGO,
+            conférence de Corey Samuels
+          </p>
+          <p class="time-slot">
+            <b>17h</b> : Beyond the Brick, une épopée à travers la création
+            d’une communauté de plus de 10 millions d’abonnés, conférence de
+            Joshua et John Hanlon
+          </p>
+          <p class="time-slot">
+            <b>18h</b> : Food Truck offert par Le Sommet de la Brique
+          </p>
+          <p class="time-slot"><b>19h-21h</b> : Événement VIP</p>
+          <p class="time-slot"><b>21h</b> : Segment dans le noir</p>
+          <p class="time-slot">
+            <b>21h30-22h30</b> : Draft de pièces <span class="price">($)</span>
+          </p>
+        </div>
+
+        <div class="day">
+          <h3>Samedi 4 octobre</h3>
+          <p class="time-slot">
+            <b>8h-22h</b> : Ouverture du site pour les exposants
+          </p>
+          <p class="time-slot"><b>9h-10h</b> : Rencontre LGBTQIA+</p>
+          <p class="time-slot">
+            <b>10h-13h</b> : Ouverture du site pour les visiteurs
+          </p>
+          <p class="time-slot">
+            <b>14h-17h</b> : Ouverture du site pour les visiteurs
+          </p>
+          <p class="time-slot">
+            <b>19h-22h</b> : Dirty Brickster <span class="price">($)</span>
+          </p>
+        </div>
+
+        <div class="day">
+          <h3>Dimanche 5 octobre</h3>
+          <p class="time-slot">
+            <b>8h-19h</b> : Ouverture du site pour les exposants
+          </p>
+          <p class="time-slot">
+            <b>9h-12h</b> : Ouverture du site pour les visiteurs
+          </p>
+          <p class="time-slot">
+            <b>13h-16h</b> : Ouverture du site pour les visiteurs
+          </p>
+          <p class="time-slot"><b>16h-19h</b> : Sortie des exposants</p>
+        </div>
+
+        <p class="note">Note: Horaire sujet à changement.</p>
+      </div>
+
+      <style>
+        /* Schedule Container */
+        .schedule-container {
+          background: linear-gradient(
+            to right,
+            #ffecd2,
+            #b6b2b1
+          ); /* Dégradé doux */
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          font-family: "Arial", sans-serif;
+          color: #333;
+          max-width: 82%;
+          margin: 20px auto;
+          line-height: 1.6;
+        }
+
+        .schedule-container h2 {
+          text-align: center;
+          color: #333;
+          font-weight: bold;
+          padding: 10px;
+          text-decoration: underline;
+        }
+
+        .schedule-container .day {
+          margin-bottom: 30px;
+        }
+
+        .schedule-container .day h3 {
+          font-size: 22px;
+          font-weight: bold;
+          color: #2980b9;
+          margin-bottom: 10px;
+        }
+
+        .schedule-container .time-slot {
+          font-size: 18px;
+          line-height: 1.6;
+          margin-bottom: 10px;
+        }
+
+        .schedule-container .time-slot b {
+          font-weight: bold;
+          color: #2c3e50;
+        }
+
+        .schedule-container .price {
+          color: #e74c3c; /* Rouge pour les éléments payants */
+          font-weight: bold;
+        }
+
+        .schedule-container .note {
+          font-size: 14px;
+          color: #95a5a6;
+          text-align: center;
+          margin-top: 30px;
+        }
+        /* Titre et icône de toggle */
+        .toggle-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          gap: 10px;
+          font-size: 24px;
+        }
+
+        .tit {
+          text-align: center;
+          font-weight: bold;
+          margin: 0;
+          text-decoration: underline;
+          font-size: 34px !important;
+        }
+        .toggle-icon {
+          font-size: 24px;
+          color: white;
+          transition: transform 0.3s ease;
+          font-weight: bolder;
+        }
+      </style>
+      <script>
+        function toggleSchedule() {
+          var content = document.querySelector(".schedule-wrapper");
+          var icon = document.querySelector(".toggle-icon");
+
+          if (
+            content.style.display === "none" ||
+            content.style.display === ""
+          ) {
+            content.style.display = "block";
+            icon.innerHTML = "↑"; // Flèche vers le haut
+          } else {
+            content.style.display = "none";
+            icon.innerHTML = "↓"; // Flèche vers le bas
+          }
+        }
+      </script>
+    </section>
+
+    <section class="activities">
+      <div class="content">
+        <h2>Activités</h2>
+        <div class="activity-cards">
+          <div class="card">
+            <h3>Construction à relais</h3>
+            <p>
+              Formez des équipes et construisez ensemble des créations LEGO à
+              relais !
+            </p>
+          </div>
+          <div class="card">
+            <h3>Construction à une main</h3>
+            <p>Challengez-vous en construisant avec une seule main !</p>
+          </div>
+          <div class="card">
+            <h3>Speed build en équipe</h3>
+            <p>
+              Testez vos réflexes et votre créativité dans un speed build
+              collaboratif.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Construction à deux têtes</h3>
+            <p>
+              Deux cerveaux valent mieux qu’un. Construisez en duo avec des
+              idées communes !
+            </p>
+          </div>
+          <div class="card">
+            <h3>Drafts de pièces ($)</h3>
+            <p>
+              Choisissez vos pièces et créez une œuvre unique lors de cette
+              activité payante.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Dirty Brickster ($)</h3>
+            <p>
+              Un jeu de stratégie avec des briques LEGO où la chance peut
+              tourner ! (payant)
+            </p>
+          </div>
+          <div class="card">
+            <h3>Segment dans le noir</h3>
+            <p>
+              Construisez sans voir dans un segment mystérieux… à vous de
+              briller dans l’obscurité !
+            </p>
+          </div>
+          <div class="card">
+            <h3>Quiz</h3>
+            <p>
+              Mettez vos connaissances à l’épreuve avec un quiz LEGO pour les
+              vrais fans !
+            </p>
+          </div>
+          <div class="card">
+            <h3>Mixer ($)</h3>
+            <p>
+              Faites vos mélanges de briques et laissez libre cours à votre
+              imagination ! (payant)
+            </p>
+          </div>
+          <div class="card">
+            <h3>DJ Night</h3>
+            <p>
+              Venez danser et profiter de la musique pendant une soirée
+              inoubliable avec notre DJ.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Brickfilm</h3>
+            <p>
+              Participez à un atelier de création de films avec des briques
+              LEGO. Soyez le réalisateur !
+            </p>
+          </div>
+          <div class="card">
+            <h3>Food Truck ($)</h3>
+            <p>
+              Régalez-vous avec de délicieux repas proposés par notre Food Truck
+              (payant).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      font-family: "Roboto", sans-serif;
+      background-color: #f4f4f4;
+      overflow-x: hidden; /* Empêche le défilement horizontal */
+    }
+
+    header,
+    .landing-text,
+    .conferences,
+    .workshops {
+      width: 100%;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .landing-text,
+    .conferences,
+    .workshops {
+      padding-bottom: 30px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      color: #2c3e50;
+    }
+
+    p {
+      margin-bottom: 5px;
+      line-height: 1.7;
+      font-size: 1.3rem;
+      color: #333;
+    }
+
+    ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    .conference {
+      margin-bottom: 30px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .conference h3 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    .conference p {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .conference ul {
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+
+    .conference ul li {
+      font-size: 1rem;
+      color: #7f8c8d;
+    }
+
+    .conferences,
+    .workshops {
+      background-color: #ecf0f1;
+    }
+
+    .content .conference {
+      border-left: 5px solid #333;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .activities {
+      width: 100%;
+      background-color: #333;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .activities h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #f39c12;
+    }
+
+    .activity-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background-color: #34495e;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .card h3 {
+      font-size: 1.7rem;
+      color: #f39c12;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #ecf0f1;
+    }
+
+    @media (max-width: 768px) {
+      .activities h2 {
+        font-size: 2rem;
+      }
+
+      .card h3 {
+        font-size: 1.4rem;
+      }
+
+      .card p {
+        font-size: 1rem;
+      }
+    }
+
+    /* Navbar styles */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      background-color: #222;
+      z-index: 1000;
+      padding: 10px 10px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Logo styles */
+    .logo img {
+      height: 30px;
+      width: auto;
+    }
+
+    /* Styling the navigation links */
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style-type: none;
+      margin-right: 30px;
+      margin-top: 20px;
+    }
+
+    /* Ensure nav-links are hidden by default on small screens */
+    .nav-links {
+      display: none;
+    }
+
+    .nav-links li {
+      display: inline-block;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+    .nav-links li a:hover {
+      color: black;
+      background-color: yellow;
+      font-weight: 700;
+    }
+
+    /* Burger Menu Styles */
+    .burger-menu {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .burger-menu .bar {
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 2px;
+    }
+
+    .highlight {
+      color: #333;
+      font-weight: bolder;
+    }
+
+    /* Dropdown menu */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #222;
+      border-radius: 4px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+      padding: 10px 0;
+      z-index: 1;
+      margin-top: 5px;
+      width: 180px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu li a {
+      color: #fff;
+      padding: 10px 20px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-menu li a:hover {
+      background-color: #f4a261;
+      font-weight: 700;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px; /* Ajoute un espacement entre les éléments */
+      list-style: none; /* Supprime les puces des listes */
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    /* Conteneur du header avec Flexbox */
+    .header-container {
+      display: flex;
+      gap: 5%; /* Espacement entre le titre et le bouton */
+      text-align: center;
+      margin-top: 2%;
+      margin-left: 20%;
+    }
+
+    /* Style du bouton */
+    .button {
+      position: relative;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+      padding-inline: 1.25rem;
+      background-color: yellow;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      gap: 10px;
+      font-weight: bold;
+      border: 3px solid #ffffff4d;
+      outline: none;
+      overflow: hidden;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      border-color: #fff9;
+    }
+
+    .button:hover .icon {
+      transform: translate(4px);
+    }
+
+    .button:hover::before {
+      animation: shine 1.5s ease-out infinite;
+    }
+
+    .button::before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100%;
+      background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0) 70%
+      );
+      top: 0;
+      left: -100px;
+      opacity: 0.6;
+    }
+  </style>
+</html>
