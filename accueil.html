@@ -170,11 +170,50 @@
       <nav>
         <ul class="nav-links">
           <li><a href="#accueil">Accueil</a></li>
-          <li>
-            <a
-              href="https://www.eventbrite.ca/e/bricks-in-the-six-2024-lego-fan-exhibition-tickets-759779279277?aff=oddtdtcreator"
-              >Billets</a
-            >
+          <li class="menu-billets">
+            <a href="#">Billets</a>
+            <ul class="menu-billets-liste">
+              <li><a href="#">Bientôt disponible</a></li>
+            </ul>
+            <style>
+              /* Styles spécifiques pour le menu Billets */
+              .menu-billets {
+                position: relative;
+              }
+
+              .menu-billets-liste {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #333;
+                list-style: none;
+                border-radius: 5px;
+                margin-top: 10px;
+                width: 190px;
+                z-index: 10;
+              }
+
+              .menu-billets-liste li {
+                padding: 10px;
+                text-align: center;
+              }
+
+              .menu-billets-liste li a {
+                color: white;
+                text-decoration: none;
+                display: block;
+              }
+
+              .menu-billets-liste li:hover {
+                background-color: #444;
+              }
+
+              /* Affichage du menu "Billets" au survol */
+              .menu-billets:hover .menu-billets-liste {
+                display: block;
+              }
+            </style>
           </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle">Exposant</a>
@@ -182,11 +221,11 @@
               <li>
                 <a href="Login.html"> <i class="fa fa-user"></i> Connexion </a>
               </li>
-              <li>
+              <!-- <li>
                 <a href="Login.html">
                   <i class="fa fa-user"></i> Nouveau compte
                 </a>
-              </li>
+              </li> -->
             </ul>
           </li>
           <li><a href="#contact">Contact</a></li>
@@ -220,13 +259,13 @@
             </p>
             <div class="actions">
               <a href="convention.html" class="btn">CONVENTION</a>
-              <a href="visiteur.html" class="btn">VISITEUR</a>
+              <a href="exposition.html" class="btn">EXPOSITION</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Nouvelle section -->
+      <!-- Nouvelle section 
       <section class="scroll-animate" id="description">
         <h1
           style="
@@ -253,24 +292,17 @@
           d’ouverture pour les exposants. <br />
           <br />
         </p>
-      </section>
+      </section>-->
 
       <section class="collaboration" style="background-color: white">
         <div class="left">
           <h2>Présenté par</h2>
-          <img
-            style="height: 300px"
-            src="images/presentedByCFB.png"
-            alt="presentedByCFB Logo"
-          />
-        </div>
-        <div class="right">
-          <h2>En collaboration avec</h2>
-          <img
-            style="height: auto"
-            src="images/collabAvecBB.png"
-            alt="BB Logo"
-          />
+          <a href="https://canadafirstbricks.com/"
+            ><img
+              style="height: 300px; border-radius: 5%"
+              src="images/presentedByCFB.png"
+              alt="presentedByCFB Logo"
+          /></a>
         </div>
       </section>
 
@@ -287,7 +319,7 @@
           <img src="images/image6.jpg" alt="Image 6" />
         </div>
         <div class="image-item horizontal">
-          <img src="images/image7.jpg" alt="Image 7" />
+          <img src="images/image4.jpg" alt="Image 7" />
         </div>
         <div class="image-item horizontal">
           <img src="images/image8.jpg" alt="Image 87" />
@@ -349,8 +381,8 @@
 
         <!-- Image à droite -->
         <div class="image-container">
-          <img src="images/image4.jpg" alt="Presented By CFB" />
-          <h3 style="color: #f4a261">Kim’s Convenience model by Calum Tsang</h3>
+          <img src="images/image7.jpg" alt="Presented By CFB" />
+          <!-- <h3 style="color: #f4a261">Kim’s Convenience model by Calum Tsang</h3> -->
         </div>
       </section>
 
@@ -363,24 +395,26 @@
       >
         <div class="contact-content">
           <br />
-          <h3 style="text-align: center; color: yellow">Canada First Bricks</h3>
+          <h3 style="text-align: center; color: yellow">
+            Le Sommet De La Brique
+          </h3>
           <br />
-          <h2 style="color: white; text-align: center">Contact Us</h2>
+          <h2 style="color: white; text-align: center">Contactez-nous</h2>
           <div class="underline"></div>
           <form id="contact-form" class="contact-form">
-            <label for="name">Name*</label>
+            <label for="name">Nom*</label>
             <input type="text" id="name" name="name" required />
 
-            <label for="email">Email*</label>
+            <label for="email">Adresse email*</label>
             <input type="email" id="email" name="email" required />
 
-            <label for="subject">Subject*</label>
+            <label for="subject">Sujet*</label>
             <input type="text" id="subject" name="subject" required />
 
             <label for="message">Message*</label>
             <textarea id="message" name="message" rows="5" required></textarea>
 
-            <button type="submit" onclick="SendMail()">Submit</button>
+            <button type="submit" onclick="SendMail()">Soumettre</button>
           </form>
         </div>
       </section>

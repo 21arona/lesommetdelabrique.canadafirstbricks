@@ -123,7 +123,7 @@ body {
     padding: 10px 0;
     z-index: 1;
     margin-top: 5px;
-    width: 180px;
+    width: 200px;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -419,12 +419,15 @@ body {
 .image-item.vertical img {
     width: 100%;
     height: auto;
+    border-radius: 2%;
 }
 
 /* Images horizontales (image7.jpg et image87.jpg) */
 .image-item.horizontal img {
     width: 100%;
     height: auto;
+    border-radius: 2%;
+
 }
 
 /* Styles pour la section de collaboration */
@@ -552,6 +555,7 @@ footer {
     height: auto;
     object-fit: contain;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5%;
 }
 
 /* Ajustements pour les petits Ã©crans */

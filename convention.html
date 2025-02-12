@@ -109,11 +109,49 @@
         >
           <a href="accueil.html">Accueil</a>
         </li>
-        <!-- <li>
-            <a
-              href="https://www.eventbrite.ca/e/bricks-in-the-six-2024-lego-fan-exhibition-tickets-759779279277?aff=oddtdtcreator"
-              >Billets</a
-            >
+        <!--    <li class="menu-billets">
+            <a href="#">Billets</a>
+            <ul class="menu-billets-liste">
+              <li><a href="#">Bientôt disponible</a></li>
+            </ul>
+            <style>
+              /* Styles spécifiques pour le menu Billets */
+              .menu-billets {
+                position: relative;
+              }
+
+                         .menu-billets-liste {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #333;
+                list-style: none;
+                border-radius: 5px;
+                margin-top: 10px;
+                width: 190px;
+                z-index: 10;
+              }
+              .menu-billets-liste li {
+                padding: 10px;
+                text-align: center;
+              }
+
+              .menu-billets-liste li a {
+                color: white;
+                text-decoration: none;
+                display: block;
+              }
+
+              .menu-billets-liste li:hover {
+                background-color: #444;
+              }
+
+              /* Affichage du menu "Billets" au survol */
+              .menu-billets:hover .menu-billets-liste {
+                display: block;
+              }
+            </style>
           </li> -->
         <!-- <li class="dropdown">
             <a href="#" class="dropdown-toggle">Exposant</a>
@@ -135,7 +173,9 @@
     <section class="landing-text">
       <div class="content">
         <div class="header-container">
-          <a href="#">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdQ3o7RY8Cn394XxKYmRZzfAQYHI_sJhGtc3ATVHLIyH9bgJw/viewform?usp=sf_link"
+          >
             <button class="button">
               S'inscrire
               <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
@@ -147,7 +187,7 @@
               </svg>
             </button>
           </a>
-          <a href="#">
+          <a href="exposition.html">
             <button class="button">
               Devenir exposant
               <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
@@ -330,7 +370,7 @@
 
     <section class="schedule-container">
       <div class="toggle-container" onclick="toggleSchedule()">
-        <h2>Horaires</h2>
+        <h2>Horaire préliminaire, sujet à changements</h2>
         <span class="toggle-icon">voir plus ↓</span>
       </div>
 
@@ -374,6 +414,7 @@
             <b>11h</b> : Construire l’impossible, L’art des mégas-constructions,
             conférence de Steve St-Pierre
           </p>
+          <p class="time-slot"><b>13h</b> : La réunion LGBTQIA+</p>
           <p class="time-slot">
             <b>14h</b> : Partagez votre création avec le monde, une leçon rapide
             sur la conception d’instructions stud.io, atelier de James Nunnally
@@ -551,7 +592,10 @@
               </div>
               <div class="card-back">
                 <h3>Construction à relais</h3>
-                <p>⏰ Heure: 14h - 15h</p>
+                <p>
+                  Formez des équipes et construisez ensemble des créations LEGO
+                  à relais !
+                </p>
               </div>
             </div>
           </div>
@@ -564,7 +608,7 @@
               </div>
               <div class="card-back">
                 <h3>Construction à une main</h3>
-                <p>⏰ Heure: 15h - 16h</p>
+                <p>Challengez-vous en construisant avec une seule main !</p>
               </div>
             </div>
           </div>
@@ -580,7 +624,10 @@
               </div>
               <div class="card-back">
                 <h3>Speed build en équipe</h3>
-                <p>⏰ Heure: 16h - 17h</p>
+                <p>
+                  Testez vos réflexes et votre créativité dans un speed build
+                  collaboratif.
+                </p>
               </div>
             </div>
           </div>
@@ -593,7 +640,7 @@
               </div>
               <div class="card-back">
                 <h3>Construction à deux têtes</h3>
-                <p>⏰ Heure: 17h - 18h</p>
+                <p>Construisez en duo avec des idées communes !</p>
               </div>
             </div>
           </div>
@@ -606,7 +653,7 @@
               </div>
               <div class="card-back">
                 <h3>Drafts de pièces ($)</h3>
-                <p>⏰ Heure: 18h - 19h</p>
+                <p>Choisissez vos pièces et créez une œuvre unique !</p>
               </div>
             </div>
           </div>
@@ -619,7 +666,7 @@
               </div>
               <div class="card-back">
                 <h3>Dirty Brickster ($)</h3>
-                <p>⏰ Heure: 19h - 20h</p>
+                <p>Un jeu de stratégie avec des briques LEGO !</p>
               </div>
             </div>
           </div>
@@ -632,7 +679,7 @@
               </div>
               <div class="card-back">
                 <h3>Segment dans le noir</h3>
-                <p>⏰ Heure: 20h - 21h</p>
+                <p>Construisez sans voir dans un segment mystérieux…</p>
               </div>
             </div>
           </div>
@@ -645,7 +692,7 @@
               </div>
               <div class="card-back">
                 <h3>Quiz</h3>
-                <p>⏰ Heure: 21h - 22h</p>
+                <p>Mettez vos connaissances LEGO à l’épreuve !</p>
               </div>
             </div>
           </div>
@@ -1057,7 +1104,7 @@
       padding: 10px 0;
       z-index: 1;
       margin-top: 5px;
-      width: 180px;
+      width: 200px;
     }
 
     .dropdown:hover .dropdown-menu {
