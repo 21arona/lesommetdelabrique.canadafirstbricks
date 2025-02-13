@@ -441,7 +441,7 @@ body {
 
 /* Images verticales (image5.jpg et image6.jpg) */
 .image-item.vertical img {
-    width: 100%;
+    width: 115%;
     height: auto;
     border-radius: 2%;
 }
