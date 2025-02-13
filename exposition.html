@@ -54,6 +54,9 @@
 
   body {
     background-color: #f4f4f4;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
   }
 
   .fa-user {
@@ -83,10 +86,9 @@
 
   /* Styling the navigation links */
   .nav-links {
+    list-style: none;
     display: flex;
     gap: 20px;
-    list-style-type: none;
-    margin-right: 30px;
   }
 
   .nav-links li {
@@ -113,14 +115,13 @@
     display: none;
     flex-direction: column;
     cursor: pointer;
-    gap: 5px;
   }
 
   .burger-menu .bar {
-    width: 30px;
+    width: 25px;
     height: 3px;
-    background-color: #fff;
-    border-radius: 2px;
+    background-color: white;
+    margin: 4px 0;
   }
 
   .highlight {
@@ -132,25 +133,23 @@
     .nav-links {
       display: none;
       position: absolute;
-      top: 60px;
-      right: -48px;
+      top: 44px;
+      right: 0;
       background-color: #222;
-      width: 395px;
-      padding: 8px;
-      border-radius: 4px;
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-    }
-
-    .nav-links li {
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .burger-menu {
-      display: flex;
+      width: 32%;
+      flex-direction: column;
+      text-align: center;
     }
 
     .nav-links.active {
+      display: flex;
+    }
+
+    .nav-links li {
+      margin: 10px 0;
+    }
+
+    .burger-menu {
       display: flex;
     }
   }
@@ -166,12 +165,9 @@
     top: 100%;
     left: 0;
     background-color: #222;
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-    padding: 10px 0;
-    z-index: 1;
-    margin-top: 8px;
     width: 150px;
+    border-radius: 4px;
+    z-index: 100;
   }
 
   .dropdown:hover .dropdown-menu {
