@@ -703,31 +703,39 @@
     </style>
   </section>
 
-  <!-- Carte
-  <section class="map-section scroll-animate">
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d92455.58974329421!2d-79.742216!3d43.601603!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b6a818296a65b%3A0x9ac8eafecb49e97b!2sHilton%20Mississauga%2FMeadowvale!5e0!3m2!1sen!2sus!4v1732298731895!5m2!1sen!2sus"
-        width="800"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
-  </section> -->
+  <div class="video-wrapper">
+    <video autoplay loop muted playsinline class="responsive-video">
+      <source src="images/videoLSDB.mp4" type="video/mp4" />
+      Votre navigateur ne supporte pas la vidéo.
+    </video>
+    <style>
+      /* Conteneur centré */
+      .video-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Hauteur égale à toute la fenêtre */
+        width: 100%;
+        background-color: #f4f4f4; /* Arrière-plan léger */
+      }
 
-  <!-- Petit paragraphe de 4 lignes
-  <section class="small-paragraph scroll-animate">
-    <p>
-      L'événement de cette année aura lieu à l'hôtel Hilton
-      Meadowvale/Mississauga, idéalement situé le long de l'autoroute 401. Il y
-      aura un stationnement gratuit pour les invités qui passent la nuit à
-      l'hôtel et un tarif de chambre de 159 $/nuit pour l'événement (plus taxes
-      et frais).
-    </p>
-  </section> -->
+      /* Vidéo responsive */
+      .responsive-video {
+        width: 80%; /* La vidéo prend 60% de la largeur */
+        max-width: 900px; /* Largeur max */
+        height: auto;
+        border-radius: 10px; /* Coins arrondis */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
+      }
+
+      /* Pour les petits écrans */
+      @media screen and (max-width: 768px) {
+        .responsive-video {
+          width: 90%; /* Prend presque toute la largeur sur mobile */
+        }
+      }
+    </style>
+  </div>
 
   <section class="recognition-container scroll-animate">
     <div class="recognition-text">

@@ -200,24 +200,9 @@
             </button>
           </a>
         </div>
+
         <!-- Nouvelle section -->
         <section id="description">
-          <style>
-            /* Section de description */
-            #description {
-              padding: 0px 10%;
-              text-align: left;
-            }
-
-            #description p {
-              font-size: 1.2rem;
-              /* Taille du texte */
-              line-height: 1.8;
-              font-family: "Georgia", serif;
-              color: #333;
-              max-width: 800px;
-            }
-          </style>
           <h1 style="color: #f4a261; text-align: center; font-size: x-large">
             LE SOMMET DE LA BRIQUE
           </h1>
@@ -227,7 +212,7 @@
             AFOL (Adult Fan of Lego). Il s’agit de l’événement vous offrant le
             plus de conférenciers et d'ateliers au Canada. Pour l’édition 2025,
             ne manquez pas la chance de voir vos créations mises en vedette sur
-            les réseaux sociaux de Beyond the Brick qui seront présent pour les
+            les réseaux sociaux de Beyond the Brick qui seront présents pour les
             4 journées de l’événement. En tant que congressiste, vous avez accès
             à tous les ateliers, conférences et activités (à noter que certaines
             activités sont payantes). Vous avez également accès au site
@@ -235,9 +220,55 @@
             public ou des périodes d’ouverture pour les exposants. <br />
             <br />
           </p>
+
+          <!-- Ajout de la vidéo -->
+          <div class="video-container">
+            <video autoplay loop muted playsinline class="responsive-video">
+              <source src="images/videoLSDB.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la vidéo.
+            </video>
+          </div>
         </section>
       </div>
     </section>
+
+    <style>
+      /* Section de description */
+      #description {
+        padding: 0px 10%;
+        text-align: left;
+      }
+
+      #description p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        font-family: "Georgia", serif;
+        color: #333;
+        max-width: 800px;
+      }
+
+      /* Conteneur de la vidéo */
+      .video-container {
+        width: 100%;
+        max-width: 900px; /* Largeur max */
+        margin: 20px auto; /* Centre la vidéo */
+      }
+
+      /* Vidéo responsive */
+      .responsive-video {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        display: block;
+      }
+
+      /* Ajustement pour petits écrans */
+      @media screen and (max-width: 768px) {
+        .video-container {
+          max-width: 100%;
+        }
+      }
+    </style>
 
     <section class="conferences">
       <div class="content">
@@ -834,8 +865,9 @@
     /* Conteneur principal */
     .landing-text {
       width: 100%;
-      padding: 50px 10%;
+      padding: 10px 10px;
       text-align: center;
+      margin-bottom: 20px;
     }
 
     .content {
@@ -856,7 +888,8 @@
     #description {
       text-align: left;
       margin: 10px auto;
-      max-width: 1000px;
+      max-width: 1100px;
+      width: 110%;
     }
 
     #description p {
