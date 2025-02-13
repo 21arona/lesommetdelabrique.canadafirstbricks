@@ -314,18 +314,91 @@
         </div>
       </section>
 
-      <section class="collaboration" style="background-color: white">
-        <div class="left">
-          <h2>Presented by</h2>
+      <section class="collaboration">
+        <div class="video-container">
+          <video autoplay loop muted playsinline class="responsive-video">
+            <source src="images/videoLSDB.mp4" type="video/mp4" />
+            Votre navigateur ne supporte pas la vidéo.
+          </video>
+        </div>
+        <div class="right">
+          <h2>Présenté par</h2>
           <a href="https://canadafirstbricks.com/">
-            <img
-              style="height: 300px; border-radius: 5%"
-              src="images/presentedByCFB.png"
-              alt="presentedByCFB Logo"
-            />
+            <img src="images/presentedByCFB.png" alt="presentedByCFB Logo" />
           </a>
         </div>
       </section>
+
+      <style>
+        /* Section Collaboration */
+        .collaboration {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px;
+          padding: 20px;
+          max-width: 1350px;
+          margin: auto;
+          box-sizing: border-box;
+          flex-wrap: nowrap; /* Empêche le passage en colonne */
+        }
+
+        /* Conteneur de la vidéo */
+        .video-container {
+          flex: 0 0 60%; /* 60% de la largeur */
+          max-width: 60%;
+        }
+
+        /* Vidéo responsive */
+        .responsive-video {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+          display: block;
+        }
+
+        /* Conteneur de l'image */
+        .right {
+          flex: 0 0 40%; /* 40% de la largeur */
+          max-width: 40%;
+          text-align: center;
+        }
+
+        .right h2 {
+          margin-right: 50%;
+          margin-bottom: 5%;
+          margin-bottom: 5%;
+        }
+
+        /* Image */
+        .right img {
+          height: auto;
+          max-width: 100%;
+          border-radius: 5%;
+          display: block;
+          margin-left: 10%;
+        }
+
+        /* Responsive pour petits écrans */
+        @media screen and (max-width: 900px) {
+          .collaboration {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+
+          .video-container,
+          .right {
+            max-width: 100%;
+          }
+
+          .right img {
+            height: auto;
+            width: 100%;
+            max-width: 400px;
+          }
+        }
+      </style>
 
       <section
         class="scroll-animate"
