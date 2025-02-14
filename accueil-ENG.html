@@ -283,6 +283,81 @@
     </header>
 
     <main>
+      <section class="image-section">
+        <div class="image-container">
+          <img src="images/sommetlogoBG.png" alt="Image principale" />
+        </div>
+        <div class="clickable-image">
+          <h3>Presented by</h3>
+          <a href="https://canadafirstbricks.com/">
+            <img src="images/presentedByCFB.png" alt="CFB" />
+          </a>
+        </div>
+      </section>
+
+      <style>
+        .image-section {
+          display: flex;
+          width: 95vw;
+          height: 80vh;
+          overflow: hidden;
+        }
+
+        .image-container {
+          width: 85%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .image-container img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+
+        .clickable-image {
+          width: 18%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-left: 5%;
+          text-align: center;
+        }
+
+        .clickable-image h3 {
+          margin-bottom: 10px;
+          font-size: 1.2rem;
+        }
+
+        .clickable-image img {
+          width: 95%;
+          height: auto;
+          cursor: pointer;
+          border-radius: 5%;
+        }
+
+        /* Format téléphone */
+        @media (max-width: 768px) {
+          .image-section {
+            flex-direction: column;
+            align-items: center;
+            height: auto; /* Ajuste la hauteur */
+          }
+
+          .clickable-image {
+            width: 100%;
+            order: 2; /* Met la section clickable au-dessus */
+            margin-left: 0;
+            margin-bottom: 20px;
+          }
+
+          .image-container {
+            width: 100%;
+          }
+        }
+      </style>
       <section id="accueil">
         <div class="overlay">
           <div class="content">
@@ -325,12 +400,6 @@
           <button class="sound-toggle" onclick="toggleSound()">🔇</button>
         </div>
       </section>
-      <div class="right">
-        <h2>Présenté par</h2>
-        <a href="https://canadafirstbricks.com/">
-          <img src="images/presentedByCFB.png" alt="presentedByCFB Logo" />
-        </a>
-      </div>
       <script>
         function toggleSound() {
           var video = document.getElementById("video");
