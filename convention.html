@@ -201,6 +201,78 @@
               </svg>
             </button>
           </a>
+          <style>
+            /* Section Titre */
+            .title-section {
+              text-align: left;
+              padding-top: 2%;
+            }
+
+            .title {
+              font-size: 1.5em;
+              color: #333;
+              width: 80%;
+              padding-top: 1%;
+            }
+
+            .h3a {
+              display: flex;
+              align-items: center;
+              gap: 5px; /* Réduction de l'espace entre le h3 et le bouton */
+              margin-right: 9%;
+              max-width: 1200px;
+            }
+
+            .button {
+              flex-shrink: 0; /* Empêche le bouton de se rétrécir */
+              white-space: nowrap; /* Empêche le texte du bouton de passer à la ligne */
+            }
+            /* Boutons */
+            .button {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              background-color: yellow;
+              border: 2px solid yellow;
+              color: black;
+              font-size: 1rem;
+              font-weight: 600;
+              padding: 12px 20px;
+              cursor: pointer;
+              border-radius: 50px;
+              transition: all 0.3s ease;
+            }
+
+            .button .icon {
+              width: 20px;
+              height: 20px;
+            }
+
+            .button:hover {
+              background: #f4a261;
+              color: white;
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+              .landing-text h1 {
+                font-size: 1.6rem;
+              }
+
+              #description p {
+                font-size: 1rem;
+              }
+
+              .header-container {
+                flex-direction: column;
+              }
+
+              .button {
+                text-align: center;
+                margin: auto;
+              }
+            }
+          </style>
         </div>
 
         <!-- Nouvelle section -->
@@ -223,13 +295,13 @@
             <br />
           </p>
 
-          <!-- Ajout de la vidéo -->
+          <!-- Ajout de la vidéo 
           <div class="video-container">
             <video autoplay loop muted playsinline class="responsive-video">
               <source src="images/videoLSDB.mp4" type="video/mp4" />
               Votre navigateur ne supporte pas la vidéo.
             </video>
-          </div>
+          </div>-->
         </section>
       </div>
     </section>
@@ -271,7 +343,124 @@
         }
       }
     </style>
+    <!-- Long texte -->
+    <section class="long-text">
+      <div class="h3a">
+        <h3 class="title">En tant que congressiste / exposant,</h3>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdQ3o7RY8Cn394XxKYmRZzfAQYHI_sJhGtc3ATVHLIyH9bgJw/viewform?usp=sf_link"
+        >
+          <button class="button">
+            S'inscrire
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </a>
+      </div>
+      <p>
+        vous avez droit à un escompte allant jusqu’à
+        <span class="highlight">40%</span> dans la boutique de Canada First
+        Bricks Inc. <br />
+        Sur <span class="highlight">Bricklink</span>, une plateforme appartenant
+        à The Lego Group et regroupant plus
+        <span class="highlight">19000 boutiques</span>, Canada First Bricks est,
+        depuis quelques années, dans le top 20 pour la variété et la quantité de
+        pièces LEGO ainsi que pour le nombre total de commentaires positifs.
+        L’escompte offert s’applique sur tout le contenu de la boutique à
+        l’exception des ensembles, est valide pour une durée d’un an et est
+        applicable sur plusieurs commandes. <br />
+        <br />
+        Prendre note que seulement le niveau d’escompte le plus élevé qui
+        s’applique sera émis. <br />
+        <br />
+        Les escomptes vont comme suit:
+        <br />
+        <br />
+        <span class="highlight">En tant que congressiste,</span> vous recevrez
+        20% d’escompte sur vos prochains 500$ d’achat pour un escompte total de
+        100$ .
+        <br />
+        <br />
+        <span class="highlight"
+          >En tant qu’exposant d’une collection unique de modèles LEGO,</span
+        >
+        vous recevrez 25% d'escompte sur vos prochains 800$ d’achat pour un
+        escompte total de 200$. <br />
+        <br />
+        <span class="highlight">En tant qu’exposant de MOCs,</span> vous
+        recevrez 40% d’escompte sur vos prochains 1250$ d’achat pour un escompte
+        total de 500$. <br />
+        <br />
+        <br />
+      </p>
+      <style>
+        /* Long texte */
+        /* Style pour la section du texte long */
+        .long-text {
+          padding: 20px;
+          background-color: #f9f9f9;
+          max-width: 1200px;
+          margin: auto;
+          border-radius: 8px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease-in-out;
+          margin-bottom: 5%;
+        }
 
+        .long-text:hover {
+          transform: scale(1.02);
+        }
+
+        /* Style pour le texte */
+        .long-text p {
+          font-size: 1.2em;
+          line-height: 1.6;
+          color: #444;
+          text-align: justify;
+        }
+
+        /* Mise en valeur des éléments importants */
+        .highlight {
+          font-weight: bold;
+          color: #333;
+          transition: color 0.3s ease-in-out;
+        }
+
+        .highlight:hover {
+          color: #c9302c;
+        }
+
+        /* Effet subtil sur les sauts de ligne */
+        .long-text p br {
+          display: block;
+          content: "";
+          margin-bottom: 10px;
+        }
+
+        /* Animation d'apparition fluide */
+        .long-text {
+          opacity: 0;
+          transform: translateY(20px);
+          animation: fadeIn 0.8s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      </style>
+    </section>
     <section class="conferences">
       <div class="content">
         <h2>Conférences et Ateliers</h2>
@@ -480,7 +669,6 @@
           <p class="time-slot">
             <b>8h-22h</b> : Ouverture du site pour les exposants
           </p>
-          <p class="time-slot"><b>9h-10h</b> : Rencontre LGBTQIA+</p>
           <p class="time-slot">
             <b>10h-13h</b> : Ouverture du site pour les visiteurs
           </p>

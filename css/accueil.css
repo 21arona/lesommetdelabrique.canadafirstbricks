@@ -69,7 +69,7 @@ body {
     background-color: yellow;
     color: black;
     font-weight: 700;
-    border-radius: 10%;
+    border-radius: 7%;
 
 }
 
@@ -236,7 +236,7 @@ body {
     display: flex;
     gap: 20px;
     opacity: 0;
-    animation: fadeInActions 2s ease-in-out 1.5s forwards;
+    animation: fadeInActions 1s ease-in-out 0.5s forwards;
 }
 
 .actions .btn {

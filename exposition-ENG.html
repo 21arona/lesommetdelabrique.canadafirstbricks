@@ -188,19 +188,6 @@
   }
 
   /****************************************/
-  /* Section Titre */
-  .title-section {
-    text-align: left;
-    padding-top: 2%;
-  }
-
-  .title {
-    font-size: 1.5em;
-    color: #333;
-    width: 80%;
-    padding-top: 3%;
-    margin-left: 10%;
-  }
 
   /* Section Carte */
   .map-section {
@@ -499,17 +486,7 @@
           </style>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Exhibitor</a>
-          <ul class="dropdown-menu">
-            <li>
-              <a href="Login.html"> <i class="fa fa-user"></i> Connexion </a>
-            </li>
-            <!-- <li>
-                <a href="Login.html">
-                  <i class="fa fa-user"></i> Nouveau Compte
-                </a>
-              </li> -->
-          </ul>
+          <a href="Login.html"> <i class="fa fa-user"></i> Login </a>
         </li>
         <li><a href="accueil-ENG.html#contact">Contact</a></li>
       </ul>
@@ -526,25 +503,6 @@
       One-year discount, up to 40% in the Canada First Bricks store (one of the
       largest LEGO parts stores in the world)
     </h2>
-
-    <div class="h3a">
-      <h3 class="title">As a congress participant / exhibitor,</h3>
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSdQ3o7RY8Cn394XxKYmRZzfAQYHI_sJhGtc3ATVHLIyH9bgJw/viewform?usp=sf_link"
-      >
-        <button class="button">
-          Register
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              fill-rule="evenodd"
-              d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
-      </a>
-    </div>
-
     <style>
       .h3a {
         display: flex;
@@ -604,109 +562,22 @@
       }
     </style>
   </section>
-
-  <!-- Long texte -->
-  <section class="long-text">
-    <p>
-      You are entitled to a discount of up to
-      <span class="highlight">40%</span> in the Canada First Bricks Inc. store
-      <br />
-      On <span class="highlight">Bricklink</span>, a platform owned by The Lego
-      Group and home to more than <span class="highlight">19000 stores</span>,
-      Canada First Bricks has been ranked in the top 20 for the variety and
-      quantity of LEGO pieces as well as for the total number of positive
-      reviews. The discount offered applies to all store content except sets, is
-      valid for one year, and can be applied to multiple orders.
-      <br />
-      <br />
-      Please note that only the highest applicable discount will be issued.
-      <br />
-      <br />
-      The discounts are as follows:
-      <br />
-      <br />
-      <span class="highlight">As a congress participant,</span> you will receive
-      a 20% discount on your next $500 purchase for a total discount of $100.
-      <br />
-      <br />
-      <span class="highlight"
-        >As an exhibitor of a unique LEGO model collection,</span
-      >
-      you will receive a 25% discount on your next $800 purchase for a total
-      discount of $200.
-      <br />
-      <br />
-      <span class="highlight">As an exhibitor of MOCs,</span> you will receive a
-      40% discount on your next $1250 purchase for a total discount of $500.
-      <br />
-      <br />
-      <br />
-    </p>
-
-    <style>
-      /* Long texte */
-      /* Style pour la section du texte long */
-      .long-text {
-        padding: 20px;
-        background-color: #f9f9f9;
-        width: 80%;
-        margin: auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease-in-out;
-      }
-
-      .long-text:hover {
-        transform: scale(1.02);
-      }
-
-      /* Style pour le texte */
-      .long-text p {
-        font-size: 1.2em;
-        line-height: 1.6;
-        color: #444;
-        text-align: justify;
-      }
-
-      /* Mise en valeur des éléments importants */
-      .highlight {
-        font-weight: bold;
-        color: #333;
-        transition: color 0.3s ease-in-out;
-      }
-
-      .highlight:hover {
-        color: #c9302c;
-      }
-
-      /* Effet subtil sur les sauts de ligne */
-      .long-text p br {
-        display: block;
-        content: "";
-        margin-bottom: 10px;
-      }
-
-      /* Animation d'apparition fluide */
-      .long-text {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeIn 0.8s ease-in-out forwards;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    </style>
-  </section>
-
-  <div class="video-wrapper">
+  <section class="landing-text">
+    <h3 class="title">Once registered as a conference attendee, you can display your unique MOC(s) or LEGO model collection for free.</h3>
+            <style>
+              .title {
+                font-size: 1.5em;
+                color: #333;
+                width: 80%;
+                padding-top: 1%;
+                margin: auto;
+                text-align: center;
+              }
+            </style>
+          </div>
+        </div>
+      </section>
+  <!-- <div class="video-wrapper">
     <video autoplay loop muted playsinline class="responsive-video">
       <source src="images/videoLSDB.mp4" type="video/mp4" />
       Votre navigateur ne supporte pas la vidéo.
@@ -738,9 +609,9 @@
         }
       }
     </style>
-  </div>
+  </div> -->
 
-  <section class="recognition-container scroll-animate">
+  <section class="recognition-container ">
     <div class="recognition-text">
       <h2>RECOGNITION OF EXHIBITORS' WORK</h2>
       <p>
@@ -779,13 +650,10 @@
   </section>
 
   <!-- Paragraphe de 3 lignes -->
-  <section class="three-line-paragraph">
-    <div class="toggle-container" onclick="toggleSection()">
+  <section class="three-line-paragraph scroll-animate">
+    <div class="toggle-containe">
       <h2 class="tit">Awards for Exhibitors</h2>
-      <span class="toggle-icon"> See more ↓</span>
     </div>
-
-    <div class="content-wrapper">
       <p>
         Here is a list of the awards that will be presented at the 2025 edition
         of Le Sommet de la Brique. Please note that only one prize can be won
@@ -840,26 +708,11 @@
         exhibitors/congress participants. This recognition comes with a $500
         coupon for Canada First Bricks store.
       </p>
-    </div>
-
-    <script>
-      function toggleSection() {
-        var content = document.querySelector(".content-wrapper");
-        var icon = document.querySelector(".toggle-icon");
-
-        if (content.style.display === "none" || content.style.display === "") {
-          content.style.display = "block";
-          icon.innerHTML = "↑"; // Flèche vers le haut
-        } else {
-          content.style.display = "none";
-          icon.innerHTML = "↓"; // Flèche vers le bas
-        }
-      }
-    </script>
   </section>
 
   <!-- Deux lignes -->
-  <section class="two-lines">
-    <p>Canada FirstBricks.</p>
+  <section class="two-lines" style="margin-top: 3%;">
+    <a href="https://canadafirstbricks.com/" style="text-decoration: underline; color: #333;">Canada FirstBricks Inc</a>
+    
   </section>
 </body>

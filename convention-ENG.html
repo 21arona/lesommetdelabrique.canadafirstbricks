@@ -246,7 +246,7 @@
           </h1>
           <p>
             <br />
-            The Summit of the Brick is the event not to be missed for any AFOL
+            Le Sommet de la Brique is the event not to be missed for any AFOL
             (Adult Fan of Lego). It is the event offering the most speakers and
             workshops in Canada. For the 2025 edition, don't miss the chance to
             see your creations featured on Beyond the Brick's social media,
@@ -257,15 +257,206 @@
             hours or exhibitor opening hours. <br />
             <br />
           </p>
-          <!-- Ajout de la vidéo -->
+          <!-- Ajout de la vidéo
           <div class="video-container">
             <video autoplay loop muted playsinline class="responsive-video">
               <source src="images/videoLSDB.mp4" type="video/mp4" />
               Votre navigateur ne supporte pas la vidéo.
             </video>
-          </div>
+          </div> -->
         </section>
       </div>
+    </section>
+
+    <!-- Long texte -->
+    <section class="long-text">
+      <div class="h3a">
+        <h3 class="title">As a congress participant / exhibitor,</h3>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdQ3o7RY8Cn394XxKYmRZzfAQYHI_sJhGtc3ATVHLIyH9bgJw/viewform?usp=sf_link"
+        >
+          <button class="button">
+            Register
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </a>
+      </div>
+      <p>
+        You are entitled to a discount of up to
+        <span class="highlight">40%</span> in the Canada First Bricks Inc. store
+        <br />
+        On <span class="highlight">Bricklink</span>, a platform owned by The
+        Lego Group and home to more than
+        <span class="highlight">19000 stores</span>, Canada First Bricks has
+        been ranked in the top 20 for the variety and quantity of LEGO pieces as
+        well as for the total number of positive reviews. The discount offered
+        applies to all store content except sets, is valid for one year, and can
+        be applied to multiple orders.
+        <br />
+        <br />
+        Please note that only the highest applicable discount will be issued.
+        <br />
+        <br />
+        The discounts are as follows:
+        <br />
+        <br />
+        <span class="highlight">As a congress participant,</span> you will
+        receive a 20% discount on your next $500 purchase for a total discount
+        of $100.
+        <br />
+        <br />
+        <span class="highlight"
+          >As an exhibitor of a unique LEGO model collection,</span
+        >
+        you will receive a 25% discount on your next $800 purchase for a total
+        discount of $200.
+        <br />
+        <br />
+        <span class="highlight">As an exhibitor of MOCs,</span> you will receive
+        a 40% discount on your next $1250 purchase for a total discount of $500.
+        <br />
+        <br />
+        <br />
+      </p>
+
+      <style>
+        /* Long texte */
+        /* Style pour la section du texte long */
+        .long-text {
+          padding: 20px;
+          background-color: #f9f9f9;
+          max-width: 1200px;
+          margin: auto;
+          border-radius: 8px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease-in-out;
+          margin-bottom: 5%;
+        }
+
+        .long-text:hover {
+          transform: scale(1.02);
+        }
+
+        /* Style pour le texte */
+        .long-text p {
+          font-size: 1.2em;
+          line-height: 1.6;
+          color: #444;
+          text-align: justify;
+        }
+
+        /* Mise en valeur des éléments importants */
+        .highlight {
+          font-weight: bold;
+          color: #333;
+          transition: color 0.3s ease-in-out;
+        }
+
+        .highlight:hover {
+          color: #c9302c;
+        }
+
+        /* Effet subtil sur les sauts de ligne */
+        .long-text p br {
+          display: block;
+          content: "";
+          margin-bottom: 10px;
+        }
+
+        /* Animation d'apparition fluide */
+        .long-text {
+          opacity: 0;
+          transform: translateY(20px);
+          animation: fadeIn 0.8s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        /* Section Titre */
+        .title-section {
+          text-align: left;
+          padding-top: 2%;
+        }
+
+        .title {
+          font-size: 1.5em;
+          color: #333;
+          width: 80%;
+          padding-top: 1%;
+        }
+
+        .h3a {
+          display: flex;
+          align-items: center;
+          gap: 5px; /* Réduction de l'espace entre le h3 et le bouton */
+          margin-right: 9%;
+        }
+
+        .button {
+          flex-shrink: 0; /* Empêche le bouton de se rétrécir */
+          white-space: nowrap; /* Empêche le texte du bouton de passer à la ligne */
+        }
+        /* Boutons */
+        .button {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background-color: yellow;
+          border: 2px solid yellow;
+          color: black;
+          font-size: 1rem;
+          font-weight: 600;
+          padding: 12px 20px;
+          cursor: pointer;
+          border-radius: 50px;
+          transition: all 0.3s ease;
+        }
+
+        .button .icon {
+          width: 20px;
+          height: 20px;
+        }
+
+        .button:hover {
+          background: #f4a261;
+          color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+          .landing-text h1 {
+            font-size: 1.6rem;
+          }
+
+          #description p {
+            font-size: 1rem;
+          }
+
+          .header-container {
+            flex-direction: column;
+          }
+
+          .button {
+            text-align: center;
+            margin: auto;
+          }
+        }
+      </style>
     </section>
 
     <section class="conferences">
@@ -470,7 +661,6 @@
           <p class="time-slot">
             <b>8:00 AM - 10:00 PM</b>: Site opens for exhibitors
           </p>
-          <p class="time-slot"><b>9:00 AM - 10:00 AM</b>: LGBTQIA+ Meet-up</p>
           <p class="time-slot">
             <b>10:00 AM - 1:00 PM</b>: Site opens for visitors
           </p>
