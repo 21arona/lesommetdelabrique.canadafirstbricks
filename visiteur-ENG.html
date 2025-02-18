@@ -48,10 +48,11 @@
         background-color: #f0f0f0;
         margin: 0;
         height: 100vh;
-        overflow: hidden; /* Prevent scrolling */
         display: flex;
         flex-direction: column;
         box-sizing: border-box; /* Ensure padding/borders don't cause overflow */
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
       }
       html {
         scroll-behavior: smooth;
@@ -320,47 +321,236 @@
       </div>
     </header>
 
-    <section class="event-section">
-        <h1
-          style="
-            color: #f4a261;
-            text-align: center;
-            font-size: x-large;
-            margin-bottom: 15px;
-          "
-        >
-          LE SOMMET DE LA BRIQUE
-        </h1>
-        <p class="event-text">
-            The Brick Summit is the largest event gathering exhibitors in Quebec with over XX exhibitors and XX merchants. Don't miss the chance to see the creative talent of the exhibitors, who will gladly share their passion for the LEGO brick. It is also an opportunity to acquire models, retired models, minifigures, as well as accessories and jewelry from our merchants.
-          </p>
-          <p class="event-text">
-            Don’t miss our VIP event on Friday evening, limited to XX visitors, who will have the chance to meet our speakers and discuss with exhibitors in more intimate settings. It’s also your chance to acquire some rarer items from our merchants with priority access. The first 50 VIP visitors will also receive a model from one of Canada First Bricks' many partners, the event organizers.
-          </p>
-        <style>
-          .event-section {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.9); /* Fond subtil */
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            font-family: "Poppins", sans-serif;
-            color: #333;
-            line-height: 1.8;
-            text-align: justify;
-          }
-    
-          .event-text {
-            font-size: 1.1rem;
-          }
-    
-          @media (max-width: 768px) {
-            .event-section {
-              padding: 20px;
-            }
-          }
-        </style>
-      </section>
+     <!-- Nouvelle section -->
+     <section
+     class="scroll-animate"
+     style="background-color: white"
+     id="collaboration-info"
+   >
+     <div class="text-container">
+       <!-- Titre au centre -->
+       <h1 style="color: #f4a261">LE SOMMET DE LA BRIQUE</h1>
+
+       <!-- Contenu de l'énumération -->
+       <ul>
+        <li>
+          Don't miss the chance to witness the creative talent of the exhibitors, who will gladly take the time to share their passion for the small LEGO brick with you.
+        </li>
+        <li>
+          This is also an opportunity to acquire models, retired models, minifigures, as well as accessories and jewelry from our vendors. Don’t miss our VIP event on Friday night, limited to XX visitors, who will have the chance to meet our speakers and have more intimate discussions with our exhibitors.
+        </li>
+      </ul>
+      
+     </div>
+
+     <!-- Image à droite -->
+     <div class="image-container">
+       <img src="images/image7.jpg" alt="Presented By CFB" />
+       <!-- <h3 style="color: #f4a261">Kim’s Convenience model by Calum Tsang</h3> -->
+     </div>
+     <style>
+       #collaboration-info {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 60px 10%;
+           background-color: #f4f4f4;
+           font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+           flex-wrap: nowrap;
+           /* Empêche le retour à la ligne */
+       }
+       
+       /* Conteneur du texte à gauche */
+       .text-container {
+           width: 90%;
+           padding-right: 30px;
+           text-align: left;
+           /* Alignement du texte */
+       }
+       
+       #collaboration-info h1 {
+           font-size: 2.5rem;
+           font-weight: bold;
+           text-align: center;
+           margin-bottom: 20px;
+           color: #333;
+       }
+       
+       /* Liste d'énumération */
+       #collaboration-info ul {
+           list-style-type: none;
+           padding: 0;
+           margin: 0;
+       }
+       
+       #collaboration-info ul li {
+           font-size: 1.2rem;
+           line-height: 1.8;
+           margin-bottom: 5px;
+           color: #333;
+       }
+       
+       /* Conteneur de l'image à droite */
+       .image-container {
+           width: 50%;
+           text-align: center;
+           display: flex;
+           justify-content: flex-end;
+           /* Assure que l'image reste bien à droite */
+       }
+       
+       .image-container img {
+           width: 90%;
+           /* Ajuste la taille pour éviter le débordement */
+           height: auto;
+           object-fit: contain;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+           border-radius: 5%;
+       }
+       
+       /* Ajustements pour les petits écrans */
+       @media (max-width: 768px) {
+           #collaboration-info {
+               flex-direction: column;
+               text-align: center;
+               font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+               font-weight: bold;
+
+           }        
+
+       
+           .text-container,
+           .image-container {
+               width: 100%;
+               padding: 0;
+           }
+       
+           .text-container {
+               margin-bottom: 20px;
+           }
+       
+           #collaboration-info h1 {
+               font-size: 2rem;
+           }
+       
+           #collaboration-info ul li {
+               font-size: 1.2rem;
+           }
+       
+           .image-container {
+               justify-content: center;
+               /* Centre l'image sur mobile */
+           }
+       
+           .image-container img {
+               width: 80%;
+           }
+       }
+       
+       
+       
+       @media (max-width: 480px) {
+           #collaboration-info {
+               padding: 40px 5%;
+           }
+       
+           #collaboration-info h1 {
+               font-size: 1.8rem;
+           }
+       
+           #collaboration-info ul li {
+               font-size: 1.2rem;
+           }
+       }</style>
+   </section>
+
+   <section class="collaboration">
+    <div class="video-container">
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="responsive-video"
+        id="video"
+      >
+        <source src="images/videoLSDB.mp4" type="video/mp4" />
+        Votre navigateur ne supporte pas la vidéo.
+      </video>
+      <button class="sound-toggle" onclick="toggleSound()">🔇</button>
+    </div>
+  </section>
+  <script>
+    function toggleSound() {
+      var video = document.getElementById("video");
+      var button = document.querySelector(".sound-toggle");
+
+      if (video.muted) {
+        video.muted = false;
+        button.textContent = "🔊 ";
+      } else {
+        video.muted = true;
+        button.textContent = "🔇 ";
+      }
+    }
+  </script>
+  <style>.collaboration {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+  }
+  
+  .video-container {
+    width: 100%;
+    max-width: 1920px; /* Pour éviter que la vidéo ne s'étire trop sur les grands écrans */
+    height: auto;
+    position: relative;
+  }
+  
+  .responsive-video {
+    width: 100%;
+    height: 100vh; /* Pleine hauteur de l'écran */
+    object-fit: cover; /* Assure que la vidéo couvre tout en restant proportionnelle */
+    border-radius: 2%;
+    margin-bottom: 1%;
+  }
+  
+  .sound-toggle {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease;
+    width: 51px;
+  }
+  
+  .sound-toggle:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Responsive pour écrans plus petits */
+  @media (max-width: 768px) {
+    .responsive-video {
+      height: 60vh; /* Réduction de la hauteur sur petits écrans */
+    }
+  
+    .sound-toggle {
+      bottom: 10px;
+      right: 10px;
+      padding: 8px 12px;
+      font-size: 16px;
+    }
+  }
+  </style>
+   
   </body>
 </html>
