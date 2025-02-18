@@ -130,7 +130,7 @@
           /* Hide the navigation links by default on smaller screens */
           position: absolute;
           top: 60px;
-          right: -12px;
+          right: -30px;
           background-color: #222;
           width: 378px;
           padding: 8px;
@@ -319,253 +319,47 @@
         <div class="bar"></div>
       </div>
     </header>
-            <!-- Nouvelle section -->
-            <section
-            class="scroll-animate"
-            style="background-color: white"
-            id="collaboration-info"
-          >
-            <div class="text-container">
-              <!-- Titre au centre -->
-              <h1 style="color: #f4a261">LE SOMMET DE LA BRIQUE</h1>
-    
-              <!-- Contenu de l'énumération -->
-              <ul>
-                <li>
-                  Ne manquez pas la chance de venir voir le talent créatif des
-                  exposants présents qui prendront volontiers le temps de vous
-                  transmettre leur passion pour la petite brique LEGO.
-                </li>
-                <li>
-                  Il s’agit également d’une occasion d’acquérir des modèles, des
-                  modèles retirés, des minifigurines ainsi que des accessoires et
-                  bijoux auprès de nos commerçants. Ne manquez pas notre événement
-                  VIP du vendredi soir, limité à XX visiteurs qui auront la chance
-                  de rencontrer nos conférenciers et de discuter avec plus
-                  d’intimités avec nos exposants.
-                </li>
-              </ul>
-            </div>
-    
-            <!-- Image à droite -->
-            <div class="image-container">
-              <img src="images/image7.jpg" alt="Presented By CFB" />
-              <!-- <h3 style="color: #f4a261">Kim’s Convenience model by Calum Tsang</h3> -->
-            </div>
-            <style>
-              #collaboration-info {
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                  padding: 60px 10%;
-                  background-color: #f4f4f4;
-                  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                  flex-wrap: nowrap;
-                  height: 500px;
-                  /* Empêche le retour à la ligne */
-              }
-              
-              /* Conteneur du texte à gauche */
-              .text-container {
-                  width: 90%;
-                  padding-right: 30px;
-                  text-align: left;
-                  /* Alignement du texte */
-              }
-              
-              #collaboration-info h1 {
-                  font-size: 2.5rem;
-                  font-weight: bold;
-                  text-align: center;
-                  margin-bottom: 20px;
-                  color: #333;
-              }
-              
-              /* Liste d'énumération */
-              #collaboration-info ul {
-                  list-style-type: none;
-                  padding: 0;
-                  margin: 0;
-              }
-              
-              #collaboration-info ul li {
-                  font-size: 1.2rem;
-                  line-height: 1.8;
-                  margin-bottom: 5px;
-                  color: #333;
-              }
-              
-              /* Conteneur de l'image à droite */
-              .image-container {
-                  width: 45%;
-                  text-align: center;
-                  display: flex;
-                  justify-content: flex-end;
-                  /* Assure que l'image reste bien à droite */
-              }
-              
-              .image-container img {
-                  width: 95%;
-                  /* Ajuste la taille pour éviter le débordement */
-                  height: auto;
-                  object-fit: contain;
-                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                  border-radius: 5%;
-              }
-              
-              /* Ajustements pour les petits écrans */
-              @media (max-width: 768px) {
-                  #collaboration-info {
-                      flex-direction: column;
-                      text-align: center;
-                      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                      font-weight: bold;
-                  }
-              
-                  .text-container,
-                  .image-container {
-                      width: 100%;
-                      padding: 0;
-                  }
-              
-                  .text-container {
-                      margin-bottom: 20px;
-                  }
-              
-                  #collaboration-info h1 {
-                      font-size: 2rem;
-                  }
-              
-                  #collaboration-info ul li {
-                      font-size: 1.2rem;
-                  }
-              
-                  .image-container {
-                      justify-content: center;
-                      /* Centre l'image sur mobile */
-                  }
-              
-                  .image-container img {
-                      width: 80%;
-                  }
-                  .responsive-video {
-  width: 100%;
-  max-width: 800px; /* Définis une largeur max pour éviter l'agrandissement */
-  height: auto;
-  display: block;
-  margin: auto; /* Centre la vidéo */
-}
-              }
-              
-              
-              
-              @media (max-width: 480px) {
-                  #collaboration-info {
-                      padding: 40px 5%;
-                  }
-              
-                  #collaboration-info h1 {
-                      font-size: 1.8rem;
-                  }
-              
-                  #collaboration-info ul li {
-                      font-size: 1.2rem;
-                  }
-              }</style>
-          </section>
-
-          <section class="collaboration">
-            <div class="video-container">
-              <video
-                autoplay
-                loop
-                muted
-                playsinline
-                class="responsive-video"
-                id="video"
-              >
-                <source src="images/videoLSDB.mp4" type="video/mp4" />
-                Votre navigateur ne supporte pas la vidéo.
-              </video>
-              <button class="sound-toggle" onclick="toggleSound()">🔇</button>
-            </div>
-          </section>
-          <script>
-            function toggleSound() {
-              var video = document.getElementById("video");
-              var button = document.querySelector(".sound-toggle");
-        
-              if (video.muted) {
-                video.muted = false;
-                button.textContent = "🔊 ";
-              } else {
-                video.muted = true;
-                button.textContent = "🔇 ";
-              }
-            }
-          </script>
-          <style>.collaboration {
-            width: 85%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            margin: auto;
+  
+    <section style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding: 20px; max-width: 1200px; margin: auto; gap: 20px;">
+        <div style="flex: 1; min-width: 300px; padding-right: 20px; text-align: center;">
+          <h1 style="color: #f4a261; font-size: 2.5rem; margin-bottom: 10px;">LE SOMMET DE LA BRIQUE</h1>
+          <ul style="list-style-type: none; padding: 0; text-align: left;">
+            <li style="margin-bottom: 10px; font-size: 1.2rem; line-height: 1.6;">
+                🌟 Ne manquez pas la chance de venir voir le talent créatif des exposants présents qui prendront volontiers le temps de vous transmettre leur passion pour la petite brique LEGO.
+            </li>
+            <li style="margin-bottom: 10px; font-size: 1.2rem; line-height: 1.6;">
+              🌟 Il s’agit également d’une occasion d’acquérir des modèles, des modèles retirés, des minifigurines ainsi que des accessoires et bijoux auprès de nos commerçants. Ne manquez pas notre événement VIP du vendredi soir, limité à XX visiteurs qui auront la chance de rencontrer nos conférenciers et de discuter avec plus d’intimité avec nos exposants.
+            </li>
+          </ul>
+        </div>
+        <div style="flex: 1; min-width: 300px; text-align: center;">
+          <div class="video-container" style="position: relative; max-width: 100%; border-radius: 10px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+            <video autoplay loop muted playsinline class="responsive-video" id="video" style="width: 100%; height: auto; border-radius: 10px;">
+              <source src="images/videoLSDB.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la vidéo.
+            </video>
+            <button class="sound-toggle" onclick="toggleSound()" style="position: absolute; width: 33px; bottom: 10px; left: 10px; background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 5px 5px; border-radius: 5px; cursor: pointer;">🔇</button>
+          </div>
+        </div>
+      </section>
+      
+      <script>
+        function toggleSound() {
+          var video = document.getElementById("video");
+          var button = document.querySelector(".sound-toggle");
+      
+          if (video.muted) {
+            video.muted = false;
+            button.textContent = "🔊";
+          } else {
+            video.muted = true;
+            button.textContent = "🔇";
           }
-          
-          .video-container {
-            width: 100%;
-            max-width: 1920px; /* Pour éviter que la vidéo ne s'étire trop sur les grands écrans */
-            height: auto;
-            position: relative;
-          }
-          
-          .responsive-video {
-            width: 100%;
-            height: 100vh; /* Pleine hauteur de l'écran */
-            object-fit: cover; /* Assure que la vidéo couvre tout en restant proportionnelle */
-            border-radius: 2%;
-            margin-bottom: 1%;
-          }
-          
-          .sound-toggle {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background 0.3s ease;
-            width: 51px;
-          }
-          
-          .sound-toggle:hover {
-            background: rgba(0, 0, 0, 0.8);
-          }
-          
-          /* Responsive pour écrans plus petits */
-          @media (max-width: 768px) {
-            .responsive-video {
-  width: 100%;
-  max-width: 800px; /* Définis une largeur max pour éviter l'agrandissement */
-  height: auto;
-  display: block;
-  margin: auto; /* Centre la vidéo */
-  margin-top: 90%;
-}
-          
-            .sound-toggle {
-              bottom: 10px;
-              right: 10px;
-              padding: 8px 12px;
-              font-size: 16px;
-            }
-          }
-          </style>
+        }
+      </script>
+      
+      
+      
            
     </body>
 </html>
