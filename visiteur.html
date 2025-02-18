@@ -124,7 +124,7 @@
         border-radius: 2px;
       }
 
-      @media screen and (max-width: 435px) {
+      @media screen and (max-width: 510px) {
         .nav-links {
           display: none;
           /* Hide the navigation links by default on smaller screens */
@@ -414,7 +414,7 @@
               }
               
               /* Ajustements pour les petits écrans */
-              @media (max-width: 868px) {
+              @media (max-width: 768px) {
                   #collaboration-info {
                       flex-direction: column;
                       text-align: center;
@@ -448,6 +448,13 @@
                   .image-container img {
                       width: 80%;
                   }
+                  .responsive-video {
+  width: 100%;
+  max-width: 800px; /* Définis une largeur max pour éviter l'agrandissement */
+  height: auto;
+  display: block;
+  margin: auto; /* Centre la vidéo */
+}
               }
               
               
@@ -543,8 +550,13 @@
           /* Responsive pour écrans plus petits */
           @media (max-width: 768px) {
             .responsive-video {
-              height: 60vh; /* Réduction de la hauteur sur petits écrans */
-            }
+  width: 100%;
+  max-width: 800px; /* Définis une largeur max pour éviter l'agrandissement */
+  height: auto;
+  display: block;
+  margin: auto; /* Centre la vidéo */
+  margin-top: 90%;
+}
           
             .sound-toggle {
               bottom: 10px;
