@@ -1,0 +1,658 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le Sommet De La Brique</title>
+  <!-- Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-X2S70WVQRV"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    // ID de mesure Google Analytics
+    gtag("config", "G-X2S70WVQRV");
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    href="images/sommetlogo.png"
+    sizes="180x180"
+  />
+</head>
+
+<style>
+  /* Reset styles */
+  body,
+  h1,
+  h2,
+  p,
+  ul,
+  li,
+  a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .fa-user {
+    margin-right: 8px;
+    font-size: 1rem;
+  }
+
+  /* Navbar styles */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: #222;
+    z-index: 1000;
+    padding: 10px 12px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+
+  /* Logo styles */
+  .logo img {
+    height: 30px;
+    width: auto;
+  }
+
+  /* Styling the navigation links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links li {
+    display: inline-block;
+  }
+
+  .nav-links li a {
+    color: #fff;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+  .nav-links li a:hover {
+    color: black;
+    background-color: yellow;
+    font-weight: 700;
+  }
+
+  /* Burger Menu Styles */
+  .burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .burger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+  }
+
+  .highlight {
+    color: #333;
+    font-weight: bolder;
+  }
+
+  @media screen and (max-width: 605px) {
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 44px;
+      right: 0;
+      background-color: #222;
+      width: 32%;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .nav-links li {
+      margin: 10px 0;
+    }
+
+    .burger-menu {
+      display: flex;
+    }
+  }
+
+  /* Dropdown menu */
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    width: 150px;
+    border-radius: 4px;
+    z-index: 100;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu li a {
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+  }
+
+  .dropdown-menu li a:hover {
+    background-color: #f4a261;
+    font-weight: 700;
+  }
+
+  /****************************************/
+  /* Section Carte */
+  .map-section {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .map-section h2 {
+    font-size: 1.5em;
+    color: #333;
+  }
+
+  .map-container {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  /* Petit paragraphe */
+  .small-paragraph {
+    font-size: 1.3em;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .small-paragraph p {
+    font-size: 1em;
+    color: #555;
+  }
+
+  /* Image */
+  .image-section {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .image-section img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Paragraphe de 3 lignes */
+  /* Styles pour la section */
+  .three-line-paragraph {
+    background: linear-gradient(to right, #ffecd2, #b6b2b1); /* Dégradé doux */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Arial", sans-serif;
+    color: #333;
+    max-width: 80%;
+    margin: auto;
+    line-height: 1.6;
+  }
+
+  /* Titre et icône de toggle */
+  .toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    font-size: 24px;
+  }
+
+  .tit {
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    text-decoration: underline;
+    font-size: 34px !important;
+  }
+  .toggle-icon {
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s ease;
+    font-weight: bolder;
+  }
+
+  /* Contenu masqué par défaut */
+  .content-wrapper {
+    display: none;
+    margin-top: 15px;
+  }
+
+  /* Texte */
+  .three-line-paragraph p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .three-line-paragraph p b {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .three-line-paragraph p::first-line {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .three-line-paragraph {
+      padding: 15px;
+      font-size: 16px;
+    }
+  }
+
+  /* Deux lignes */
+  .two-lines {
+    font-size: 1.3em;
+    width: 80%;
+    margin: auto;
+    padding: 10px 20px;
+  }
+
+  .two-lines p {
+    font-size: 1em;
+    color: #333;
+  }
+
+  /**************************/
+  /* Animation d'apparition */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Style pour les éléments masqués par défaut */
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  /* Lorsque l'élément est visible */
+  .scroll-animate.visible {
+    animation: fadeInUp 0.7s ease forwards;
+  }
+
+  /* Recognition Container */
+  .recognition-container {
+    display: flex;
+    align-items: center; /* Alignement vertical */
+    justify-content: space-between; /* Sépare le texte et l'image */
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    gap: 20px; /* Espacement entre le texte et l'image */
+  }
+
+  .recognition-text {
+    flex: 1; /* Prend l'espace disponible */
+    font-family: "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    background: #f9f9f9; /* Fond doux */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .recognition-text h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d35400; /* Titre en orange foncé */
+    margin-bottom: 15px;
+  }
+
+  .recognition-text p {
+    margin-bottom: 10px;
+  }
+
+  .recognition-text b {
+    font-weight: bold;
+    color: #2c3e50; /* Bleu foncé pour les distinctions */
+  }
+
+  .recognition-image img {
+    width: 500px; /* Assure une taille fixe sans déformation */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    .recognition-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .recognition-image img {
+      width: 100%; /* Pour s’adapter aux petits écrans */
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollElements = document.querySelectorAll(".scroll-animate");
+
+    const elementInView = (el, dividend = 1) => {
+      const elementTop = el.getBoundingClientRect().top;
+      return (
+        elementTop <=
+        (window.innerHeight || document.documentElement.clientHeight) / dividend
+      );
+    };
+
+    const displayScrollElement = (element) => {
+      element.classList.add("visible");
+    };
+
+    const handleScrollAnimation = () => {
+      scrollElements.forEach((el) => {
+        if (elementInView(el, 1.25)) {
+          displayScrollElement(el);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", () => {
+      handleScrollAnimation();
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burgerMenu = document.getElementById("burger-menu");
+    if (burgerMenu) {
+      burgerMenu.addEventListener("click", function () {
+        document.querySelector(".nav-links").classList.toggle("active");
+      });
+    }
+  });
+</script>
+
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/imageExpositionCouleurs.png" alt="Logo" />
+    </div>
+    <nav style="margin-right: 30px">
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li class="menu-billets">
+          <a href="#">Billets</a>
+          <ul class="menu-billets-liste">
+            <li><a href="#">Bientôt disponible</a></li>
+          </ul>
+          <style>
+            /* Styles spécifiques pour le menu Billets */
+            .menu-billets {
+              position: relative;
+            }
+
+            .menu-billets-liste {
+              display: none;
+              position: absolute;
+              top: 100%;
+              left: 0;
+              background-color: #333;
+              list-style: none;
+              border-radius: 5px;
+              margin-top: 10px;
+              width: 190px;
+              z-index: 10;
+            }
+
+            .menu-billets-liste li {
+              padding: 10px;
+              text-align: center;
+            }
+
+            .menu-billets-liste li a {
+              color: white;
+              text-decoration: none;
+              display: block;
+            }
+
+            .menu-billets-liste li:hover {
+              background-color: #444;
+            }
+
+            /* Affichage du menu "Billets" au survol */
+            .menu-billets:hover .menu-billets-liste {
+              display: block;
+            }
+          </style>
+        </li>
+        <li class="dropdown">
+          <a href="Login.html"> <i class="fa fa-user"></i> Connexion </a>
+        </li>
+        <li><a href="index-ENG.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="burger-menu" id="burger-menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </header>
+
+  <section class="title-section">
+    <h2 style="text-align: center; margin: 10px; text-decoration: underline">
+      Rabais d’une durée d’un an, jusqu’à 40% dans la boutique de Canada First
+      Bricks (une des plus grosses boutiques de pièces LEGO au monde)
+    </h2>
+  </section>
+  <section class="landing-text">
+<h3 class="title">Une fois inscrit comme congressiste, vous pouvez exposer gratuitement votre/vos MOC(s) ou votre collection de modèles LEGO unique.</h3>
+
+        <style>
+          .title {
+            font-size: 1.5em;
+            color: #333;
+            width: 80%;
+            padding-top: 1%;
+            margin: auto;
+            text-align: center;
+          }
+        </style>
+      </div>
+    </div>
+  </section>
+  <!-- <div class="video-wrapper">
+    <video autoplay loop muted playsinline class="responsive-video">
+      <source src="images/videoLSDB.mp4" type="video/mp4" />
+      Votre navigateur ne supporte pas la vidéo.
+    </video>
+    <style>
+      /* Conteneur centré */
+      .video-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Hauteur égale à toute la fenêtre */
+        width: 100%;
+        background-color: #f4f4f4; /* Arrière-plan léger */
+      }
+
+      /* Vidéo responsive */
+      .responsive-video {
+        width: 80%; /* La vidéo prend 60% de la largeur */
+        max-width: 900px; /* Largeur max */
+        height: auto;
+        border-radius: 10px; /* Coins arrondis */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
+      }
+
+      /* Pour les petits écrans */
+      @media screen and (max-width: 768px) {
+        .responsive-video {
+          width: 90%; /* Prend presque toute la largeur sur mobile */
+        }
+      }
+    </style>
+  </div> -->
+
+  <section class="recognition-container ">
+    <div class="recognition-text">
+      <h2>RECONNAISSANCE DU TRAVAIL DES EXPOSANTS</h2>
+      <p>
+        Nous comprenons qu'une exposition réussie passe par des exposants de
+        MOCs. Nous désirons donc dès cette année reconnaître la contribution de
+        certains d'entre vous en distinguant les exposants par les modèles
+        exposés. Nous reconnaissons donc les types d'exposants suivants :
+      </p>
+
+      <p>
+        <b> 🔹 Exposants standards :</b> Quelqu'un qui expose une collection
+        unique de modèles Lego.
+      </p>
+      <p><b> 🔹 Exposants premium :</b> Quelqu'un qui expose un/des MOC(s).</p>
+      <p>
+        <b> 🔹 Exposants platine :</b> Quelqu'un qui expose un/des MOC(s) de
+        grande envergure/complexité.
+      </p>
+      <p>
+        <b> 🔹 Exposants prestige :</b> Exposant ayant gagné un des prix de
+        l'édition précédente.
+      </p>
+
+      <p>
+        Ces distinctions seront faites lors de l'exposition par un jury et vous
+        donneront droit, dans le cas d'un exposant premium, platine ou prestige,
+        à des gratuités lors de l'événement de l'année suivante.
+      </p>
+    </div>
+
+    <div class="recognition-image">
+      <img src="images/image8.jpg" alt="Image8" />
+    </div>
+  </section>
+
+<!-- Paragraphe de 3 lignes -->
+<section class="three-line-paragraph scroll-animate">
+  <div class="toggle-container">
+    <h2 class="tit">Prix pour les exposants</h2>
+  </div>
+    <p>
+      Voici une liste des prix qui seront remis lors de l’édition 2025 de Le
+      Sommet de la Brique. À noter que seulement un prix peut-être gagné par
+      participant.
+    </p>
+
+    <p>
+      <b> 🔹 Recru(e) de l’année</b><br />
+      Prix remis par le jury à l’exposant qui est à sa première exposition et
+      s’étant le plus démarqué par son MOC. Cette reconnaissance est remise
+      avec un coupon d’une valeur de 100$ dans la boutique Canada First
+      Bricks.
+    </p>
+
+    <p>
+      <b> 🔹 Jeune exposant de l’année</b><br />
+      Prix remis par le jury à l’exposant de moins de 18 ans s’étant le plus
+      démarqué par son MOC. Cette reconnaissance est remise avec un ensemble
+      LEGO offert par Canada First Bricks.
+    </p>
+
+    <p>
+      <b> 🔹 Meilleur exploitation de la thématique</b><br />
+      Prix remis par le jury à l’exposant ayant le mieux exploité la
+      thématique de son MOC. Cette reconnaissance est remise avec un coupon
+      d’une valeur de 100$ dans la boutique Canada First Bricks.
+    </p>
+
+    <p>
+      <b> 🔹 Meilleur exploitation des LEDs</b><br />
+      Prix remis par le jury à l’exposant ayant le mieux exploité les LEDs
+      dans son MOC. Cette reconnaissance est remise avec un coupon d’une
+      valeur de 100$ dans la boutique Canada First Bricks.
+    </p>
+
+    <p>
+      <b> 🔹 1ère place vote des visiteurs</b><br />
+      Prix remis à l’exposant ayant reçu le plus grand nombre de votes de la
+      part des visiteurs. Cette reconnaissance est remise avec un coupon d’une
+      valeur de 200$ dans la boutique Canada First Bricks.
+    </p>
+
+    <p>
+      <b> 🔹 1ère place vote du jury</b><br />
+      Prix remis à l’exposant ayant reçu le plus grand nombre de votes de la
+      part du jury. Cette reconnaissance est remise avec un coupon d’une
+      valeur de 300$ dans la boutique Canada First Bricks.
+    </p>
+
+    <p>
+      <b> 🔹 1ère place vote des exposants</b><br />
+      Prix remis à l’exposant ayant reçu le plus grand nombre de votes de la
+      part des exposants/congressistes. Cette reconnaissance est remise avec
+      un coupon d’une valeur de 500$ dans la boutique Canada First Bricks.
+    </p>
+</section>
+
+  <!-- Deux lignes -->
+  <section class="two-lines" style="margin-top: 3%;">
+    <a href="https://canadafirstbricks.com/" style="text-decoration: underline; color: #333;">Canada FirstBricks Inc</a>
+  </section>
+</body>

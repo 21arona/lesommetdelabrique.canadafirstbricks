@@ -1,718 +1,365 @@
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Le Sommet De La Brique</title>
-  <!-- Google Analytics -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-X2S70WVQRV"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    // ID de mesure Google Analytics
-    gtag("config", "G-X2S70WVQRV");
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    rel="stylesheet"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    href="images/sommetlogo.png"
-    sizes="180x180"
-  />
-</head>
-
-<style>
-  /* Reset styles */
-  body,
-  h1,
-  h2,
-  p,
-  ul,
-  li,
-  a {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    color: inherit;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    background-color: #f4f4f4;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-  }
-
-  .fa-user {
-    margin-right: 8px;
-    font-size: 1rem;
-  }
-
-  /* Navbar styles */
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    background-color: #222;
-    z-index: 1000;
-    padding: 10px 12px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-  }
-
-  /* Logo styles */
-  .logo img {
-    height: 30px;
-    width: auto;
-  }
-
-  /* Styling the navigation links */
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-
-  .nav-links li {
-    display: inline-block;
-  }
-
-  .nav-links li a {
-    color: #fff;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    padding: 8px 16px;
-    border-radius: 4px;
-    text-decoration: none;
-  }
-
-  .nav-links li a:hover {
-    color: black;
-    background-color: yellow;
-    font-weight: 700;
-  }
-
-  /* Burger Menu Styles */
-  .burger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-  }
-
-  .burger-menu .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-  }
-
-  .highlight {
-    color: #333;
-    font-weight: bolder;
-  }
-
-  @media screen and (max-width: 605px) {
-    .nav-links {
-      display: none;
-      position: absolute;
-      top: 44px;
-      right: 0;
-      background-color: #222;
-      width: 32%;
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .nav-links.active {
-      display: flex;
-    }
-
-    .nav-links li {
-      margin: 10px 0;
-    }
-
-    .burger-menu {
-      display: flex;
-    }
-  }
-
-  /* Dropdown menu */
-  .dropdown {
-    position: relative;
-  }
-
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #222;
-    width: 150px;
-    border-radius: 4px;
-    z-index: 100;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-
-  .dropdown-menu li a {
-    color: #fff;
-    padding: 10px 20px;
-    display: block;
-    text-decoration: none;
-  }
-
-  .dropdown-menu li a:hover {
-    background-color: #f4a261;
-    font-weight: 700;
-  }
-
-  /****************************************/
-
-  /* Section Carte */
-  .map-section {
-    margin: 20px 0;
-    text-align: center;
-  }
-
-  .map-section h2 {
-    font-size: 1.5em;
-    color: #333;
-  }
-
-  .map-container {
-    margin: 0 auto;
-    max-width: 100%;
-  }
-
-  /* Petit paragraphe */
-  .small-paragraph {
-    font-size: 1.3em;
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-  }
-
-  .small-paragraph p {
-    font-size: 1em;
-    color: #555;
-  }
-
-  /* Image */
-  .image-section {
-    text-align: center;
-    margin: 20px 0;
-  }
-
-  .image-section img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Paragraphe de 3 lignes */
-  /* Styles pour la section */
-  .three-line-paragraph {
-    background: linear-gradient(to right, #ffecd2, #b6b2b1); /* Dégradé doux */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: "Arial", sans-serif;
-    color: #333;
-    max-width: 80%;
-    margin: auto;
-    line-height: 1.6;
-  }
-
-  /* Titre et icône de toggle */
-  .toggle-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    gap: 10px;
-    font-size: 24px;
-  }
-
-  .tit {
-    text-align: center;
-    font-weight: bold;
-    margin: 0;
-    text-decoration: underline;
-    font-size: 34px !important;
-  }
-  .toggle-icon {
-    font-size: 24px;
-    color: white;
-    transition: transform 0.3s ease;
-    font-weight: bolder;
-  }
-
-  /* Contenu masqué par défaut */
-  .content-wrapper {
-    display: none;
-    margin-top: 15px;
-  }
-
-  /* Texte */
-  .three-line-paragraph p {
-    font-size: 18px;
-    margin-top: 10px;
-  }
-
-  .three-line-paragraph p b {
-    font-weight: bold;
-    color: #333;
-  }
-
-  .three-line-paragraph p::first-line {
-    font-weight: bold;
-    font-size: 20px;
-  }
-
-  @media (max-width: 768px) {
-    .three-line-paragraph {
-      padding: 15px;
-      font-size: 16px;
-    }
-  }
-
-  /* Deux lignes */
-  .two-lines {
-    font-size: 1.3em;
-    width: 80%;
-    margin: auto;
-    padding: 10px 20px;
-  }
-
-  .two-lines p {
-    font-size: 1em;
-    color: #333;
-  }
-
-  /**************************/
-  /* Animation d'apparition */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Style pour les éléments masqués par défaut */
-  .scroll-animate {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-
-  /* Lorsque l'élément est visible */
-  .scroll-animate.visible {
-    animation: fadeInUp 0.7s ease forwards;
-  }
-
-  /* Recognition Container */
-  .recognition-container {
-    display: flex;
-    align-items: center; /* Alignement vertical */
-    justify-content: space-between; /* Sépare le texte et l'image */
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-    gap: 20px; /* Espacement entre le texte et l'image */
-  }
-
-  .recognition-text {
-    flex: 1; /* Prend l'espace disponible */
-    font-family: "Arial", sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-    background: #f9f9f9; /* Fond doux */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .recognition-text h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #d35400; /* Titre en orange foncé */
-    margin-bottom: 15px;
-  }
-
-  .recognition-text p {
-    margin-bottom: 10px;
-  }
-
-  .recognition-text b {
-    font-weight: bold;
-    color: #2c3e50; /* Bleu foncé pour les distinctions */
-  }
-
-  .recognition-image img {
-    width: 500px; /* Assure une taille fixe sans déformation */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  @media (max-width: 768px) {
-    .recognition-container {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .recognition-image img {
-      width: 100%; /* Pour s’adapter aux petits écrans */
-    }
-  }
-</style>
-
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Sommet De La Brique</title>
+    <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X2S70WVQRV"></script>
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const scrollElements = document.querySelectorAll(".scroll-animate");
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
 
-    const elementInView = (el, dividend = 1) => {
-      const elementTop = el.getBoundingClientRect().top;
-      return (
-        elementTop <=
-        (window.innerHeight || document.documentElement.clientHeight) / dividend
-      );
-    };
+  // ID de mesure Google Analytics
+  gtag('config', 'G-X2S70WVQRV');
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
 
-    const displayScrollElement = (element) => {
-      element.classList.add("visible");
-    };
-
-    const handleScrollAnimation = () => {
-      scrollElements.forEach((el) => {
-        if (elementInView(el, 1.25)) {
-          displayScrollElement(el);
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/sommetlogo.png"
+      sizes="180x180"
+    />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const burgerMenu = document.getElementById("burger-menu");
+        if (burgerMenu) {
+          burgerMenu.addEventListener("click", function () {
+            document.querySelector(".nav-links").classList.toggle("active");
+          });
         }
       });
-    };
-
-    window.addEventListener("scroll", () => {
-      handleScrollAnimation();
-    });
-  });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const burgerMenu = document.getElementById("burger-menu");
-    if (burgerMenu) {
-      burgerMenu.addEventListener("click", function () {
-        document.querySelector(".nav-links").classList.toggle("active");
-      });
-    }
-  });
-</script>
-
-<body>
-  <header class="navbar">
-    <div class="logo">
-      <img src="images/imageExpositionCouleurs.png" alt="Logo" />
-    </div>
-    <nav style="margin-right: 30px">
-      <ul class="nav-links">
-        <li><a href="index-ENG.html">Home</a></li>
-        <li class="menu-billets">
-          <a href="#">Tickets</a>
-          <ul class="menu-billets-liste">
-            <li><a href="#">Coming soon</a></li>
-          </ul>
-          <style>
-            /* Styles spécifiques pour le menu Billets */
-            .menu-billets {
-              position: relative;
-            }
-
-            .menu-billets-liste {
-              display: none;
-              position: absolute;
-              top: 100%;
-              left: 0;
-              background-color: #333;
-              list-style: none;
-              border-radius: 5px;
-              margin-top: 10px;
-              width: 190px;
-              z-index: 10;
-            }
-
-            .menu-billets-liste li {
-              padding: 10px;
-              text-align: center;
-            }
-
-            .menu-billets-liste li a {
-              color: white;
-              text-decoration: none;
-              display: block;
-            }
-
-            .menu-billets-liste li:hover {
-              background-color: #444;
-            }
-
-            /* Affichage du menu "Billets" au survol */
-            .menu-billets:hover .menu-billets-liste {
-              display: block;
-            }
-          </style>
-        </li>
-        <li class="dropdown">
-          <a href="Login.html"> <i class="fa fa-user"></i> Login </a>
-        </li>
-        <li><a href="index-ENG.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="burger-menu" id="burger-menu">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-  </header>
-
-  <section class="title-section">
-    <h2 style="text-align: center; margin: 10px; text-decoration: underline">
-      One-year discount, up to 40% in the Canada First Bricks store (one of the
-      largest LEGO parts stores in the world)
-    </h2>
+    </script>
     <style>
-      .h3a {
+      /* General body styling */
+      body {
+        background-color: #f0f0f0;
+        margin: 0;
+        height: 100vh;
         display: flex;
-        align-items: center;
-        gap: 5px; /* Réduction de l'espace entre le h3 et le bouton */
-        margin-right: 9%;
+        flex-direction: column;
+        box-sizing: border-box; /* Ensure padding/borders don't cause overflow */
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+      }
+      html {
+        scroll-behavior: smooth;
       }
 
-      .button {
-        flex-shrink: 0; /* Empêche le bouton de se rétrécir */
-        white-space: nowrap; /* Empêche le texte du bouton de passer à la ligne */
+      .fa-user {
+        margin-right: 8px; /* Espacement entre l'icône et le texte */
+        font-size: 1rem; /* Taille de l'icône */
       }
-      /* Boutons */
-      .button {
+
+      /* Navbar styles */
+      .navbar {
         display: flex;
         align-items: center;
-        gap: 10px;
-        background-color: yellow;
-        border: 2px solid yellow;
-        color: black;
-        font-size: 1rem;
-        font-weight: 600;
-        padding: 12px 20px;
-        cursor: pointer;
-        border-radius: 50px;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        background-color: #222;
+        padding: 2px 5px;
+        z-index: 1000;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Logo styles */
+      .logo img {
+        height: 30px;
+        width: auto;
+      }
+
+      /* Styling the navigation links */
+      .nav-links {
+        display: flex;
+        gap: 20px;
+        list-style-type: none;
+        margin-right: 30px;
+      }
+
+      .nav-links li {
+        display: inline-block;
+      }
+
+      .nav-links li a {
+        color: #fff;
+        font-size: 0.9rem;
         transition: all 0.3s ease;
+        padding: 8px 16px;
+        border-radius: 4px;
+        text-decoration: none;
       }
 
-      .button .icon {
-        width: 20px;
-        height: 20px;
+      .nav-links li a:hover {
+        color: black;
+        background-color: yellow;
+        font-weight: 700;
       }
 
-      .button:hover {
-        background: #f4a261;
+      /* Burger Menu Styles */
+      .burger-menu {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+      }
+
+      .burger-menu .bar {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 2px;
+      }
+
+      @media screen and (max-width: 510px) {
+        .nav-links {
+          display: none;
+          /* Hide the navigation links by default on smaller screens */
+          position: absolute;
+          top: 60px;
+          right: -30px;
+          background-color: #222;
+          width: 378px;
+          padding: 8px;
+          border-radius: 4px;
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-links li {
+          display: block;
+          margin-bottom: 10px;
+        }
+
+        .burger-menu {
+          display: flex;
+        }
+
+        .nav-links.active {
+          display: flex;
+          /* Show the menu when the burger is clicked */
+        }
+      }
+
+      /* Dropdown menu */
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #222;
+        border-radius: 4px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+        padding: 10px 0;
+        z-index: 1;
+        margin-top: 5px;
+        width: 150px;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-menu li a {
+        color: #fff;
+        padding: 10px 20px;
+        display: block;
+        text-decoration: none;
+      }
+
+      .dropdown-menu li a:hover {
+        background-color: #f4a261;
+        font-weight: 700;
+      }
+
+      /* Login container styling */
+      .login-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        margin-top: auto;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+
+      label {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
         color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
       }
 
-      /* Responsive */
-      @media (max-width: 768px) {
-        .landing-text h1 {
-          font-size: 1.6rem;
-        }
+      button:hover {
+        background-color: #45a049;
+      }
 
-        #description p {
-          font-size: 1rem;
-        }
+      #errorMessage {
+        text-align: center;
+        font-size: 14px;
+      }
 
-        .header-container {
-          flex-direction: column;
-        }
+      /* iframe styling */
+      iframe {
+        width: 100%;
+        height: 600px;
+        border: none;
+      }
 
-        .button {
-          text-align: center;
-          margin: auto;
-        }
+      /* Adjust contact section to stay within screen */
+      #contact {
+        margin-left: 20px;
+        margin-right: 20px;
+        overflow: hidden; /* Prevent horizontal overflow */
+        width: 100%;
+        padding: 20px;
       }
     </style>
-  </section>
-  <section class="landing-text">
-    <h3 class="title">Once registered as a conference attendee, you can display your unique MOC(s) or LEGO model collection for free.</h3>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="images/sommetlogo.png" alt="Logo" />
+      </div>
+      <nav style="margin-right: 30px">
+        <ul class="nav-links">
+          <li><a href="index-ENG.html">Home</a></li>
+          <li class="menu-billets">
+            <a href="#">Billets</a>
+            <ul class="menu-billets-liste">
+              <li><a href="#">Coming Soon</a></li>
+            </ul>
             <style>
-              .title {
-                font-size: 1.5em;
-                color: #333;
-                width: 80%;
-                padding-top: 1%;
-                margin: auto;
+              /* Styles spécifiques pour le menu Billets */
+              .menu-billets {
+                position: relative;
+              }
+
+              .menu-billets-liste {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #333;
+                list-style: none;
+                border-radius: 5px;
+                margin-top: 10px;
+                width: 190px;
+                z-index: 10;
+              }
+
+              .menu-billets-liste li {
+                padding: 10px;
                 text-align: center;
               }
+
+              .menu-billets-liste li a {
+                color: white;
+                text-decoration: none;
+                display: block;
+              }
+
+              .menu-billets-liste li:hover {
+                background-color: #444;
+              }
+
+              /* Affichage du menu "Billets" au survol */
+              .menu-billets:hover .menu-billets-liste {
+                display: block;
+              }
             </style>
+          </li>
+          <li class="dropdown">
+            <a href="Login.html"> <i class="fa fa-user"></i> Login </a>
+          </li>
+          <li><a href="index-ENG.html#contact">Contact</a></li>          </ul>
+        </ul>
+      </nav>
+      <div class="burger-menu" id="burger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </header>
+  
+    <section style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding: 20px; max-width: 1200px; margin: auto; gap: 20px;">
+        <div style="flex: 1; min-width: 300px; padding-right: 20px; text-align: center;">
+          <h1 style="color: #f4a261; font-size: 2.5rem; margin-bottom: 10px;">LE SOMMET DE LA BRIQUE</h1>
+          <ul style="list-style-type: none; padding: 0; text-align: left;">
+            <li style="margin-bottom: 10px; font-size: 1.2rem; line-height: 1.6;">
+                🌟 Don't miss the chance to witness the creative talent of the exhibitors, who will gladly take the time to share their passion for the small LEGO brick with you.
+            </li>
+            <li style="margin-bottom: 10px; font-size: 1.2rem; line-height: 1.6;">
+              🌟           This is also an opportunity to acquire models, retired models, minifigures, as well as accessories and jewelry from our vendors. Don’t miss our VIP event on Friday night, limited to XX visitors, who will have the chance to meet our speakers and have more intimate discussions with our exhibitors.
+            </li>
+          </ul>
+        </div>
+        <div style="flex: 1; min-width: 300px; text-align: center;">
+          <div class="video-container" style="position: relative; max-width: 100%; border-radius: 10px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+            <video autoplay loop muted playsinline class="responsive-video" id="video" style="width: 100%; height: auto; border-radius: 10px;">
+              <source src="images/videoLSDB.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la vidéo.
+            </video>
+            <button class="sound-toggle" onclick="toggleSound()" style="position: absolute; width: 33px; bottom: 10px; left: 10px; background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 5px 5px; border-radius: 5px; cursor: pointer;">🔇</button>
           </div>
         </div>
       </section>
-  <!-- <div class="video-wrapper">
-    <video autoplay loop muted playsinline class="responsive-video">
-      <source src="images/videoLSDB.mp4" type="video/mp4" />
-      Votre navigateur ne supporte pas la vidéo.
-    </video>
-    <style>
-      /* Conteneur centré */
-      .video-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh; /* Hauteur égale à toute la fenêtre */
-        width: 100%;
-        background-color: #f4f4f4; /* Arrière-plan léger */
-      }
-
-      /* Vidéo responsive */
-      .responsive-video {
-        width: 80%; /* La vidéo prend 60% de la largeur */
-        max-width: 900px; /* Largeur max */
-        height: auto;
-        border-radius: 10px; /* Coins arrondis */
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
-      }
-
-      /* Pour les petits écrans */
-      @media screen and (max-width: 768px) {
-        .responsive-video {
-          width: 90%; /* Prend presque toute la largeur sur mobile */
+      
+      <script>
+        function toggleSound() {
+          var video = document.getElementById("video");
+          var button = document.querySelector(".sound-toggle");
+      
+          if (video.muted) {
+            video.muted = false;
+            button.textContent = "🔊";
+          } else {
+            video.muted = true;
+            button.textContent = "🔇";
+          }
         }
-      }
-    </style>
-  </div> -->
-
-  <section class="recognition-container ">
-    <div class="recognition-text">
-      <h2>RECOGNITION OF EXHIBITORS' WORK</h2>
-      <p>
-        We understand that a successful exhibition relies on exhibitors of MOCs.
-        Therefore, starting this year, we aim to recognize the contribution of
-        some of you by distinguishing exhibitors based on the models exhibited.
-        We recognize the following types of exhibitors:
-      </p>
-
-      <p>
-        <b> 🔹 Standard Exhibitors:</b> Someone who exhibits a unique collection
-        of LEGO models.
-      </p>
-      <p>
-        <b> 🔹 Premium Exhibitors:</b> Someone who exhibits one or more MOCs.
-      </p>
-      <p>
-        <b> 🔹 Platinum Exhibitors:</b> Someone who exhibits one or more
-        large-scale/complex MOCs.
-      </p>
-      <p>
-        <b> 🔹 Prestige Exhibitors:</b> Exhibitor who has won an award from the
-        previous edition.
-      </p>
-
-      <p>
-        These distinctions will be made during the exhibition by a jury and will
-        grant, for premium, platinum, or prestige exhibitors, certain benefits
-        for the next year's event.
-      </p>
-    </div>
-
-    <div class="recognition-image">
-      <img src="images/image8.jpg" alt="Image8" />
-    </div>
-  </section>
-
-  <!-- Paragraphe de 3 lignes -->
-  <section class="three-line-paragraph scroll-animate">
-    <div class="toggle-containe">
-      <h2 class="tit">Awards for Exhibitors</h2>
-    </div>
-      <p>
-        Here is a list of the awards that will be presented at the 2025 edition
-        of Le Sommet de la Brique. Please note that only one prize can be won
-        per participant.
-      </p>
-
-      <p>
-        <b> 🔹 Rookie of the Year</b><br />
-        Award presented by the jury to the exhibitor who is attending their
-        first exhibition and has stood out the most with their MOC. This
-        recognition comes with a $100 coupon for Canada First Bricks store.
-      </p>
-
-      <p>
-        <b> 🔹 Young Exhibitor of the Year</b><br />
-        Award presented by the jury to the exhibitor under 18 who has stood out
-        the most with their MOC. This recognition comes with a LEGO set provided
-        by Canada First Bricks.
-      </p>
-
-      <p>
-        <b> 🔹 Best Use of the Theme</b><br />
-        Award presented by the jury to the exhibitor who best used the theme in
-        their MOC. This recognition comes with a $100 coupon for Canada First
-        Bricks store.
-      </p>
-
-      <p>
-        <b> 🔹 Best Use of LEDs</b><br />
-        Award presented by the jury to the exhibitor who best used LEDs in their
-        MOC. This recognition comes with a $100 coupon for Canada First Bricks
-        store.
-      </p>
-
-      <p>
-        <b> 🔹 1st Place Visitor Vote</b><br />
-        Award presented to the exhibitor who received the most votes from
-        visitors. This recognition comes with a $200 coupon for Canada First
-        Bricks store.
-      </p>
-
-      <p>
-        <b> 🔹 1st Place Jury Vote</b><br />
-        Award presented to the exhibitor who received the most votes from the
-        jury. This recognition comes with a $300 coupon for Canada First Bricks
-        store.
-      </p>
-
-      <p>
-        <b> 🔹 1st Place Exhibitor Vote</b><br />
-        Award presented to the exhibitor who received the most votes from other
-        exhibitors/congress participants. This recognition comes with a $500
-        coupon for Canada First Bricks store.
-      </p>
-  </section>
-
-  <!-- Deux lignes -->
-  <section class="two-lines" style="margin-top: 3%;">
-    <a href="https://canadafirstbricks.com/" style="text-decoration: underline; color: #333;">Canada FirstBricks Inc</a>
-    
-  </section>
-</body>
+      </script>
+      
+      
+      
+           
+    </body>
+</html>
