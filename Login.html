@@ -488,6 +488,40 @@
         height="598px"
         frameborder="0"
       ></iframe>
+      <footer class="disclaimer">
+      <p style="font-size: 0.8rem;">
+        LEGO® est une marque déposée du groupe LEGO® qui ne sponsorise,
+        n'autorise et n'approuve pas ce site.
+      </p>
+      <style>
+        .disclaimer {
+          text-align: center;
+          color: #777;
+          background-color: #f9f9f9;
+          border-top: 0px solid #ddd;
+          position: relative;
+          bottom: 0;
+          width: 100%;
+          padding-top: 5px;
+        }
+        html,
+        body {
+          height: 100%;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+        }
+
+        body > * {
+          flex-grow: 1;
+        }
+
+        .disclaimer {
+          flex-shrink: 0;
+        }
+      </style>
+    </footer>
     </div>
+    
   </body>
 </html>
