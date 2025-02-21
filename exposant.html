@@ -25,7 +25,6 @@
 </head>
 
 <style>
-  /* Reset styles */
   body,
   h1,
   h2,
@@ -222,7 +221,6 @@
     height: auto;
   }
 
-  /* Paragraphe de 3 lignes */
   /* Styles pour la section */
   .three-line-paragraph {
     background: linear-gradient(to right, #ffecd2, #b6b2b1); /* Dégradé doux */
@@ -315,36 +313,33 @@
     }
   }
 
-  /* Style pour les éléments masqués par défaut */
   .scroll-animate {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
 
-  /* Lorsque l'élément est visible */
   .scroll-animate.visible {
     animation: fadeInUp 0.7s ease forwards;
   }
 
-  /* Recognition Container */
   .recognition-container {
     display: flex;
-    align-items: center; /* Alignement vertical */
-    justify-content: space-between; /* Sépare le texte et l'image */
+    align-items: center;
+    justify-content: space-between;
     max-width: 1200px;
     margin: auto;
     padding: 20px;
-    gap: 20px; /* Espacement entre le texte et l'image */
+    gap: 20px;
   }
 
   .recognition-text {
-    flex: 1; /* Prend l'espace disponible */
+    flex: 1; 
     font-family: "Arial", sans-serif;
     font-size: 18px;
     line-height: 1.6;
     color: #333;
-    background: #f9f9f9; /* Fond doux */
+    background: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -353,7 +348,7 @@
   .recognition-text h2 {
     font-size: 24px;
     font-weight: bold;
-    color: #d35400; /* Titre en orange foncé */
+    color: #d35400; 
     margin-bottom: 15px;
   }
 
@@ -363,11 +358,11 @@
 
   .recognition-text b {
     font-weight: bold;
-    color: #2c3e50; /* Bleu foncé pour les distinctions */
+    color: #2c3e50;
   }
 
   .recognition-image img {
-    width: 500px; /* Assure une taille fixe sans déformation */
+    width: 500px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -380,7 +375,7 @@
     }
 
     .recognition-image img {
-      width: 100%; /* Pour s’adapter aux petits écrans */
+      width: 100%; 
     }
   }
 </style>
@@ -439,7 +434,6 @@
             <li><a href="#">Bientôt disponible</a></li>
           </ul>
           <style>
-            /* Styles spécifiques pour le menu Billets */
             .menu-billets {
               position: relative;
             }
@@ -472,7 +466,6 @@
               background-color: #444;
             }
 
-            /* Affichage du menu "Billets" au survol */
             .menu-billets:hover .menu-billets-liste {
               display: block;
             }
@@ -513,39 +506,6 @@
       </div>
     </div>
   </section>
-  <!-- <div class="video-wrapper">
-    <video autoplay loop muted playsinline class="responsive-video">
-      <source src="images/videoLSDB.mp4" type="video/mp4" />
-      Votre navigateur ne supporte pas la vidéo.
-    </video>
-    <style>
-      /* Conteneur centré */
-      .video-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh; /* Hauteur égale à toute la fenêtre */
-        width: 100%;
-        background-color: #f4f4f4; /* Arrière-plan léger */
-      }
-
-      /* Vidéo responsive */
-      .responsive-video {
-        width: 80%; /* La vidéo prend 60% de la largeur */
-        max-width: 900px; /* Largeur max */
-        height: auto;
-        border-radius: 10px; /* Coins arrondis */
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
-      }
-
-      /* Pour les petits écrans */
-      @media screen and (max-width: 768px) {
-        .responsive-video {
-          width: 90%; /* Prend presque toute la largeur sur mobile */
-        }
-      }
-    </style>
-  </div> -->
 
   <section class="recognition-container ">
     <div class="recognition-text">
@@ -583,7 +543,6 @@
     </div>
   </section>
 
-<!-- Paragraphe de 3 lignes -->
 <section class="three-line-paragraph scroll-animate">
   <div class="toggle-container">
     <h2 class="tit">Prix pour les exposants</h2>
@@ -645,7 +604,6 @@
     </p>
 </section>
 
-  <!-- Deux lignes -->
   <section class="two-lines" style="margin-top: 3%;">
     <a href="https://canadafirstbricks.com/" style="text-decoration: underline; color: #333;">Canada FirstBricks Inc</a>
   </section>

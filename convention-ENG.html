@@ -100,64 +100,6 @@
         >
           <a href="index-ENG.html">Home</a>
         </li>
-        <!--    <li class="menu-billets">
-            <a href="#">Billets</a>
-            <ul class="menu-billets-liste">
-              <li><a href="#">Bientôt disponible</a></li>
-            </ul>
-            <style>
-              /* Styles spécifiques pour le menu Billets */
-              .menu-billets {
-                position: relative;
-              }
-
-                         .menu-billets-liste {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                background-color: #333;
-                list-style: none;
-                border-radius: 5px;
-                margin-top: 10px;
-                width: 190px;
-                z-index: 10;
-              }
-              .menu-billets-liste li {
-                padding: 10px;
-                text-align: center;
-              }
-
-              .menu-billets-liste li a {
-                color: white;
-                text-decoration: none;
-                display: block;
-              }
-
-              .menu-billets-liste li:hover {
-                background-color: #444;
-              }
-
-              /* Affichage du menu "Billets" au survol */
-              .menu-billets:hover .menu-billets-liste {
-                display: block;
-              }
-            </style>
-          </li> -->
-        <!-- <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Exposant</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="Login.html"> <i class="fa fa-user"></i> Connexion </a>
-              </li>
-              <li>
-                <a href="Login.html"
-                  ><i class="fa fa-user"></i> Nouveau compte</a
-                >
-              </li>
-            </ul>
-          </li> -->
-        <!-- <li><a href="accueil.html#contact">Contact</a></li> -->
       </nav>
     </header>
 
@@ -191,10 +133,8 @@
             </button>
           </a>
         </div>
-        <!-- Nouvelle section -->
         <section id="description">
           <style>
-            /* Section de description */
             #description {
               padding: 0px 10%;
               text-align: left;
@@ -209,8 +149,8 @@
             /* Conteneur de la vidéo */
             .video-container {
               width: 100%;
-              max-width: 900px; /* Largeur max */
-              margin: 20px auto; /* Centre la vidéo */
+              max-width: 900px;
+              margin: 20px auto;
             }
 
             /* Vidéo responsive */
@@ -221,7 +161,6 @@
               display: block;
             }
 
-            /* Ajustement pour petits écrans */
             @media screen and (max-width: 768px) {
               .video-container {
                 max-width: 100%;
@@ -244,13 +183,6 @@
             hours or exhibitor opening hours. <br />
             <br />
           </p>
-          <!-- Ajout de la vidéo
-          <div class="video-container">
-            <video autoplay loop muted playsinline class="responsive-video">
-              <source src="images/videoLSDB.mp4" type="video/mp4" />
-              Votre navigateur ne supporte pas la vidéo.
-            </video>
-          </div> -->
         </section>
       </div>
     </section>
@@ -315,8 +247,6 @@
         </a>
       </div>
       <style>
-        /* Long texte */
-        /* Style pour la section du texte long */
         .long-text {
           padding: 20px;
           background-color: #f9f9f9;
@@ -332,7 +262,6 @@
           transform: scale(1.02);
         }
 
-        /* Style pour le texte */
         .long-text p {
           font-size: 1.2em;
           line-height: 1.6;
@@ -340,7 +269,6 @@
           text-align: justify;
         }
 
-        /* Mise en valeur des éléments importants */
         .highlight {
           font-weight: bold;
           color: #333;
@@ -351,14 +279,12 @@
           color: #c9302c;
         }
 
-        /* Effet subtil sur les sauts de ligne */
         .long-text p br {
           display: block;
           content: "";
           margin-bottom: 10px;
         }
 
-        /* Animation d'apparition fluide */
         .long-text {
           opacity: 0;
           transform: translateY(20px);
@@ -392,15 +318,14 @@
         .h3a {
           display: flex;
           align-items: center;
-          gap: 5px; /* Réduction de l'espace entre le h3 et le bouton */
+          gap: 5px;
           margin-right: 9%;
         }
 
         .button {
-          flex-shrink: 0; /* Empêche le bouton de se rétrécir */
-          white-space: nowrap; /* Empêche le texte du bouton de passer à la ligne */
+          flex-shrink: 0;
+          white-space: nowrap;
         }
-        /* Boutons */
         .button {
           display: flex;
           align-items: center;
@@ -680,13 +605,8 @@
       </div>
 
       <style>
-        /* Schedule Container */
         .schedule-container {
-          background: linear-gradient(
-            to right,
-            #ffecd2,
-            #b6b2b1
-          ); /* Dégradé doux */
+          background: linear-gradient(to right, #ffecd2, #b6b2b1);
           border-radius: 10px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           font-family: "Arial", sans-serif;
@@ -727,7 +647,7 @@
         }
 
         .schedule-container .price {
-          color: #e74c3c; /* Rouge pour les éléments payants */
+          color: #e74c3c;
           font-weight: bold;
         }
 
@@ -737,7 +657,6 @@
           text-align: center;
           margin-top: 30px;
         }
-        /* Titre et icône de toggle */
         .toggle-container {
           display: flex;
           justify-content: center;
@@ -771,10 +690,10 @@
             content.style.display === ""
           ) {
             content.style.display = "block";
-            icon.innerHTML = "↑"; // Flèche vers le haut
+            icon.innerHTML = "↑";
           } else {
             content.style.display = "none";
-            icon.innerHTML = "↓"; // Flèche vers le bas
+            icon.innerHTML = "↓";
           }
         }
       </script>
@@ -897,17 +816,14 @@
       </div>
 
       <style>
-        /* Importer une belle police */
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
-        /* Styles de base */
         body {
           font-family: "Poppins", sans-serif;
           margin: 0;
           padding: 0;
         }
 
-        /* Section activités */
         .activities {
           width: 100%;
           padding: 50px 20px;
@@ -921,7 +837,6 @@
           color: #f39c12;
         }
 
-        /* Grille des cartes */
         .activity-cards {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -929,7 +844,6 @@
           margin-top: 20px;
         }
 
-        /* Carte flip */
         .card {
           perspective: 1000px;
         }
@@ -946,7 +860,6 @@
           transform: rotateY(180deg);
         }
 
-        /* Faces avant et arrière */
         .card-front,
         .card-back {
           width: 100%;
@@ -966,22 +879,19 @@
           transition: box-shadow 0.3s ease;
         }
 
-        /* Texte des cartes */
         .card-front h3,
         .card-front p,
         .card-back h3,
         .card-back p {
-          color: #f39c12; /* Même couleur que le titre */
+          color: #f39c12;
           text-align: center;
         }
 
-        /* Face arrière */
         .card-back {
           transform: rotateY(180deg);
           background-color: #2c3e50;
         }
 
-        /* Taille du texte */
         .card h3 {
           font-size: 1.6rem;
           font-weight: 600;
@@ -993,7 +903,6 @@
           font-weight: 400;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
           .activities h2 {
             font-size: 2rem;
@@ -1045,7 +954,6 @@
   </body>
 
   <style>
-    /* Importation de la police */
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
     * {
@@ -1058,11 +966,10 @@
     body {
       height: 100%;
       font-family: "Poppins", sans-serif;
-      color: #333; /* Texte en noir atténué */
+      color: #333;
       overflow-x: hidden;
     }
 
-    /* Conteneur principal */
     .landing-text {
       width: 100%;
       padding: 50px 10%;
@@ -1074,7 +981,6 @@
       margin: 0 auto;
     }
 
-    /* Titre principal */
     .landing-text h1 {
       color: #f4a261;
       font-size: 2rem;
@@ -1083,7 +989,6 @@
       text-transform: uppercase;
     }
 
-    /* Texte de description */
     #description {
       text-align: left;
       margin: 25px auto;
@@ -1095,10 +1000,9 @@
       line-height: 1.8;
       font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
         "Lucida Sans", Arial, sans-serif;
-      color: #444; /* Gris foncé pour une meilleure lisibilité */
+      color: #444;
     }
 
-    /* Conteneur des boutons */
     .header-container {
       display: flex;
       justify-content: center;
@@ -1106,7 +1010,6 @@
       margin-top: 10px;
     }
 
-    /* Boutons */
     .button {
       display: flex;
       align-items: center;
@@ -1132,7 +1035,6 @@
       color: white;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .landing-text h1 {
         font-size: 1.7rem;
@@ -1252,7 +1154,6 @@
       }
     }
 
-    /* Navbar styles */
     .navbar {
       display: flex;
       align-items: center;
@@ -1272,7 +1173,6 @@
       width: auto;
     }
 
-    /* Styling the navigation links */
     .nav-links {
       display: flex;
       gap: 20px;
@@ -1281,7 +1181,6 @@
       margin-top: 20px;
     }
 
-    /* Ensure nav-links are hidden by default on small screens */
     .nav-links {
       display: none;
     }
@@ -1361,8 +1260,8 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 20px; /* Ajoute un espacement entre les éléments */
-      list-style: none; /* Supprime les puces des listes */
+      gap: 20px;
+      list-style: none;
     }
 
     .navbar {
@@ -1370,15 +1269,14 @@
       justify-content: space-between;
       align-items: center;
     }
-    /* Conteneur du header avec Flexbox */
+
     .header-container {
       display: flex;
-      gap: 5%; /* Espacement entre le titre et le bouton */
+      gap: 5%;
       text-align: center;
       margin-bottom: 5%;
     }
 
-    /* Style du bouton */
     .button {
       position: relative;
       transition: all 0.3s ease-in-out;
